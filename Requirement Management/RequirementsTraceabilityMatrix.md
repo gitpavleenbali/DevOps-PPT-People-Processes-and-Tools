@@ -360,7 +360,9 @@ A well-maintained Requirements Traceability Matrix is essential for:
 
 ---
 
+**© 2025 Microsoft Global Delivery - Requirements Management Framework**
+
 **Version:** 1.0  
 **Last Updated:** November 11, 2025  
-**Author:** Pavleen Bali, Senior Cloud Solution Architect  
-**For:** Siemens - DevOps PPT Initiative
+**Author:** Pavleen Bali, Cloud Solution Architect  
+**For:** Customer Engagement - DevOps PPT Initiative

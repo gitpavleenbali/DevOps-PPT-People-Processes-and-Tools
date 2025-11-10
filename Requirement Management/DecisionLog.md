@@ -49,7 +49,7 @@ flowchart LR
 
 | Decision ID | Date | Title | Category | Description | Alternatives Considered | Decision | Rationale | Stakeholders | Owner | Status | Impact | Related Items | Review Date |
 |-------------|------|-------|----------|-------------|------------------------|----------|-----------|--------------|-------|--------|--------|---------------|-------------|
-| DEC-001 | 2025-11-01 | Select GitLab as Primary DevOps Platform | Technology | Choose between Azure DevOps and GitLab for requirements management | Azure DevOps, Jira + Confluence, GitLab | **GitLab** | Already in use at Siemens; single platform for code, CI/CD, and requirements; cost-effective | Product Owner, Architect, Dev Lead, Security | Pavleen Bali | ✅ Approved | High | REQ-006, REQ-007 | 2026-05-01 |
+| DEC-001 | 2025-11-01 | Select GitLab as Primary DevOps Platform | Technology | Choose between Azure DevOps and GitLab for requirements management | Azure DevOps, Jira + Confluence, GitLab | **GitLab** | Already in use; single platform for code, CI/CD, and requirements; cost-effective | Product Owner, Architect, Dev Lead, Security | Pavleen Bali | ✅ Approved | High | REQ-006, REQ-007 | 2026-05-01 |
 | DEC-002 | 2025-11-05 | Implement OAuth 2.0 for Authentication | Security | Standardize authentication mechanism across all applications | Basic Auth, SAML, OAuth 2.0, API Keys | **OAuth 2.0** | Industry standard; integrates with Azure AD; better security than basic auth; supports modern apps | Security Lead, Architect, Compliance | J. Smith | ✅ Approved | High | REQ-001, SEC-010 | 2026-02-01 |
 | DEC-003 | 2025-11-08 | Use Microservices Architecture | Architecture | Define application architecture pattern | Monolithic, Microservices, Serverless | **Microservices** | Better scalability; easier to maintain; aligns with cloud-native principles; team expertise | Architect, Dev Lead, Product Owner | A. Johnson | ✅ Approved | High | ARCH-001 | 2026-08-01 |
 | DEC-004 | 2025-11-10 | Defer Multi-language Support to Q2 2026 | Scope | Decide when to implement i18n/l10n support | Implement now, Q1 2026, Q2 2026, Later | **Q2 2026** | Current bandwidth focused on core features; market research needed for language priorities | Product Owner, Business Analyst, Marketing | M. Lee | ⏳ Deferred | Medium | REQ-004, FEAT-025 | 2026-03-01 |
@@ -89,7 +89,7 @@ Each major architectural decision should follow the ADR template:
 
 **Context and Problem Statement**
 
-Siemens needs a unified platform for managing requirements, tracking development, and ensuring traceability from requirements through deployment. The current scattered approach using multiple tools creates inefficiency.
+The organization needs a unified platform for managing requirements, tracking development, and ensuring traceability from requirements through deployment. The current scattered approach using multiple tools creates inefficiency.
 
 **Decision Drivers**
 
@@ -109,7 +109,7 @@ Siemens needs a unified platform for managing requirements, tracking development
 
 Chosen option: **GitLab**, because:
 
-* Already deployed and in use at Siemens for code repositories
+* Already deployed and in use for code repositories
 * Single platform reduces license costs and training overhead
 * Native CI/CD integration with requirements validation
 * Strong requirement traceability features (Ultimate tier)
@@ -188,7 +188,7 @@ mindmap
 
 ## 🎯 Sample Decision Log for DevOps PPT Project
 
-### Siemens DevOps - People, Processes & Tools Initiative
+### DevOps - People, Processes & Tools Initiative
 
 | Decision ID | Date | Category | Decision Title | Stakeholders Involved | Decision | Rationale | Impact | Status |
 |-------------|------|----------|----------------|----------------------|----------|-----------|--------|--------|
@@ -397,7 +397,9 @@ An effective Decision Log:
 
 ---
 
+**© 2025 Microsoft Global Delivery - Requirements Management Framework**
+
 **Version:** 1.0  
 **Last Updated:** November 11, 2025  
-**Author:** Pavleen Bali, Senior Cloud Solution Architect  
-**For:** Siemens - DevOps PPT Initiative
+**Author:** Pavleen Bali, Cloud Solution Architect  
+**For:** Customer Engagement - DevOps PPT Initiative
