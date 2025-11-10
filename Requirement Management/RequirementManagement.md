@@ -1565,21 +1565,33 @@ flowchart LR
 
 1. **[Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md)** - Quick start guide for customers with GitLab-specific recommendations
 2. **[GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md)** - Cheat sheet for GitLab requirements management commands and workflows
+3. **[Requirements Traceability Matrix](RequirementsTraceabilityMatrix.md)** - Track requirements through the entire SDLC with forward and backward traceability
+4. **[Decision Log](DecisionLog.md)** - Architectural Decision Records (ADR) with stakeholder voting and RACI matrix
+5. **[Pipeline Requirements](PipelineRequirements.md)** - CI/CD integration for automated requirement validation and testing
 
 ### Document Suite Overview
 
 ```mermaid
-graph LR
+graph TB
     MAIN[RequirementManagement.md<br/>Main Framework] --> IMPL[IMPLEMENTATION_GUIDE.md<br/>Quick Start]
     MAIN --> QUICK[GITLAB_QUICK_REFERENCE.md<br/>Cheat Sheet]
+    MAIN --> RTM[RequirementsTraceabilityMatrix.md<br/>Traceability]
+    MAIN --> DL[DecisionLog.md<br/>Decision Tracking]
+    MAIN --> PR[PipelineRequirements.md<br/>CI/CD Validation]
     
     IMPL --> TEAM[For Project Teams<br/>& Managers]
     QUICK --> DEV[For Developers<br/>& Engineers]
     MAIN --> EXEC[For Executives<br/>& Stakeholders]
+    RTM --> QA[For QA Engineers<br/>& BAs]
+    DL --> ARCH[For Architects<br/>& Product Owners]
+    PR --> DEVOPS[For DevOps<br/>Engineers]
     
     style MAIN fill:#4c6ef5,stroke:#364fc7,color:#fff
     style IMPL fill:#37b24d,stroke:#2b8a3e,color:#fff
     style QUICK fill:#fc6d26,stroke:#e24329,color:#fff
+    style RTM fill:#20c997,stroke:#12b886,color:#fff
+    style DL fill:#ff6b6b,stroke:#fa5252,color:#fff
+    style PR fill:#748ffc,stroke:#5c7cfa,color:#fff
 ```
 
 ---
@@ -1597,14 +1609,22 @@ graph LR
 **Project Managers & BAs:**
 1. Read complete RequirementManagement.md
 2. Follow [Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md)
-3. Setup pilot project
-4. Train team
+3. Create [Requirements Traceability Matrix](RequirementsTraceabilityMatrix.md)
+4. Setup [Decision Log](DecisionLog.md) for tracking
+5. Setup pilot project
+6. Train team
 
 **Developers & Engineers:**
 1. Review [GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md)
-2. Configure CI/CD integration
+2. Configure CI/CD integration with [Pipeline Requirements](PipelineRequirements.md)
 3. Start linking code to requirements
 4. Automate validation
+
+**QA Engineers:**
+1. Review [Requirements Traceability Matrix](RequirementsTraceabilityMatrix.md)
+2. Map test cases to requirements
+3. Setup automated validation
+4. Track coverage metrics
 
 ---
 
