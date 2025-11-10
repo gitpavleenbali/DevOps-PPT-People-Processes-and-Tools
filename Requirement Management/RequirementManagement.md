@@ -15,8 +15,18 @@
 8. [Common Challenges & Solutions](#common-challenges--solutions)
 9. [Best Practices](#best-practices)
 10. [Change Management](#change-management)
-11. [Azure DevOps Integration](#azure-devops-integration)
-12. [Conclusion](#conclusion)
+11. [Platform Integration Options](#platform-integration-options)
+    - [Option 1: Azure DevOps Integration](#option-1-azure-devops-integration)
+    - [Option 2: GitLab Integration](#option-2-gitlab-integration)
+12. [Platform Comparison Matrix](#platform-comparison-matrix)
+13. [Success Metrics & KPIs](#success-metrics--kpis)
+14. [Documentation Templates](#documentation-templates)
+15. [Conclusion](#conclusion)
+16. [Getting Started Checklist](#getting-started-checklist)
+17. [Additional Resources](#additional-resources)
+18. [Additional Documentation](#additional-documentation)
+19. [Getting Started Roadmap](#getting-started-roadmap)
+20. [Document Control](#document-control)
 
 ---
 
@@ -1549,7 +1559,7 @@ flowchart LR
 
 ---
 
-## � Additional Documentation
+## 📚 Additional Documentation
 
 ### Companion Guides
 
@@ -1560,7 +1570,7 @@ flowchart LR
 
 ```mermaid
 graph LR
-    MAIN[README.md<br/>Main Framework] --> IMPL[IMPLEMENTATION_GUIDE.md<br/>Quick Start]
+    MAIN[RequirementManagement.md<br/>Main Framework] --> IMPL[IMPLEMENTATION_GUIDE.md<br/>Quick Start]
     MAIN --> QUICK[GITLAB_QUICK_REFERENCE.md<br/>Cheat Sheet]
     
     IMPL --> TEAM[For Project Teams<br/>& Managers]
@@ -1585,20 +1595,20 @@ graph LR
 4. Review [Success Metrics](#success-metrics--kpis)
 
 **Project Managers & BAs:**
-1. Read complete [README.md](README.md)
-2. Follow [Implementation Guide](IMPLEMENTATION_GUIDE.md)
+1. Read complete RequirementManagement.md
+2. Follow [Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md)
 3. Setup pilot project
 4. Train team
 
 **Developers & Engineers:**
-1. Review [GitLab Quick Reference](GITLAB_QUICK_REFERENCE.md)
+1. Review [GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md)
 2. Configure CI/CD integration
 3. Start linking code to requirements
 4. Automate validation
 
 ---
 
-## �📄 Document Control
+## 📄 Document Control
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
@@ -1609,7 +1619,7 @@ graph LR
 
 ## 🌟 What's Included in This Package
 
-✅ **README.md** (This Document)
+✅ **RequirementManagement.md** (This Document)
 - Complete requirements management framework
 - 30+ professional Mermaid diagrams
 - Azure DevOps AND GitLab integration options
