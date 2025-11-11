@@ -239,8 +239,8 @@ flowchart TD
     
     style Start fill:#4c6ef5,stroke:#364fc7,color:#fff
     style End fill:#37b24d,stroke:#2b8a3e,color:#fff
-    style VALID fill:#ffd43b,stroke:#fab005
-    style APPROVE fill:#ffd43b,stroke:#fab005
+    style VALID fill:#ffd43b,stroke:#fab005,color:#000
+    style APPROVE fill:#ffd43b,stroke:#fab005,color:#000
 ```
 
 ---
@@ -320,8 +320,8 @@ flowchart LR
     CHOICE{Choose<br/>Method} --> SI
     CHOICE --> JRD
     
-    style SI fill:#e3fafc,stroke:#0c8599
-    style JRD fill:#fff3bf,stroke:#fab005
+    style SI fill:#e3fafc,stroke:#0c8599,color:#000
+    style JRD fill:#fff3bf,stroke:#fab005,color:#000
     style CHOICE fill:#4c6ef5,stroke:#364fc7,color:#fff
 ```
 
