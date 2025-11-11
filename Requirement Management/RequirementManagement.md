@@ -32,7 +32,7 @@
 
 ## 🎯 Executive Summary
 
-**Purpose**: This framework provides a structured approach to requirements gathering and change management for Microsoft Global Delivery engagements, ensuring on-time delivery of software projects while managing scope and cost effectively.
+**Purpose**: This framework provides a structured approach to requirements gathering and change management, ensuring on-time delivery of software projects while managing scope and cost effectively. This guide incorporates Microsoft best practices for enterprise requirements management.
 
 **Target Audience**: Consultants, Project Managers, Engagement Managers, Technical Sales, and Solution Architects involved in customer requirements gathering.
 
@@ -1662,9 +1662,7 @@ graph TB
 
 ---
 
-**© 2025 Microsoft Global Delivery - Requirements Management Framework**
-
-*This comprehensive documentation suite provides everything needed for enterprise-grade requirements gathering and change management. For questions or feedback, please contact your engagement manager.*
+*This comprehensive documentation suite provides everything needed for enterprise-grade requirements gathering and change management, incorporating Microsoft best practices. For questions or feedback, please contact your engagement manager.*
 
 **Next Steps:**
 1. Review this README for overall framework
