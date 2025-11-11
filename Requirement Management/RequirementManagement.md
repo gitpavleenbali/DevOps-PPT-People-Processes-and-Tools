@@ -52,6 +52,7 @@
 Requirements are the foundation of successful software delivery. However, common issues include:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffcc00','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#66ccff','tertiaryColor':'#ff9999'}}}%%
 mindmap
   root((Common<br/>Project<br/>Problems))
     Unclear Scope
@@ -95,8 +96,8 @@ flowchart TD
     
     style A fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px,color:#fff
     style K fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px,color:#fff
-    style F fill:#ffa94d,stroke:#fd7e14
-    style G fill:#ffa94d,stroke:#fd7e14
+    style F fill:#ffa94d,stroke:#fd7e14,color:#000
+    style G fill:#ffa94d,stroke:#fd7e14,color:#000
 ```
 
 ---
@@ -139,6 +140,7 @@ graph TB
 ### User Requirement Categories
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#66ccff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcc99','tertiaryColor':'#99ff99'}}}%%
 mindmap
   root((User<br/>Requirements))
     Conscious
@@ -362,6 +364,7 @@ flowchart TD
 ### Requirements Volatility - Root Causes
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ff9999','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#99ccff','tertiaryColor':'#ffcc99'}}}%%
 mindmap
   root((Requirement<br/>Volatility<br/>Causes))
     Internal Factors
@@ -553,9 +556,9 @@ graph TB
     
     RESOLUTION --> QUALITY[Quality<br/>Requirements<br/>Document]
     
-    style ANAL fill:#ff8787,stroke:#fa5252
-    style DOC fill:#ffa94d,stroke:#fd7e14
-    style RESOLUTION fill:#69db7c,stroke:#51cf66
+    style ANAL fill:#ff8787,stroke:#fa5252,color:#000
+    style DOC fill:#ffa94d,stroke:#fd7e14,color:#000
+    style RESOLUTION fill:#69db7c,stroke:#51cf66,color:#000
     style QUALITY fill:#37b24d,stroke:#2b8a3e,color:#fff
 ```
 
@@ -566,6 +569,7 @@ graph TB
 ### Comprehensive Best Practices Framework
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#99ccff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcc99','tertiaryColor':'#ccffcc'}}}%%
 mindmap
   root((Best<br/>Practices))
     Elicitation
@@ -630,7 +634,7 @@ flowchart LR
     
     style REQ fill:#37b24d,stroke:#2b8a3e,color:#fff
     style NICE fill:#fab005,stroke:#f59f00,color:#fff
-    style OPT fill:#adb5bd,stroke:#868e96
+    style OPT fill:#adb5bd,stroke:#868e96,color:#000
     style IMP fill:#4c6ef5,stroke:#364fc7,color:#fff
 ```
 
@@ -698,7 +702,7 @@ flowchart TD
     
     style STEP1 fill:#4c6ef5,stroke:#364fc7,color:#fff
     style STEP6 fill:#37b24d,stroke:#2b8a3e,color:#fff
-    style CAB_PROCESS fill:#e3fafc,stroke:#0c8599
+    style CAB_PROCESS fill:#e3fafc,stroke:#0c8599,color:#000
     style REVIEW fill:#f59f00,stroke:#e67700,color:#fff
 ```
 
@@ -736,6 +740,7 @@ graph TB
 ### Change Management Best Practices
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ccffcc','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcccc','tertiaryColor':'#ccccff'}}}%%
 mindmap
   root((Change<br/>Management<br/>Best Practices))
     Empathy
@@ -869,6 +874,7 @@ flowchart TB
 ### Azure DevOps Requirements Features
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#99ccff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcc99','tertiaryColor':'#ccffcc'}}}%%
 mindmap
   root((Azure DevOps<br/>Requirements<br/>Management))
     Work Item Types
@@ -1076,6 +1082,7 @@ graph TB
 ### GitLab Requirements Features Matrix
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffcc99','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ccffcc','tertiaryColor':'#99ccff'}}}%%
 mindmap
   root((GitLab<br/>Requirements<br/>Management))
     Native Requirements
@@ -1194,7 +1201,7 @@ flowchart TD
     style START fill:#fc6d26,stroke:#e24329,color:#fff
     style SATISFIED fill:#37b24d,stroke:#2b8a3e,color:#fff
     style FAILED fill:#ff6b6b,stroke:#c92a2a,color:#fff
-    style ARCHIVED fill:#adb5bd,stroke:#868e96
+    style ARCHIVED fill:#adb5bd,stroke:#868e96,color:#000
 ```
 
 ### GitLab Requirements Best Practices
@@ -1398,6 +1405,7 @@ flowchart TD
 ### Key Performance Indicators
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ccffcc','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcccc','tertiaryColor':'#ccccff'}}}%%
 mindmap
   root((Requirements<br/>Success<br/>Metrics))
     Quality Metrics
@@ -1473,6 +1481,7 @@ flowchart TD
 ### Key Takeaways
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffcc99','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#99ccff','tertiaryColor':'#ccffcc'}}}%%
 mindmap
   root((Requirements<br/>Management<br/>Success))
     No Silver Bullet
