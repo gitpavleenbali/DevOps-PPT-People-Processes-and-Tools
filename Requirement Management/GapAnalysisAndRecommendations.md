@@ -333,8 +333,8 @@ graph LR
 
 | Jira Project | Purpose | Issue Types | Owner |
 |--------------|---------|-------------|-------|
-| **REQ** | Requirements Repository | Epic, Story, Task | Customer BA + HCL BA |
-| **MIG** | Migration Planning | Epic, Story, Subtask | HCL Migration Lead |
+| **REQ** | Requirements Repository | Epic, Story, Task | Customer BA + Partner BA |
+| **MIG** | Migration Planning | Epic, Story, Subtask | Partner Migration Lead |
 | **CHG** | Change Requests | Change, Task | Joint CAB |
 | **DEP** | Application Dependencies | Task, Subtask | Customer Architect |
 
@@ -381,11 +381,11 @@ graph LR
 
 ---
 
-## 🤝 HCL-Customer Process Alignment
+## 🤝 Vendor-Customer Process Alignment
 
 ### Cross-Organization RACI Matrix
 
-| Activity | Customer BA | HCL BA | Customer Architect | HCL Dev Lead | Customer PMO | Joint CAB |
+| Activity | Customer BA | Partner BA | Customer Architect | Partner Dev Lead | Customer PMO | Joint CAB |
 |----------|-------------|--------|-------------------|--------------|--------------|-----------|
 | **Define Requirements** | R | C | I | I | I | - |
 | **Approve Requirements** | A | C | C | - | I | - |
@@ -412,7 +412,7 @@ graph LR
 ```mermaid
 sequenceDiagram
     participant C as Customer BA
-    participant H as HCL BA
+    participant H as Partner BA
     participant J as Jira/GitLab
     participant CAB as Joint CAB
     participant D as Dev Team
@@ -507,7 +507,7 @@ Requirements Repository
    - Migration Wave: [Wave 1 | Wave 2 | Wave 3 | Wave 4]
    - Application: [App A | App B | App C]
    - Requirement Type: [Functional | Non-Functional | Migration | Dependency]
-   - Owner Organization: [HCL | Customer | Joint]
+   - Owner Organization: [Partner | Customer | Joint]
    - Approval Status: [Draft | Under Review | Approved | Rejected]
    - Dependency List: [Link to other requirements]
    ```
@@ -568,20 +568,20 @@ Confluence Space: Requirements Management
 
 ```mermaid
 graph TB
-    CAB[Joint Change Advisory Board<br/>HCL + Customer Executives]
+    CAB[Joint Change Advisory Board<br/>Partner + Customer Executives]
     
     CAB --> BA[Business Analysis Team]
     CAB --> ARCH[Architecture Team]
     CAB --> DEV[Development Team]
     
-    BA --> HCL_BA[HCL Business Analysts<br/>2-3 people]
+    BA --> Partner_BA[Partner Business Analysts<br/>2-3 people]
     BA --> CUST_BA[Customer Business Analysts<br/>2-3 people]
     
-    ARCH --> HCL_ARCH[HCL Architects<br/>1-2 people]
+    ARCH --> Partner_ARCH[Partner Architects<br/>1-2 people]
     ARCH --> CUST_ARCH[Customer Architects<br/>1-2 people]
     
-    DEV --> HCL_DEV[HCL Dev Leads<br/>3-5 people]
-    DEV --> HCL_QA[HCL QA Leads<br/>2-3 people]
+    DEV --> Partner_DEV[Partner Dev Leads<br/>3-5 people]
+    DEV --> Partner_QA[Partner QA Leads<br/>2-3 people]
     
     style CAB fill:#e74c3c,stroke:#c0392b,color:#fff
     style BA fill:#3498db,stroke:#2980b9,color:#fff
@@ -597,7 +597,7 @@ graph TB
 
 **Composition:**
 - Customer: Program Manager, Enterprise Architect, Product Owner
-- HCL: Engagement Manager, Solution Architect, Delivery Lead
+- Partner: Engagement Manager, Solution Architect, Delivery Lead
 
 **Responsibilities:**
 - Approve major requirement changes (Tier 3)
@@ -629,7 +629,7 @@ graph TB
 - Strong communication skills
 - Domain knowledge (migration projects)
 
-**Team Size:** 1-2 specialists (one from HCL, one from customer for alignment)
+**Team Size:** 1-2 specialists (one from partner, one from customer for alignment)
 
 ---
 
@@ -638,7 +638,7 @@ graph TB
 ### Phase 1: **Foundation & Quick Wins** (Week 1)
 
 #### Day 1-2: Assessment & Alignment
-- [ ] Conduct joint workshop with HCL and customer teams
+- [ ] Conduct joint workshop with partner and customer teams
 - [ ] Review current requirements in Jira/Confluence/Excel
 - [ ] Identify top 10 critical requirements for pilot
 - [ ] Define success criteria
@@ -662,7 +662,7 @@ graph TB
 #### Day 1-2: Process Definition
 - [ ] Document requirement creation workflow
 - [ ] Define approval workflows (Tier 1/2/3)
-- [ ] Create RACI matrix (HCL vs. Customer roles)
+- [ ] Create RACI matrix (partner vs. customer roles)
 - [ ] Setup Joint CAB meeting cadence
 
 #### Day 3-5: Migration Planning
@@ -701,7 +701,7 @@ graph TB
 ### Phase 4: **Rollout & Training** (Week 4)
 
 #### Day 1-2: Training
-- [ ] Train HCL team on new process
+- [ ] Train partner team on new process
 - [ ] Train customer team on new process
 - [ ] Create video tutorials
 - [ ] Document FAQs
@@ -772,8 +772,8 @@ graph LR
 
 | Change Type | Stakeholders Required | Decision SLA |
 |-------------|----------------------|--------------|
-| **Tier 1: Minor** | HCL Team Lead only | 24 hours |
-| **Tier 2: Moderate** | HCL + Customer BA | 3 business days |
+| **Tier 1: Minor** | Partner Team Lead only | 24 hours |
+| **Tier 2: Moderate** | Partner + Customer BA | 3 business days |
 | **Tier 3: Major** | Full CAB (5-7 people) | 1 week |
 
 ---
@@ -824,12 +824,12 @@ graph LR
 1. **Decision Required:** Jira vs. GitLab vs. Hybrid
    - **Recommendation:** Standardize Jira + integrate with GitLab (Option A)
    - **Rationale:** Faster adoption, less change management
-   - **Owner:** Customer + HCL leadership
+   - **Owner:** Customer + Partner leadership
    - **Deadline:** This week
 
 2. **Schedule Joint Workshop**
    - **Purpose:** Align on process, tool, and timeline
-   - **Attendees:** HCL BA, Customer BA, Architects from both sides
+   - **Attendees:** Partner BA, Customer BA, Architects from both sides
    - **Duration:** Half-day (4 hours)
    - **Deadline:** Next week
 
@@ -842,7 +842,7 @@ graph LR
 4. **Tool Configuration**
    - **Action:** Setup Jira project or GitLab group
    - **Include:** Custom fields, workflows, templates
-   - **Owner:** HCL DevOps lead
+   - **Owner:** Partner DevOps lead
    - **Deadline:** Next week
 
 ---
@@ -883,7 +883,7 @@ graph TB
 **Version:** 1.0  
 **Last Updated:** November 11, 2025  
 **Author:** Pavleen Bali, Cloud Solution Architect  
-**For:** Customer Engagement - HCL Migration Project
+**For:** Customer Engagement - Migration Project
 
 ---
 
@@ -957,7 +957,7 @@ All fields must be preserved in the new cloud-based CRM. Account Type must map t
 **Rollback Criteria:**  
 - If >1% of customer records fail validation, rollback
 
-**Owner:** HCL  
+**Owner:** Partner  
 **Approver:** Customer Product Owner  
 **Target Migration Wave:** Wave 2
 ```
