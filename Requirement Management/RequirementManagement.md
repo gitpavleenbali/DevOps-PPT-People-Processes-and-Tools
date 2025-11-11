@@ -5,28 +5,28 @@
 
 ## 📋 Table of Contents
 
-1. [Executive Summary](#executive-summary)
-2. [Introduction](#introduction)
-3. [Understanding Requirements](#understanding-requirements)
-4. [The Requirements Gathering Process](#the-requirements-gathering-process)
-5. [Key Stakeholders](#key-stakeholders)
-6. [Requirements Analysis Framework](#requirements-analysis-framework)
-7. [Characteristics of Quality Requirements](#characteristics-of-quality-requirements)
-8. [Common Challenges & Solutions](#common-challenges--solutions)
-9. [Best Practices](#best-practices)
-10. [Change Management](#change-management)
-11. [Platform Integration Options](#platform-integration-options)
-    - [Option 1: Azure DevOps Integration](#option-1-azure-devops-integration)
-    - [Option 2: GitLab Integration](#option-2-gitlab-integration)
-12. [Platform Comparison Matrix](#platform-comparison-matrix)
-13. [Success Metrics & KPIs](#success-metrics--kpis)
-14. [Documentation Templates](#documentation-templates)
-15. [Conclusion](#conclusion)
-16. [Getting Started Checklist](#getting-started-checklist)
-17. [Additional Resources](#additional-resources)
-18. [Additional Documentation](#additional-documentation)
-19. [Getting Started Roadmap](#getting-started-roadmap)
-20. [Document Control](#document-control)
+1. [Executive Summary](#-executive-summary)
+2. [Introduction](#-introduction)
+3. [Understanding Requirements](#-understanding-requirements)
+4. [The Requirements Gathering Process](#-the-requirements-gathering-process)
+5. [Key Stakeholders](#-key-stakeholders)
+6. [Requirements Analysis Framework](#-requirements-analysis-framework)
+7. [Characteristics of Quality Requirements](#-characteristics-of-quality-requirements)
+8. [Common Challenges & Solutions](#️-common-challenges--solutions)
+9. [Best Practices](#-best-practices)
+10. [Change Management](#-change-management)
+11. [Platform Integration Options](#️-platform-integration-options)
+    - [Option 1: Azure DevOps Integration](#-option-1-azure-devops-integration)
+    - [Option 2: GitLab Integration](#-option-2-gitlab-integration)
+12. [Platform Comparison Matrix](#-platform-comparison-matrix)
+13. [Success Metrics & KPIs](#-success-metrics--kpis)
+14. [Documentation Templates](#-documentation-templates)
+15. [Conclusion](#-conclusion)
+16. [Getting Started Checklist](#-getting-started-checklist)
+17. [Additional Resources](#-additional-resources)
+18. [Additional Documentation](#-additional-documentation)
+19. [Getting Started Roadmap](#-getting-started-roadmap)
+20. [Document Control](#-document-control)
 
 ---
 
@@ -1560,6 +1560,8 @@ flowchart LR
 ---
 
 ## 📚 Additional Documentation
+
+> **Note**: The companion guides and getting started roadmap referenced below are currently under development and will be made available after the completion of Day 2 of the workshop.
 
 ### Companion Guides
 
