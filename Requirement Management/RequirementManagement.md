@@ -19,8 +19,9 @@
     - [Option 1: Azure DevOps Integration](#-option-1-azure-devops-integration)
     - [Option 2: GitLab Integration](#-option-2-gitlab-integration)
 12. [Platform Comparison Matrix](#-platform-comparison-matrix)
-13. [Success Metrics & KPIs](#-success-metrics--kpis)
-14. [Documentation Templates](#-documentation-templates)
+13. [SOW Mapping Workflow](#-sow-mapping-workflow)
+14. [Success Metrics & KPIs](#-success-metrics--kpis)
+15. [Documentation Templates](#-documentation-templates)
 15. [Conclusion](#-conclusion)
 16. [Getting Started Checklist](#-getting-started-checklist)
 17. [Additional Resources](#-additional-resources)
@@ -1400,6 +1401,95 @@ flowchart TD
 
 ---
 
+## 📋 SOW Mapping Workflow
+
+### Standard Statement of Work (SOW) Mapping
+
+For a comprehensive guide on mapping Statement of Work (SOW) documents to requirements and ensuring complete traceability from contractual obligations to technical deliverables, please refer to the dedicated SOW Mapping Workflow document.
+
+**[📄 SOW Mapping Workflow Guide](SOWMappingWorkflow.md)**
+
+This comprehensive guide includes:
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#99ccff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffcc99','tertiaryColor':'#ccffcc'}}}%%
+mindmap
+  root((SOW Mapping<br/>Workflow))
+    SOW Structure
+      Standard Components
+      Hierarchical Organization
+      Deliverable Definitions
+      Acceptance Criteria
+    Mapping Process
+      SOW Analysis
+      Requirement Decomposition
+      Traceability Matrix
+      Work Item Creation
+    Templates
+      SOW Document Template
+      Mapping Matrix Template
+      Deliverable Tracker
+      Status Dashboard
+    Tool Integration
+      Confluence Templates
+      Microsoft Loop Components
+      Azure DevOps Linking
+      GitLab Integration
+    Best Practices
+      Early Engagement
+      Comprehensive Coverage
+      Change Control
+      Regular Reviews
+```
+
+### Key Features of SOW Mapping
+
+```mermaid
+flowchart LR
+    SOW[SOW Document] --> PARSE[Parse & Analyze<br/>Deliverables]
+    PARSE --> MAP[Map to<br/>Requirements]
+    MAP --> TRACK[Track in<br/>Azure DevOps/GitLab]
+    TRACK --> REPORT[Status<br/>Reporting]
+    REPORT --> DELIVER[Client<br/>Acceptance]
+    
+    DELIVER -.Validates.-> SOW
+    
+    style SOW fill:#4c6ef5,stroke:#364fc7,color:#fff
+    style MAP fill:#f59f00,stroke:#e67700,color:#fff
+    style DELIVER fill:#37b24d,stroke:#2b8a3e,color:#fff
+```
+
+### When to Use SOW Mapping
+
+- ✅ **Contract Initiation**: When a new SOW is signed
+- ✅ **Project Planning**: Before starting development work
+- ✅ **Scope Changes**: When SOW amendments are required
+- ✅ **Progress Reviews**: Regular tracking of SOW commitments
+- ✅ **Client Reporting**: Demonstrating SOW compliance
+- ✅ **Acceptance Testing**: Validating against SOW criteria
+
+### SOW Mapping Benefits
+
+| Benefit | Description | Impact |
+|---------|-------------|--------|
+| **Complete Traceability** | Every SOW item mapped to requirements and deliverables | Reduced scope disputes |
+| **Clear Acceptance** | SOW acceptance criteria flow to requirement level | Faster client approval |
+| **Risk Mitigation** | Early identification of gaps and ambiguities | Fewer surprises |
+| **Status Visibility** | Real-time tracking of SOW deliverable progress | Better stakeholder confidence |
+| **Change Management** | Formal process for SOW amendments | Controlled scope changes |
+| **Compliance** | Audit trail from SOW to delivery | Contract compliance |
+
+### Quick Start with SOW Mapping
+
+1. **Review the [SOW Mapping Workflow Guide](SOWMappingWorkflow.md)** for detailed methodology
+2. **Use the provided templates** for SOW documentation and mapping
+3. **Configure your tool** (Confluence, Microsoft Loop, Azure DevOps, or GitLab)
+4. **Create traceability links** from SOW items to work items
+5. **Setup automated reporting** for regular status updates
+6. **Establish review cadence** for ongoing SOW compliance validation
+
+---
+
 ## 📈 Success Metrics & KPIs
 
 ### Key Performance Indicators
@@ -1574,22 +1664,25 @@ flowchart LR
 
 ### Companion Guides
 
-1. **[Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md)** - Quick start guide for customers with GitLab-specific recommendations
-2. **[GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md)** - Cheat sheet for GitLab requirements management commands and workflows
-3. **[Requirements Traceability Matrix](RequirementsTraceabilityMatrix.md)** - Track requirements through the entire SDLC with forward and backward traceability
-4. **[Decision Log](DecisionLog.md)** - Architectural Decision Records (ADR) with stakeholder voting and RACI matrix
-5. **[Pipeline Requirements](PipelineRequirements.md)** - CI/CD integration for automated requirement validation and testing
+1. **[SOW Mapping Workflow](SOWMappingWorkflow.md)** ✅ - Complete guide for mapping Statement of Work to requirements with templates for Confluence and Microsoft Loop
+2. **[Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md)** - Quick start guide for customers with GitLab-specific recommendations
+3. **[GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md)** - Cheat sheet for GitLab requirements management commands and workflows
+4. **[Requirements Traceability Matrix](RequirementsTraceabilityMatrix.md)** - Track requirements through the entire SDLC with forward and backward traceability
+5. **[Decision Log](DecisionLog.md)** - Architectural Decision Records (ADR) with stakeholder voting and RACI matrix
+6. **[Pipeline Requirements](PipelineRequirements.md)** - CI/CD integration for automated requirement validation and testing
 
 ### Document Suite Overview
 
 ```mermaid
 graph TB
-    MAIN[RequirementManagement.md<br/>Main Framework] --> IMPL[IMPLEMENTATION_GUIDE.md<br/>Quick Start]
+    MAIN[RequirementManagement.md<br/>Main Framework] --> SOW[SOWMappingWorkflow.md<br/>SOW Mapping]
+    MAIN --> IMPL[IMPLEMENTATION_GUIDE.md<br/>Quick Start]
     MAIN --> QUICK[GITLAB_QUICK_REFERENCE.md<br/>Cheat Sheet]
     MAIN --> RTM[RequirementsTraceabilityMatrix.md<br/>Traceability]
     MAIN --> DL[DecisionLog.md<br/>Decision Tracking]
     MAIN --> PR[PipelineRequirements.md<br/>CI/CD Validation]
     
+    SOW --> PM[For Project Managers<br/>& Engagement Managers]
     IMPL --> TEAM[For Project Teams<br/>& Managers]
     QUICK --> DEV[For Developers<br/>& Engineers]
     MAIN --> EXEC[For Executives<br/>& Stakeholders]
@@ -1598,6 +1691,7 @@ graph TB
     PR --> DEVOPS[For DevOps<br/>Engineers]
     
     style MAIN fill:#4c6ef5,stroke:#364fc7,color:#fff
+    style SOW fill:#f59f00,stroke:#e67700,color:#fff
     style IMPL fill:#37b24d,stroke:#2b8a3e,color:#fff
     style QUICK fill:#fc6d26,stroke:#e24329,color:#fff
     style RTM fill:#20c997,stroke:#12b886,color:#fff
@@ -1645,6 +1739,7 @@ graph TB
 |---------|------|--------|---------|
 | 1.0 | 10/11/2025 | Pavleen Bali | Initial comprehensive framework with visual diagrams |
 | 1.1 | 10/11/2025 | Pavleen Bali | Added GitLab Option 2, comparison matrix, implementation guides |
+| 1.2 | [Current Date] | Requirements Team | Added SOW Mapping Workflow (Task #12) |
 
 ---
 
@@ -1656,6 +1751,14 @@ graph TB
 - Azure DevOps AND GitLab integration options
 - Best practices and methodologies
 - Change management processes
+
+✅ **SOWMappingWorkflow.md** (NEW - Task #12)
+- Standard Statement of Work mapping workflow
+- SOW-to-requirements traceability framework
+- Ready-to-use templates for Confluence and Microsoft Loop
+- Deliverable tracking and acceptance criteria
+- Best practices for SOW management
+- 15+ detailed workflow diagrams
 
 ✅ **IMPLEMENTATION_GUIDE.md**
 - Platform selection guidance
@@ -1677,5 +1780,6 @@ graph TB
 
 **Next Steps:**
 1. Review this README for overall framework
-2. Check [Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md) for customer-specific recommendations
-3. Use [GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md) as daily cheat sheet
+2. **NEW:** Check [SOW Mapping Workflow](SOWMappingWorkflow.md) for SOW-to-requirements mapping
+3. Check [Implementation Guide](../_docs/IMPLEMENTATION_GUIDE.md) for customer-specific recommendations
+4. Use [GitLab Quick Reference](../_docs/GITLAB_QUICK_REFERENCE.md) as daily cheat sheet
