@@ -141,9 +141,9 @@ TC4 --> BUG2
 # GitLab Project → Settings → Integrations → Jira
 
 Jira Configuration:
-  Web URL: https://siemens.atlassian.net
-  Jira API URL: https://siemens.atlassian.net
-  Username: gitlab-integration@siemens.com
+  Web URL: https://customer.atlassian.net
+  Jira API URL: https://customer.atlassian.net
+  Username: gitlab-integration@customer.com
   Password/API Token: [Jira API Token]
   
 Enable:
@@ -171,7 +171,7 @@ Tests: ADM-SEC-001
 # .gitlab-ci.yml - Autonomous Traceability Update
 
 variables:
-  JIRA_URL: "https://siemens.atlassian.net"
+  JIRA_URL: "https://customer.atlassian.net"
   JIRA_PROJECT: "UTM"
 
 # After each test run, update Jira automatically
@@ -229,7 +229,7 @@ import requests
 from xml.etree import ElementTree
 
 # Configuration from GitLab CI/CD variables
-JIRA_URL = os.getenv("JIRA_URL", "https://siemens.atlassian.net")
+JIRA_URL = os.getenv("JIRA_URL", "https://customer.atlassian.net")
 JIRA_AUTH = os.getenv("JIRA_AUTH")  # Base64 encoded user:token
 PIPELINE_ID = os.getenv("CI_PIPELINE_ID", "local")
 
@@ -474,7 +474,7 @@ Actions:
   3. Lookup: affected_architecture = linked issues where linkType = "Derived By"
   4. For each in affected_architecture:
      - Add Label: "review-required"
-     - Send Email: architecture-team@siemens.com
+     - Send Email: architecture-team@customer.com
 ```
 
 #### Step 4: Confluence Live Traceability Dashboard
@@ -1206,7 +1206,7 @@ Actions:
 # .gitlab-ci.yml - Auto-Update Jira from Pipeline
 
 variables:
-  JIRA_URL: "https://siemens.atlassian.net"
+  JIRA_URL: "https://customer.atlassian.net"
   JIRA_PROJECT: "UTM"
 
 # Extract requirement IDs from commit messages

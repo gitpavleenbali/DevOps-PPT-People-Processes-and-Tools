@@ -962,9 +962,9 @@ AUTO --> BASE : Achieves
 
 # 1. GitLab CI/CD Variables (Project Settings → CI/CD → Variables)
 variables:
-  JIRA_URL: "https://siemens.atlassian.net"
+  JIRA_URL: "https://customer.atlassian.net"
   JIRA_TOKEN: $JIRA_API_TOKEN  # Stored as masked variable
-  CONFLUENCE_URL: "https://siemens.atlassian.net/wiki"
+  CONFLUENCE_URL: "https://customer.atlassian.net/wiki"
 
 # 2. Post-Pipeline: Update Jira automatically
 .update_jira: &update_jira
