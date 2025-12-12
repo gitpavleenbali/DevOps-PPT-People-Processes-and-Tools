@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title L3: Compliance Testing (BDD)
+
+rectangle "📥 Input" as INPUT #D4E6F1 {
+  card "Terraform Plan\nplan.json" as PLAN
+  card "Feature Files\n.feature" as FEAT
+}
+
+rectangle "🥒 BDD Engine" as BDD #B7950B {
+  card "terraform-compliance\nGherkin Syntax" as COMP
+}
+
+rectangle "📋 Policy Rules" as RULES #FCF3CF {
+  card "Tagging Policy" as TAG
+  card "Region Restrictions" as REG
+  card "Network Rules" as NET
+  card "Security Baseline" as SEC
+}
+
+rectangle "✅ Result" as RESULT #FEFEFE {
+  card "Pass → Continue" as PASS #1E8449
+  card "Fail → Block" as FAIL #C0392B
+}
+
+INPUT --> BDD
+BDD --> RULES
+RULES --> RESULT
+
+@enduml

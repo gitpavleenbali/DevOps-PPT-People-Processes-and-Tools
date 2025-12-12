@@ -1,0 +1,35 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #2C3E50
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title L1: Unit Testing with Mock Provider
+
+rectangle "📥 Input" as INPUT #D4E6F1;text:black {
+  card "Module Code\n(.tf files)" as MOD
+  card "Test Files\n(.tftest.hcl)" as TEST
+}
+
+rectangle "🎭 Mock Layer" as MOCK #FCF3CF;text:black {
+  card "mock_provider \"azurerm\" {}\nNo Cloud Calls\nFast Execution" as MP
+}
+
+rectangle "⚡ Execution" as EXEC #D5F5E3;text:black {
+  card "tofu test\nPlan Mode\nAssertions" as PLAN
+}
+
+rectangle "📤 Output" as OUTPUT #E8DAEF;text:black {
+  card "Pass / Fail\nCoverage Report" as ASSERT
+}
+
+INPUT --> MOCK
+MOCK --> EXEC
+EXEC --> OUTPUT
+
+@enduml

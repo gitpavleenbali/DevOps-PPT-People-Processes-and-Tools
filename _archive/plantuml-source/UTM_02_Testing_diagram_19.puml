@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 📋 User Story → Test Case → Acceptance Criteria → UAT
+
+rectangle "📝 USER STORY" as US #7D3C98 {
+  card "As a payment team\nI want storage encrypted\nSo data is protected" as USC
+}
+
+rectangle "📐 ACCEPTANCE CRITERIA" as AC #2874A6 {
+  card "1. Storage uses SSE-CMK\n2. Key stored in Key Vault\n3. Audit logs enabled" as ACC
+}
+
+rectangle "🧪 TEST CASES" as TC #B7950B {
+  card "TC-001: Verify SSE enabled\nTC-002: Verify CMK reference\nTC-003: Verify audit logs" as TCC
+}
+
+rectangle "✅ ACCEPTANCE TESTS" as AT #1E8449 {
+  card "L1: Unit test encryption config\nL2: Security scan passes\nL5: UAT sign-off" as ATC
+}
+
+rectangle "📊 UAT RESULT" as UAT #C0392B {
+  card "✅ All criteria met\n✅ PO Sign-off\n✅ Ready for Production" as UATC
+}
+
+US --> AC : Defines
+AC --> TC : Generates
+TC --> AT : Implements
+AT --> UAT : Validates
+
+@enduml

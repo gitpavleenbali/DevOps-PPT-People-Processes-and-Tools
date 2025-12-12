@@ -1,0 +1,32 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+
+title 🌟 USCM: The Culture Shift
+
+rectangle "❌ WITHOUT USCM" as WITHOUT #C0392B {
+}
+note right of WITHOUT
+  • Siloed teams
+  • Manual tracking
+  • Lost decisions
+  • Hope-based quality
+  • Audit panic
+end note
+
+rectangle "✅ WITH USCM" as WITH #1E8449 {
+}
+note right of WITH
+  • Unified teams
+  • Autonomous tracking
+  • Traceable decisions
+  • Measured quality
+  • Audit-ready always
+end note
+
+WITHOUT -right-> WITH : "Cultural\nTransformation"
+
+@enduml

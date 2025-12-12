@@ -1,0 +1,29 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title 📊 Scenario Coverage Calculation
+
+|Test Execution|
+start
+:Run All Test Layers;
+:L0: Static (15 tests);
+:L1: Unit (15 tests);
+:L2: Security (15 tests);
+:L3: Compliance (10 tests);
+:L4: Integration (5 tests);
+
+|Analysis|
+:Count Results;
+note right
+  Total: 60 tests
+  Passed: 45
+  Failed: 15
+  Skipped: 0
+end note
+
+|Calculation|
+:Scenario Coverage = 45/60 = **75%**;
+stop
+
+@enduml

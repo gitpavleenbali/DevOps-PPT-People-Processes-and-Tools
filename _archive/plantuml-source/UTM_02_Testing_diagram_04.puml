@@ -1,0 +1,40 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title L2: Security Scanning Flow
+
+rectangle "🔒 Security Scanners" as SCAN #1E8449 {
+  card "checkov\nCIS Benchmarks\n1000+ policies" as CHK
+  card "tfsec\nTerraform SAST\nAzure specific" as TFS
+}
+
+rectangle "📋 Findings" as FIND #FEFEFE;text:black {
+  card "🔴 Critical" as CRIT #C0392B;text:white
+  card "🟠 High" as HIGH #D35400;text:white
+  card "🟡 Medium" as MED #B7950B;text:white
+  card "🟢 Low" as LOW #1E8449;text:white
+}
+
+rectangle "⚡ Pipeline Action" as ACTION #FEFEFE;text:black {
+  card "❌ BLOCK\nPipeline" as BLOCK #C0392B;text:white
+  card "⚠️ WARN\nOnly" as WARN #B7950B;text:white
+  card "✅ PASS" as PASS #1E8449;text:white
+}
+
+CHK --> FIND
+TFS --> FIND
+
+CRIT --> BLOCK
+HIGH --> BLOCK
+MED --> WARN
+LOW --> PASS
+
+@enduml

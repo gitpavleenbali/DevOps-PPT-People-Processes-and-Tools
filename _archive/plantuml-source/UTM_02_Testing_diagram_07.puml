@@ -1,0 +1,36 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title L5: User Acceptance Testing
+
+rectangle "🎯 UAT" as UAT #C0392B {
+  card "📋 Business Scenarios" as BC
+  card "👤 User Testing" as UT
+  card "✍️ Sign-Off" as SO
+}
+
+rectangle "Test Types" as TYPES #FCF3CF;text:black {
+  card "Functional\nValidation" as FUNC
+  card "Performance\nCheck" as PERF
+  card "Usability\nReview" as USAB
+  card "Regression\nSuite" as REG
+}
+
+rectangle "✅ Exit Criteria" as CRIT #1E8449 {
+  card "Acceptance Criteria Met" as AC
+  card "No Blocking Bugs" as NB
+  card "PO Approval" as PO
+}
+
+UAT --> TYPES
+TYPES --> CRIT
+
+@enduml

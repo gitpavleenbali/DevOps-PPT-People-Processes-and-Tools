@@ -1,0 +1,48 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Test Execution by Trigger Event
+
+rectangle "⚡ TRIGGER EVENTS" as TRIG #7D3C98;text:white
+
+rectangle "💾 File Save" as SAVE #D4E6F1;text:black {
+  card "L0: Format Check" as S1
+}
+
+rectangle "📝 Commit" as COMMIT #D5F5E3;text:black {
+  card "L0: Full Static" as C1
+  card "L1: Unit Tests" as C2
+}
+
+rectangle "🔀 Merge Request" as MR #FCF3CF;text:black {
+  card "L0-L1: Previous" as M1
+  card "L2: Security" as M2
+  card "L3: Compliance" as M3
+}
+
+rectangle "🏷️ Release Tag" as TAG #F9E79F;text:black {
+  card "L0-L3: Previous" as T1
+  card "L4: Integration" as T2
+}
+
+rectangle "🚀 Pre-Production" as PRE #FADBD8;text:black {
+  card "L0-L4: Previous" as P1
+  card "L5: UAT" as P2
+}
+
+TRIG --> SAVE
+TRIG --> COMMIT
+TRIG --> MR
+TRIG --> TAG
+TRIG --> PRE
+
+@enduml

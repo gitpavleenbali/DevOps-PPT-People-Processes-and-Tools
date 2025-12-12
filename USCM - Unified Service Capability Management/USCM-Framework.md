@@ -21,50 +21,11 @@
 
 ### 1.1 The USCM Vision
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_01
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_01.puml
+-->
+![Uscm Framework Diagram 01](https://www.plantuml.com/plantuml/svg/TPFDRjD04CVl-nH38YGG2kIpZP50TUnKZPHGb3Yfa7pPsDjarSskMQyhHQWI9ouWAi41YKkEI5ouyZoy07q4PjrOSGdObx5tvZ-_-TYZr51jifKWzyoIhHX4J6U2KKdI2ouJgkaAvZIwM6YLoTXJGcce7lVjM_BGB39KBWI3DmJWM4bJUEOFkIhvHbJ7VxirlLQ_KyT_lV-akYB4S8FwDvkFFs0wyKPFOIhvEMSnJ9Y-v143ZoPqpWKtQnXHIHTOZJI4xDWgDviFcpmOPeF9uFH51MYwDP6XUzXs3tAo7B7YPS9aci4ZUAbLnD8KhK0faORo6RYPKLAjL9Q2pmI_P7fzgzQmh7ToVduFq_4eb0NlcBtEkCxfK6g7ciUZ9rGR_MwxxPHGpaxS08o2USP57Cfc2rOgnZ5XV0UI9KsPXUl0WXgM5Zhx9DTVVl-y1jT765T7Isxmq5ReiuYdNCaz6dI5wg7VyfnkYURazAm4qoZ1kECUB1GsGr8PiK9Y7-JRTvW6fPO4B3NxhGWmkT_gjElr_UIOWv-lGta0WgwPJk71i5uRTXuYmsuo2KzmDh9eIV0FagzlmUyF1xF--5KeFTn8BZCREgCYkoq0Zw7grLjEirV2wDdYuTUxJzYyHAXrRewKv4Pf51eyyNoSo6JS3wNZF7RkunKHVBkUXMnEirs_MksvdLdv4pjtvpGO4MBNmtvWDB73AMpRgy8cHqp6zaR_0G)
 
-title 🎯 USCM: Unified Service Capability Management
-
-rectangle "🌟 USCM VISION" as VISION #2874A6 {
-  card "Culture + Process + Tools\n= Autonomous Delivery" as V1
-}
-
-rectangle "📋 URM\nUnified Requirements\nManagement" as URM #1E8449 {
-  card "WHAT to build\n23 modules\n5 phases + 5 gates" as URM1
-}
-
-rectangle "🏗️ ADM\nArchitecture Decision\nManagement" as ADM #7D3C98 {
-  card "HOW to build\n13 modules\nARB governance" as ADM1
-}
-
-rectangle "🧪 UTM\nUnified Test\nManagement" as UTM #D35400 {
-  card "HOW to verify\n6 layers (L0-L5)\nAutonomous pipelines" as UTM1
-}
-
-rectangle "🚀 DELIVERY\nContinuous Value" as DEL #C0392B {
-  card "Build → Deploy → Monitor\nCI/CD + SRE\n99.9% reliability" as DEL1
-}
-
-VISION --> URM
-VISION --> ADM
-VISION --> UTM
-
-URM --> DEL
-ADM --> DEL
-UTM --> DEL
-
-@enduml
-```
 
 ### 1.2 USCM Definition
 
@@ -78,44 +39,11 @@ UTM --> DEL
 
 ### 1.3 USCM in the DevOps/Agile Landscape
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam rectangle {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_02
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_02.puml
+-->
+![Uscm Framework Diagram 02](https://www.plantuml.com/plantuml/svg/TP91Jy8m5CVl_HHFTkE28WhgXTeDim1gW7alMnaBMxjq7KeCDuyUJFJkpS_dHx1qCnb3sqERz___sfVtNZzJLAeyYT6HMhA4WSza7ZFAKRQAU4ebJM1E_LKeHSu38c8XmHeukrrnfDf1GmRF260WkFhrcOMs5QTalg8yZ0-yRNBgd1thsFK_lsqHKf7Ie3SbOuWuw7p1PkkxD6lXCDA2uujiaocM8FIRKEFxy_KDy8qxSe1uevatSHf0ip9YjNlT3Zw_Kkn9NJuk8rLaLO4_Niel36Kx3tVtKx1Ed5wdSr77zi3tBvEdmKp2LjS-9HUzGmWgDMbuanAPZ0z5R1UYFlyWPoKvAyGjgXc8soAsiH2Ns7LrMXP6dtN9fSH8BYQeUBVA-J9F2f9ClF6-EAHyJhbHX_Zs6j_MM3nW1OgB_dAXgoAZSAb0B4pPD62gbqgnZWAMxPgkOyrcfcJkgroom8pdN73MR6fbeIUcw1W4B8xMJ6uGum7idaQehw-xMVy1)
 
-title USCM in the DevOps/Agile Ecosystem
-
-package "🌐 AGILE CULTURE" as AGILE #2874A6;text:white {
-  package "🔄 DevOps" as DEVOPS #1E8449;text:white {
-    package "📦 USCM" as USCM #7D3C98;text:white {
-      rectangle "URM" as URM
-      rectangle "ADM" as ADM
-      rectangle "UTM" as UTM
-    }
-    rectangle "CI/CD" as CICD
-    rectangle "SRE" as SRE
-    rectangle "IaC" as IAC
-  }
-  rectangle "Scrum" as SCRUM
-  rectangle "Kanban" as KANBAN
-  rectangle "SAFe" as SAFE
-}
-
-note right of USCM
-  USCM provides the
-  **structured backbone**
-  for DevOps delivery
-end note
-
-@enduml
-```
 
 ---
 
@@ -123,71 +51,11 @@ end note
 
 ### 2.1 Complete USCM Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_03
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_03.puml
+-->
+![Uscm Framework Diagram 03](https://www.plantuml.com/plantuml/svg/TLNDZjis4BxhAIRUGouswlLFaXf84ArbBpQmarIMUjA5IuzjmZJfa9GtGP1hBZa4I0yzzbYWJz3dwGkqZz0XwOrS5siR465-m_dc-sQebzOnu-gTJ1wv3UuGE9fQ8bE9tGgrPuRju9RnxTheMYt7Mce35zE9_vuW37B7r5eYV4m0fbgvUsJu99zEi9oPvJciD-vFXbtwx-g1L9-In0b7vvUByHmcQjbnkaCFc4fzDuAhsWg5ri9hn2NyzVaRl3LwMNCdj8B9UuvIekAO98-XpEUmmB2JDBHR__psovUmru5IYPMWOt9yLmj3cYXdOSuKMuTr2vWDo8lUiwU3z4ce9HJLUhjX5k5oHALH1Spdg1GnuKIj3RcMw1_5F1vnUHRN6q4cBDS7D1ygbGkx9NIfjahVALejkDvZZEoTHVP7y3EJuZxZOfxc1N0Z71h1sd3D7DeOsJ-B751EFA3KUrzQfLu9mtwu5cx6Ri7XRY-RqC5Pw704R_PeGavRgR7UxOXbMZkz2_yHutmIGuSKIh_o4ZgT5v5-sOjhJwZinxNFK0xYUkWjVmnfze1RNt_z-y-lORi3gU4RgfMxsY2LmuNrjfyvvg4NJxF--CTd9uxTAE74KRPhhxnYr2TaKZg-YM4dBaccb53hIcLKel2U58PnPBT22lSXmXjhChHYJSUcMKx8dshcGP0wPwAWQUD5ZWU1TmJDhzemtY3VIc6Fj1lP_wFsXfH06DC86IqZygXo6bKEJDAeSaYLHfN3WMbKEJsgN1OFgFpx7s6lcOa2hVlVB13Y8kiF1ztkYRApxWWMZlZoIasrePvetpSfwJiJn-2YsqJGu50UwaAdLpMrdwMGdURRg5VHE36ZKI6-DNKuJGhtWkb36zpA8e_OneOP3GVrvbuAxsobhhACa6WCMn6h3l--5GCRKsOq6pVAuTeS-wFmGP6LGIPXYNkfe-r5uzACvg9C2qfqVoSTlezcn1vzAhh1Wr1M4JqBj8leMM1IHC_2yKNqh3XwHjQhQ9bD_6tq_FcBqECZtqxDnLMffH479BA-6rk9XtYeDusWfwD3K5nvoa5wsqey9c3pW9tItUfV1PMIMkzRIV8IrTA_EVu5)
 
-title USCM End-to-End Flow: Business Need → Production Excellence
-
-' URM Section
-rectangle "📋 URM - Unified Requirements Management" as URM #2874A6 {
-  card "Phase 1: Foundation\nProcess, Roles, RTM" as U1
-  card "Phase 2: Discovery\nRisks, Unknowns, Scope" as U2
-  card "Phase 3: Validation\nSMART criteria, Gates" as U3
-  card "Phase 4: Development\nJira/GitLab templates" as U4
-  card "Phase 5: Operations\nComms, Automation, SRE" as U5
-  
-  U1 --> U2
-  U2 --> U3
-  U3 --> U4
-  U4 --> U5
-}
-
-' ADM Section
-rectangle "🏗️ ADM - Architecture Decision Management" as ADM #7D3C98 {
-  card "Initiation\nGovernance, RACI" as A1
-  card "Planning\nDomains, Traceability" as A2
-  card "Design\nADRs, Quality Attrs" as A3
-  card "Review\nARB, Checklist" as A4
-  card "Operations\nChange Control" as A5
-  
-  A1 --> A2
-  A2 --> A3
-  A3 --> A4
-  A4 --> A5
-}
-
-' UTM Section
-rectangle "🧪 UTM - Unified Test Management" as UTM #D35400 {
-  card "L0: Static\nFormat, Validate, Lint" as T0
-  card "L1: Unit\ntofu test, mocks" as T1
-  card "L2: Security\ncheckov, tfsec" as T2
-  card "L3: Compliance\nBDD, terraform-compliance" as T3
-  card "L4: Integration\nTerratest, real deploy" as T4
-  card "L5: UAT\nBusiness validation" as T5
-  
-  T0 --> T1
-  T1 --> T2
-  T2 --> T3
-  T3 --> T4
-  T4 --> T5
-}
-
-' Connections
-URM ==> ADM : "Requirements\ndrive design"
-ADM ==> UTM : "Architecture\ndefines tests"
-UTM ==> URM : "Feedback\nloop"
-
-@enduml
-```
 
 ### 2.2 Pillar Summary
 
@@ -203,47 +71,11 @@ UTM ==> URM : "Feedback\nloop"
 
 ### 3.1 URM Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_04
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_04.puml
+-->
+![Uscm Framework Diagram 04](https://www.plantuml.com/plantuml/svg/TPJFRjD04CRlVeeX4L8hLF3Vfia1DN6SAYXk8YSDGkfbQo_9AhOtx6vQAbI92mU4k00dXCI9f-1j-WGy0cDxwuPK95AKpFmyy-ryipcMYWYroLBZaLhIZ49CnIQb93VaYkLh8aW65oHUBGJVv8dFKowWEGYAznOXQAn8laWfl3C01ZnNTsJvCcwss9Y8P1UpVIVmJ8pr_jFgnZ0KKrZ_B0hXqdvgTi23oP98Ak49VZqXYah3kDVH-FFpwwUA0Ai3W_7PQRyx6uvF6q0aJ2piUTHokuUbab9I0qiVcCXE18-fb318-TLvNaRj3aoNHD048YhNF9ViWgLCNUkqqu5e5iBUJ92OaYgrhtCkvkYR3HCut5n9cD5idQ9QhSClZlQFx6-VjMnisXzE_V4yY5vLj0rDApXotVQkQWzH9cD-ISKrZFX2zpxiWB_4mXI6sPh4IeTRIDEOISRpBVW8XNRz8OH42VPM1zjuy9YlAVX5RRBGikrTsRS_FcZLE8jvTpJS7hO3pLwhxPcz7TaMkZWdAKk8AgJuInglKYQrJ0kjc6BzfE1VSh5wNVjXuMYgReNlzm_gTWzd-kMtvj6DVZ0FHkD969pEAjw5Pj_nNDFSbOT7US44gIsJkZiMEM5gH2vWAEM6rdcTzkfq6Etcq96GKiNo1OGits1DhU6Xvk_ljMQiDvu4KJdGQOLxqFHDfsq_c6YhdDcABdcQK86kPTcTQlHtn1PBTKMBpzs95aPF8zYBg19SwkMrqI3SdBHStSgaY9Ca8skTHukw6yMpAhVd3v_v_RjdqQCUbGgl4suUmni5UzCesDS7AC-Br_3Wu7cnrnreb5PQ3GD_bK6d3jhd-Ut7NstlCSXY5n5nAiIj4QT6fc4tcY7YLeXN8-vvRfdcOpZhOjeufdbI_Elz1G)
 
-title URM v2.0: 5 Phases + 5 Gates
-
-rectangle "📋 Phase 1: FOUNDATION" as P1 #2874A6 {
-  card "URM-01: Process Flow\nURM-02: Shared Responsibility\nURM-03: RTM (Traceability)\nURM-04: Requirements Template" as P1C
-}
-
-rectangle "🔍 Phase 2: DISCOVERY" as P2 #1E8449 {
-  card "URM-05: Discovery Log\nURM-06: Change Impact\nURM-07: Decision Log\nURM-08: RACI Matrix\nURM-09: Scope Coverage" as P2C
-}
-
-rectangle "✅ Phase 3: VALIDATION" as P3 #B7950B {
-  card "URM-10: Validation Checklist\nURM-11: Standard Workflow\nURM-12: Phase Gate Checklist" as P3C
-}
-
-rectangle "💻 Phase 4: DEVELOPMENT" as P4 #D35400 {
-  card "URM-13: Jira Templates\nURM-14: GitLab Issue Template\nURM-15: GitLab MR Template\nURM-16: Meeting Minutes" as P4C
-}
-
-rectangle "🚀 Phase 5: OPERATIONS" as P5 #C0392B {
-  card "URM-17: Stakeholder Comms\nURM-18: Lightweight Workflow\nURM-19: SSR (Retros)\nURM-20: Implementation Roadmap\nURM-21: Automation (CI/CD)\nURM-22: Best Practices (SRE)" as P5C
-}
-
-P1 --> P2 : "Gate 1"
-P2 --> P3 : "Gate 2\n≥95% scope"
-P3 --> P4 : "Gate 3\n≥95% SMART"
-P4 --> P5 : "Gate 4\n100% UAT"
-
-@enduml
-```
 
 ### 3.2 URM Key Outcomes
 
@@ -268,47 +100,11 @@ SoW Item → REQ-XXX → Jira Epic → GitLab MR → Deployment → Production
 
 ### 4.1 ADM Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_05
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_05.puml
+-->
+![Uscm Framework Diagram 05](https://www.plantuml.com/plantuml/svg/TLFDSjCm4BxhAPPaXbl0-MiQ7vWwZXCyq_pWPE32HR4rYIQAr97aj1scLnw0uHxW6U25U08UWPMQf2KjzcNNMdq_k-iBOwcsvKQG5tR5DWnofal1g2HcpUKLrNG32vglbrgLieYLK1ggWyIzZoeqoosLIy7W4m4OA6aFbVuXTuzgSwgBqx96t4pQ0Nxh_OVgZX3BBU97_H5iww-24DA2KSkLXD-Vlq2V2Rvb-fQG1ocLFxlT3qZ7wJoDvkbaN05gV8fyvvrMTEPLU3aLXAq5ZH262b4abJc3aIgO-2ZzIJE4B8fJ656h-SqHA7Qw_Y7y-Wkcbz5ud8w7liebKAqdvwrMzvIk5S9CYT9xwAiDvTBiwJeX6Z9yAM6kQSxeWWjkRu-0Jsbttw6VpDBXlKSCeThhTDj1xvIp7M87CvYppPMWbktvpaDuLrB70P55XulICdE0UeRj6sJ9-pJvu4imX6g_sMu5mIbRz-WZOrlEhY5UiNmjkB5xuZhAoNemrIfdni10gEi3vZEz_GcJQPBvMSvysMIAHkEWsMqyCNhcg7DkN7ClrVAUhuvh4wyGa46CowVLVhvrfwEqE0C_Z9SmLqfmURY5U_6MoiAjnkk9N2XaUJZ4rOXqlk8MfPQQOMkDnTE3Fc_3BrsjziPFZ_YTS1asbxXPkHWT4zT95-CrGYwOBDnl-HS)
 
-title ADM v1.0: Ideation → Delivery
-
-rectangle "🟢 INITIATION" as INIT #2874A6 {
-  card "ADM-02: Governance Model\nADM-03: RACI Matrix" as INITC
-}
-
-rectangle "🔵 PLANNING" as PLAN #1E8449 {
-  card "ADM-04: Solution Domains\nADM-07: Design Traceability" as PLANC
-}
-
-rectangle "🟡 DESIGN" as DES #B7950B {
-  card "ADM-05: ADR Template\nADM-08: Quality Attributes" as DESC
-}
-
-rectangle "🟠 REVIEW" as REV #D35400 {
-  card "ADM-09: Design Review Checklist\nADM-01: ARB Process Flow" as REVC
-}
-
-rectangle "🔴 OPERATIONS" as OPS #C0392B {
-  card "ADM-06: Decision Log\nADM-10: Change Control\nADM-11: Automation & Tooling\nADM-12: Handover/Onboarding\nADM-13: Architecture Testing" as OPSC
-}
-
-INIT --> PLAN
-PLAN --> DES
-DES --> REV
-REV --> OPS
-
-@enduml
-```
 
 ### 4.2 ADM Key Outcomes
 
@@ -340,52 +136,11 @@ Traceability:
 
 ### 5.1 UTM Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_06
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_06.puml
+-->
+![Uscm Framework Diagram 06](https://www.plantuml.com/plantuml/svg/TLDFZvD05B_FftYMYyQjKg3RbjDIoXeIscrQkecnnimEqtPIc6c6eQQQFNeoyQ0cNamycdZnE_a9_0XE2qPa5MwFtv_tU-znaIiiLP6bw9xQq8m2eR98AUOetpA-mn9dS8F9TYr5mHDVf4A2SHaStnf2Kg8mNwSKNYE0Iy7LR-JfGRSrBC4oQS8itmwwfguD_sDrYv1YIkiluZ7iEuzC5yxR4JvG2J7D5UDhc1wqEaiG-jDCw-UNTzyXwhhW-NumZRs97y3zXHS_Q07EzGSmVDCUMCDJFwV6MiCYPvpcELpZb2LOCS6NV8nvWLDu25wXH8OLJIe1_zZPNuOVFq7ak11O0Jo6S187JsPU75vDIe83niZkEgPPSuofb5eoLqi-ezh5UrL82YEwIyMXOjsr-V0M8ji5_seyZS9ZhX9fWp7i3RfcFP4wwg-4pDf4PBkKOKxeaWz78vWJoh5a8g_8_qZp7YBBXNdWBsPX_BJ4MM1qWhxZ36ecP4F9LkpFGAroIfRykaWvbVY6fKmTj17c5VUknzTl47LSM4p2kCHqz47qUuvtNWyXLWMKGye4sRxOIR5d2PKLewdwu_CRYFIHp6CzVBy4cM3qHhO_w3TbLvawWtsvRZqPjKePLnNd9AmFfVrimvA4ykU9UCdRUYL8xx9Pj95UGBDe8JsmPh63TCfcqKJeWlBa-3F-0W)
 
-title UTM v1.0: 6-Layer Testing Pyramid
-
-rectangle "🎯 L5: ACCEPTANCE (UAT)" as L5 #C0392B {
-  card "Business Validation\nManual + Automated" as L5C
-}
-
-rectangle "🔗 L4: E2E / INTEGRATION" as L4 #D35400 {
-  card "Terratest\nReal Azure Deploy" as L4C
-}
-
-rectangle "📋 L3: COMPLIANCE" as L3 #B7950B {
-  card "terraform-compliance\nBDD Scenarios" as L3C
-}
-
-rectangle "🔒 L2: SECURITY" as L2 #1E8449 {
-  card "checkov, tfsec\nVulnerability Scan" as L2C
-}
-
-rectangle "🧪 L1: UNIT" as L1 #2874A6 {
-  card "tofu test\nmock_provider" as L1C
-}
-
-rectangle "✅ L0: STATIC" as L0 #7D3C98 {
-  card "tofu fmt, validate\ntflint" as L0C
-}
-
-L5 -[hidden]down- L4
-L4 -[hidden]down- L3
-L3 -[hidden]down- L2
-L2 -[hidden]down- L1
-L1 -[hidden]down- L0
-
-@enduml
-```
 
 ### 5.2 UTM Key Outcomes
 
@@ -421,35 +176,11 @@ rules:
 
 ### 6.1 Complete Traceability Chain
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam card {
-  FontColor #FFFFFF
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_07
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_07.puml
+-->
+![Uscm Framework Diagram 07](https://www.plantuml.com/plantuml/svg/RLFBRXen5DtxAswPDIaDK60gHG7F414nXGw3GYGsPkOcM0mszNXeewfI5jrr4QcD5AcRB2lr2ohrevfFg6qIjPMmLpxddgFxyd6XcTBbEYVFz1BN22cgCaScIB7YOiCKMyE2fQjB9KkHKPbB1Lu_jFUVY9If33uGWBuK-Yd87VAH4CrrZl1mVti7qmcDu4Jc6Gf8bWfPvWELwqsE6Y5HB4Msu3dNLuGupyh3_TTFC95dCD2udejUMN21HG6l4RCAi08cepFm3cazRDPUQNol_NTBhl6l-ZDCuyY7E7nJdSrcSn7Zsv8hKwdGJcy8es-t6jsN-_GtTxz_ta0tC1RT8DvPT5LgOr9TAeG0KrvmAPoP2G6l5THffxtFxCilEEMA-H2E1_Jv91d5vtDn9jNALUSSJWTn5xmNORlHwEop-Fu3feb99g6xN18iD51Me5Cd5BoWtcpKzlRYzXfEk1woXGzHF1TKPWXqoSJbJXoPt7kjJhFMsoV-TcrAtUJoQYx6IcPbgf-A3iBnS7GE7gtLEuV_QOaTJhLwv9hiGoN32pkz2h5lYzj-MLpnhONjqyAk2GRdTZ7if0pdC4kQ6WsrPJdFcBOg0rWySbPRLFo2MpZQUJrcPoY5PgyBIv57yE3WoEsF8Vjcd-oUmr3AZOauHf7PN_47)
 
-title 🔗 USCM Golden Thread: Complete Traceability
-
-card "📄 SoW Item\nBusiness Need" as SOW #2C3E50;text:white
-card "📋 URM: REQ-XXX\nRequirement" as REQ #2874A6;text:white
-card "🏗️ ADM: ADR-XXX\nArchitecture Decision" as ADR #7D3C98;text:white
-card "💻 Jira: EPIC/STORY\nWork Item" as JIRA #1E8449;text:white
-card "🧪 UTM: TC-XXX\nTest Case" as TC #D35400;text:white
-card "🔀 GitLab: MR\nCode Change" as MR #B7950B;text:white
-card "🚀 Deploy\nProduction" as DEPLOY #C0392B;text:white
-
-SOW --> REQ : "defines"
-REQ --> ADR : "drives"
-ADR --> JIRA : "implements"
-JIRA --> TC : "validates"
-TC --> MR : "verifies"
-MR --> DEPLOY : "releases"
-
-DEPLOY ..> SOW : "Feedback Loop"
-
-@enduml
-```
 
 ### 6.2 Cross-Pillar Traceability Matrix
 
@@ -464,45 +195,11 @@ DEPLOY ..> SOW : "Feedback Loop"
 
 ### 6.3 Autonomous Traceability Creation
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: USCM_Framework_diagram_08
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_08.puml
+-->
+![Uscm Framework Diagram 08](https://www.plantuml.com/plantuml/svg/LPBFRXCn4CRlVef1N41g10TEsqjNtWHjjKNjDaMvJdQdMIjUJx37APNo75ovy80y0kDKeY1VhFdy_UQFvoe9HicpDszaefbWe9WzOJ1fxy818ywmnM6_Yvp3QDbpXBUhPJd6Y1DFyFldhn_mS6zleCx2WMVE2TOH1yAjyqwUOUNvoPXJGqVoVA1uCkUifh8ypqx0yaYN9h0GHBURf88s33wF1FtoRh7PR2wWRlfo0HTWffHmHmhyxAJ3BTZsWsrEfhh5c0XUc9UcMduNBKAWRHAyKz0PSW5h-rx5FWUelOSr9O4Edodge-xZelkagZbTkuXGtxPAjP5G2sjJoWIT2_kazeV3M88s9-4PLexyMCBrEFxVUIc6WgHNfeveHd4S5BtMRdSKeTU9_qFjwLjsaOeHxWKb5ysY7x8_9-KZHHr0OLeEZpvJ64XndJiID9YcBMCSuOLMlDTt7TpW43af-p5IcefNqNkQs8_bGwglZfvKHRyGfslmD-yNLcl8w5zv-djyCEQAmbWMvmy)
 
-title 🤖 USCM Autonomous Traceability Flow
-
-|Developer|
-start
-:Commit Code;
-note right: Include REQ-XXX, ADR-XXX in message
-
-|GitLab CI/CD|
-:Parse Commit;
-:Extract IDs (REQ, ADR, TC);
-:Run All Test Layers (L0-L4);
-
-|Jira API|
-:Create Issue Links;
-:Update Custom Fields;
-:Add Traceability Comments;
-
-|Jira Automation|
-:Trigger Rules;
-:Update Requirement Status;
-:Calculate Coverage;
-
-|Confluence|
-:Live Dashboard Updates;
-:JQL Macros Refresh;
-
-|Stakeholder|
-:View Real-time Status;
-:No Manual Updates;
-
-stop
-
-@enduml
-```
 
 ---
 
@@ -510,42 +207,11 @@ stop
 
 ### 7.1 Process → Tool Embedding
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_09
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_09.puml
+-->
+![Uscm Framework Diagram 09](https://www.plantuml.com/plantuml/svg/TLF1RjD04BtxAuP4IAr4Gj8ajEa1rN6sg2YEKMmBWNBPs9jaoNhNxAuhAjGh1pWWKGa9Bhtm4NnFVu1-0cCx5Q48--GtCs_Ul1cV64krBJBXFB1hbZ58c2u4ez8n6ovpgca62vfiLbeLClMKK1gQfwHyTp8qIooLAy7WlGDmggIzowmUvt8dDw4wlPzsuFN8e8FOw3-jBXt7SelyjzS_la8SUlun-5GMLC3DXo_W5bP9bQd2GAIfD4kbCsgvaexpHrhZzlhg4_ZkD7Ody68MU2GCITW0Qkx0fjVf3Gz6bRfAPgFRBWcJ3Kxujk0Q3PBMG5Pr5XTpUT06JpDg6QJCy9Kqm2MyL3gToruRPeK4omnM29NK1Vqsa8no0IWHQ9vhTKw5cSj16-8yBObCZeIfMJDcJIskMuw_CyVDzs-_Vdu6ue_86Cwc40N1f9wZXfgZm-6Wipl6SwufH2pB1NOmi1VF_5Qtjp-Ndf9BKJ2PC737CuouOx_L6M3a6RSJkW3lxB4tneB8HwoYARskpVshtAU9LhLWSbzmjJGtZe9fu0Tn2E6hC29-bLkYqEoIetv_k2CuP6BPAaf3k5o1nHKmkk22MxIm5D1AQjS5bnkpXHPeyWQKX2NwMsWsbnD-ZekXPhrGo8fvhvbMs-rLf7YKgrh6lvAlFiAmyn16RaWcPrC28V7Y6HbNwIM8Ltjqs7UVxAWEfBY0BXP9nifswm9xmPiYNPLtCvTxiHizWaJX7jWxl9Y46xJHxDUSbOJj9RPQJxVBF8Q6frA-l6WuDL26AjSmCcQvK1Yflij09Gm3RhBcx9oPXkESC9cM__Tl)
 
-title 🤖 USCM: Manual → Autonomous Transformation
-
-rectangle "📋 MANUAL PROCESSES" as MANUAL #C0392B {
-  card "1. Track requirements manually\n2. Create designs in Word\n3. Run tests locally\n4. Email for approvals\n5. Update spreadsheets" as M1
-}
-
-rectangle "⚙️ EMBED IN TOOLS" as EMBED #B7950B {
-  card "Jira Templates (URM-13)\nConfluence ADRs (ADM-05)\nGitLab CI/CD (UTM)\nJira Automation\nConfluence Macros" as E1
-}
-
-rectangle "🤖 AUTONOMOUS SYSTEM" as AUTO #1E8449 {
-  card "Self-updating traceability\nAuto-create links\nAuto-block on failure\nLive dashboards\nZero manual tracking" as A1
-}
-
-rectangle "📊 90% BASELINE SECURED" as BASE #2874A6 {
-  card "Only 10% needs\nhuman judgment\n(UAT, complex decisions)" as B1
-}
-
-MANUAL --> EMBED : "Codify"
-EMBED --> AUTO : "Deploy"
-AUTO --> BASE : "Achieves"
-
-@enduml
-```
 
 ### 7.2 Tool Integration Matrix
 
@@ -574,42 +240,11 @@ AUTO --> BASE : "Achieves"
 
 ### 8.1 RACI Across USCM
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_10
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_10.puml
+-->
+![Uscm Framework Diagram 10](https://www.plantuml.com/plantuml/svg/XPBDJi9058NtynHNM9k0eFmi3ANKX0HI-Tkn6TehD9GxP6QACOOdS46C2vUkZ8bFu5lf8pXj9HI8eLtCp9tRyvqpdORINEfe4R8pFSC5WeSo2f4JK_E0bbpo1KouDvzA4P5lYr18oDyuyPlfaEXfJjCGuP41t0ZIsyxaOUjChyUbVzXsOPUSouAfDVz1hHdJWJRweu7TXRvbjy5TeLm5UC_OZfxxUNj-XxxRSGOvu2gT6VbgfMnT9T24dhkLmeyy3UuzeHnJCr81eL9W4GyVb1xJG8IH3WI19RrPe0rWJ3qBEiZzCRLmjPkvImKEJSttA5DcCNQxv-db2KRzRh9hHiWNdMgvNClwSUjWUPx9hVaaHEF8gaCVrLAG2fB2m1Hiiuf2ZNxifGvjkXDoWVvMzvYxUVt-se3LIj5cX7obLR9hrGmw5jv3cqm7xEO9jX4-PdzymcZubtbemAtIPRbGo81xfy47eUDJsWyzJC7fRpu_luwF8RConh9xmovZ3IG_lks_)
 
-title USCM RACI Overview
-
-rectangle "👥 ROLES" as ROLES #2874A6 {
-  card "Product Owner\nBusiness Analyst\nSolution Architect\nQA Lead\nDev Lead\nDevOps Engineer" as R1
-}
-
-rectangle "📋 URM" as URM #1E8449 {
-  card "PO: Accountable\nBA: Responsible\nSA: Consulted\nQA: Informed" as URM1
-}
-
-rectangle "🏗️ ADM" as ADM #7D3C98 {
-  card "SA: Accountable\nDev: Responsible\nBA: Consulted\nQA: Informed" as ADM1
-}
-
-rectangle "🧪 UTM" as UTM #D35400 {
-  card "QA: Accountable\nDev: Responsible\nSA: Consulted\nPO: Informed" as UTM1
-}
-
-ROLES --> URM
-ROLES --> ADM
-ROLES --> UTM
-
-@enduml
-```
 
 ### 8.2 Gate Summary
 
@@ -630,42 +265,11 @@ ROLES --> UTM
 
 ### 9.1 4-Phase Adoption
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_11
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_11.puml
+-->
+![Uscm Framework Diagram 11](https://www.plantuml.com/plantuml/svg/TPD1Zfim58RtdE8rsIJAe0539fCigY4EYL91Y18YTT6DXxW96h0ZOxgfHfeBTDMgYsugLPLwhvwWHwW1pqmwgB3Yzs-_p_zxt1II25dccV5A7cbE8Q6Yp2XXHd6NiXCH98TRajmT12_P7lEC2-ZE_UezSmYQIC8E6OMF1i2SC_deh1_Z_ioR4B5_QKFOyOUMqgR_ANLl63ALwlpT5eVWckiZAIWiyrEcc9aaCkKCDfpiSt8oZ6USpf_ldpz1uxOdC8zsgvaNBwDL1qW1QrkLlXwvtbKDL9DrGeLr1Dj4xzZlXn-msuIcPOFaOBdGMmkUqAAuW4qSzXk3DrC6T06M0xq5_q058ooXok7XfRRiuX1cF04RUjEif2UHCjdN1BYwsp_0NtvfO3I1E8g2vMhHU15qRV_QTSSjMiTqcqflKa50KfKBaRI0NaLlEne3S_PUbLTq2dgZLclqeLvTf38Wju2NbtYcDYham383f3bHc_FdLytfJC3RnL5u5gm3tUbeFBIcBTIXUNM6wfMIvxfxQkoA5cX84i6BvnW3nmnK7p1NLqoRe7taQqYd3VdjGKEw4_3VOZy8_1Ns6xiBNMmvOzI670sQYjkDVxaD8XqaGeyj5yanbQfCAIZ4j90fEpHfFcLTimxLFY_kmw2waJALl2ogeHLgJAgnrHWrjPf5qtnTDNa27GHvnL5q3FLToyuBsMbajvO7JxfnGzc--fl_0W)
 
-title USCM 4-Phase Implementation Roadmap
-
-rectangle "📍 Phase 1: FOUNDATION" as P1 #2874A6 {
-  card "Month 1-2\n• URM-01 to 04 (Process, RTM)\n• ADM-02, 03 (Governance, RACI)\n• UTM Doc 1 (Blueprint)" as P1C
-}
-
-rectangle "🔧 Phase 2: TOOLING" as P2 #1E8449 {
-  card "Month 3-4\n• Jira templates (URM-13)\n• Confluence ADRs (ADM-05)\n• GitLab CI/CD (UTM L0-L2)" as P2C
-}
-
-rectangle "🤖 Phase 3: AUTOMATION" as P3 #B7950B {
-  card "Month 5-6\n• Jira Automation Rules\n• Confluence Macros\n• UTM L3-L4 (Compliance, E2E)" as P3C
-}
-
-rectangle "🚀 Phase 4: EXCELLENCE" as P4 #C0392B {
-  card "Month 7+\n• SRE/SLOs (URM-22)\n• Architecture Testing (ADM-13)\n• UTM L5 (UAT) + Continuous Improvement" as P4C
-}
-
-P1 --> P2 : "2 months"
-P2 --> P3 : "2 months"
-P3 --> P4 : "2+ months"
-
-@enduml
-```
 
 ### 9.2 Quick Start Checklist
 
@@ -684,43 +288,11 @@ P3 --> P4 : "2+ months"
 
 ### 10.1 Business Value
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam object {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_12
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_12.puml
+-->
+![Uscm Framework Diagram 12](https://www.plantuml.com/plantuml/svg/TPBDJi9058NtVOehX4qt0gL85oIK_YGaDiXVN0_jI4SwqsOwnH3ZthWmHdJD8_XgF8BJKYCfcjdTU-TyvzoPGIeG5ncDb0iHOeh1npoBC69AkYOiGHnHM29_lU9nnW8hZc8ETTV9pyb4lBp7le171S2DcIZ7sfRcw4rP6_uZyAGeWeW8ms6_UuR5pF9WEXx1BACKyQsYbBArm_xp3UP4kfkX3M6hj0OeXVd8Sw1kwwxkQ0NQGon34SovnCafw4C7GfvU1cWhkxT4X4T67rewKC9-EgfQoigEeJLKDJVsotxzWedK9M8B8vhmU2FNn4HXOR8mhwM5ZjDrMuK56z_bjvpKHmc6AHAue3Kg_7QZm9x8oMBlwWozUodIOBGaEVyOUsfQChThkPhbdkQsf1H7gvpORLQ9Xl4NigkV8J_UfH1D8eAOZmkWDVPk9C-qXtQlu9bPG0JSS9mS7qNcWGUCrsar9OHnnjFgXesIES0io3_UDm)
 
-title 📈 USCM ROI Summary
-
-object "🕐 Time Savings" as TIME #D5F5E3 {
-  Manual Tracking = 4 hrs/day
-  With USCM = 15 mins/day
-  **Savings = 93%**
-}
-
-object "🎯 Quality Improvement" as QUAL #D4E6F1 {
-  Defect Escape Rate = 15%
-  With USCM = 2%
-  **Improvement = 87%**
-}
-
-object "📊 Traceability" as TRACE #FCF3CF {
-  Manual Coverage = 60%
-  With USCM = 99%
-  **Improvement = 65%**
-}
-
-object "🔒 Compliance" as COMP #FADBD8 {
-  Audit Prep Time = 2 weeks
-  With USCM = 2 hours
-  **Savings = 99%**
-}
-
-@enduml
-```
 
 ### 10.2 Pain Points Solved
 
@@ -771,40 +343,11 @@ object "🔒 Compliance" as COMP #FADBD8 {
 
 ### USCM is a Culture, Not Just a Framework
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
+<!-- PlantUML Diagram: USCM_Framework_diagram_13
+Original source archived in _archive/plantuml-source/USCM_Framework_diagram_13.puml
+-->
+![Uscm Framework Diagram 13](https://www.plantuml.com/plantuml/svg/TPBFJW8n4CRlVOfnEPFuXuDmC221O2Bn0CIBbs5ts6tejjXEOuWXyUADHz2G-6W-WOzWMNOLYBQdpdoTxpVJjXsZPPyhSS8PvGGnMQy8jN1pgHTeCOSfnlFK6g-Jhb76GgtVs-uzXQMOKQUAu5a0z8tcIbaiiHA29OVqrsQzWSceEsp1E2FeUiNU4emoEMCXVij4d-zhkByP3-ucuq8V0RgVGArxUj4ylmvcAw4D4rYPPWncLYa2nEVB1uoaCfG04-Qk30rHUrJ0DlGaTLf6RurZI2YMJXfTIGTcGVKfkb3XCToHl2mJ7Pz8XWLg6GlI2MmH3k7VNWkIGtAedVKk6utcFzXbyOcMCta4tV5ijCcDTyVWut0ad0RJO_eXeGkZ_PEzRWcJ9Q1wmgNRQw6QRxq0gr_ji5iGxTu9rOCEXjhDZCsHWraaH3jSttwVRm)
 
-title 🌟 USCM: The Culture Shift
-
-rectangle "❌ WITHOUT USCM" as WITHOUT #C0392B {
-}
-note right of WITHOUT
-  • Siloed teams
-  • Manual tracking
-  • Lost decisions
-  • Hope-based quality
-  • Audit panic
-end note
-
-rectangle "✅ WITH USCM" as WITH #1E8449 {
-}
-note right of WITH
-  • Unified teams
-  • Autonomous tracking
-  • Traceable decisions
-  • Measured quality
-  • Audit-ready always
-end note
-
-WITHOUT -right-> WITH : "Cultural\nTransformation"
-
-@enduml
-```
 
 ### Key Takeaways
 

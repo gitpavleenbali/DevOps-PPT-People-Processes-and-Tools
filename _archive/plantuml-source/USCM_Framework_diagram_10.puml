@@ -1,0 +1,34 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title USCM RACI Overview
+
+rectangle "👥 ROLES" as ROLES #2874A6 {
+  card "Product Owner\nBusiness Analyst\nSolution Architect\nQA Lead\nDev Lead\nDevOps Engineer" as R1
+}
+
+rectangle "📋 URM" as URM #1E8449 {
+  card "PO: Accountable\nBA: Responsible\nSA: Consulted\nQA: Informed" as URM1
+}
+
+rectangle "🏗️ ADM" as ADM #7D3C98 {
+  card "SA: Accountable\nDev: Responsible\nBA: Consulted\nQA: Informed" as ADM1
+}
+
+rectangle "🧪 UTM" as UTM #D35400 {
+  card "QA: Accountable\nDev: Responsible\nSA: Consulted\nPO: Informed" as UTM1
+}
+
+ROLES --> URM
+ROLES --> ADM
+ROLES --> UTM
+
+@enduml

@@ -1,0 +1,63 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title USCM End-to-End Flow: Business Need → Production Excellence
+
+' URM Section
+rectangle "📋 URM - Unified Requirements Management" as URM #2874A6 {
+  card "Phase 1: Foundation\nProcess, Roles, RTM" as U1
+  card "Phase 2: Discovery\nRisks, Unknowns, Scope" as U2
+  card "Phase 3: Validation\nSMART criteria, Gates" as U3
+  card "Phase 4: Development\nJira/GitLab templates" as U4
+  card "Phase 5: Operations\nComms, Automation, SRE" as U5
+  
+  U1 --> U2
+  U2 --> U3
+  U3 --> U4
+  U4 --> U5
+}
+
+' ADM Section
+rectangle "🏗️ ADM - Architecture Decision Management" as ADM #7D3C98 {
+  card "Initiation\nGovernance, RACI" as A1
+  card "Planning\nDomains, Traceability" as A2
+  card "Design\nADRs, Quality Attrs" as A3
+  card "Review\nARB, Checklist" as A4
+  card "Operations\nChange Control" as A5
+  
+  A1 --> A2
+  A2 --> A3
+  A3 --> A4
+  A4 --> A5
+}
+
+' UTM Section
+rectangle "🧪 UTM - Unified Test Management" as UTM #D35400 {
+  card "L0: Static\nFormat, Validate, Lint" as T0
+  card "L1: Unit\ntofu test, mocks" as T1
+  card "L2: Security\ncheckov, tfsec" as T2
+  card "L3: Compliance\nBDD, terraform-compliance" as T3
+  card "L4: Integration\nTerratest, real deploy" as T4
+  card "L5: UAT\nBusiness validation" as T5
+  
+  T0 --> T1
+  T1 --> T2
+  T2 --> T3
+  T3 --> T4
+  T4 --> T5
+}
+
+' Connections
+URM ==> ADM : "Requirements\ndrive design"
+ADM ==> UTM : "Architecture\ndefines tests"
+UTM ==> URM : "Feedback\nloop"
+
+@enduml

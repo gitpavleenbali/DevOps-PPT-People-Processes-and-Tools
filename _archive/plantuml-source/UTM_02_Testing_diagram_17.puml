@@ -1,0 +1,29 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 🎯 Fuzz Testing Problem for IaC Modules
+
+rectangle "📦 Generic Module" as MOD #2874A6 {
+  card "Storage Account Module\nUsed by 50+ application teams\nAccepts parameters via .tfvars" as MODC
+}
+
+rectangle "❌ Without Fuzz Testing" as BAD #C0392B {
+  card "Team passes wrong region\nModule deploys to wrong location\nCompliance violation!" as BADC
+}
+
+rectangle "✅ With Fuzz Testing" as GOOD #1E8449 {
+  card "Validation blocks reject input\nBuild fails BEFORE deployment\nCompliance guaranteed" as GOODC
+}
+
+MOD --> BAD : No validation
+MOD --> GOOD : Variable validation + Preconditions
+
+@enduml

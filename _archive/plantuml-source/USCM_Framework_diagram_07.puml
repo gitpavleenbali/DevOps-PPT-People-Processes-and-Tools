@@ -1,0 +1,27 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam card {
+  FontColor #FFFFFF
+}
+
+title 🔗 USCM Golden Thread: Complete Traceability
+
+card "📄 SoW Item\nBusiness Need" as SOW #2C3E50;text:white
+card "📋 URM: REQ-XXX\nRequirement" as REQ #2874A6;text:white
+card "🏗️ ADM: ADR-XXX\nArchitecture Decision" as ADR #7D3C98;text:white
+card "💻 Jira: EPIC/STORY\nWork Item" as JIRA #1E8449;text:white
+card "🧪 UTM: TC-XXX\nTest Case" as TC #D35400;text:white
+card "🔀 GitLab: MR\nCode Change" as MR #B7950B;text:white
+card "🚀 Deploy\nProduction" as DEPLOY #C0392B;text:white
+
+SOW --> REQ : "defines"
+REQ --> ADR : "drives"
+ADR --> JIRA : "implements"
+JIRA --> TC : "validates"
+TC --> MR : "verifies"
+MR --> DEPLOY : "releases"
+
+DEPLOY ..> SOW : "Feedback Loop"
+
+@enduml

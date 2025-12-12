@@ -1,0 +1,42 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Transformation Journey
+
+rectangle "❌ CURRENT STATE" as CURRENT #C0392B {
+  card "Human-centered\ndefect finding" as C1
+  card "No regression\nprocess" as C2
+  card "Missing\ntraceability" as C3
+  card "Ad-hoc\ntesting" as C4
+}
+
+rectangle "UTM\nBLUEPRINT" as BLUEPRINT #D35400 {
+}
+
+rectangle "✅ TARGET STATE" as TARGET #1E8449 {
+  card "System-centric\ndetection" as T1
+  card "Automated\nregression" as T2
+  card "Full URM→ADM→UTM\ntraceability" as T3
+  card "Structured\n5-layer testing" as T4
+}
+
+C1 -right-> BLUEPRINT
+C2 -right-> BLUEPRINT
+C3 -right-> BLUEPRINT
+C4 -right-> BLUEPRINT
+
+BLUEPRINT -right-> T1
+BLUEPRINT -right-> T2
+BLUEPRINT -right-> T3
+BLUEPRINT -right-> T4
+
+@enduml

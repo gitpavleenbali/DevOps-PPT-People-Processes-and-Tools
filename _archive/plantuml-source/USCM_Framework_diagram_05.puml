@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title ADM v1.0: Ideation → Delivery
+
+rectangle "🟢 INITIATION" as INIT #2874A6 {
+  card "ADM-02: Governance Model\nADM-03: RACI Matrix" as INITC
+}
+
+rectangle "🔵 PLANNING" as PLAN #1E8449 {
+  card "ADM-04: Solution Domains\nADM-07: Design Traceability" as PLANC
+}
+
+rectangle "🟡 DESIGN" as DES #B7950B {
+  card "ADM-05: ADR Template\nADM-08: Quality Attributes" as DESC
+}
+
+rectangle "🟠 REVIEW" as REV #D35400 {
+  card "ADM-09: Design Review Checklist\nADM-01: ARB Process Flow" as REVC
+}
+
+rectangle "🔴 OPERATIONS" as OPS #C0392B {
+  card "ADM-06: Decision Log\nADM-10: Change Control\nADM-11: Automation & Tooling\nADM-12: Handover/Onboarding\nADM-13: Architecture Testing" as OPSC
+}
+
+INIT --> PLAN
+PLAN --> DES
+DES --> REV
+REV --> OPS
+
+@enduml

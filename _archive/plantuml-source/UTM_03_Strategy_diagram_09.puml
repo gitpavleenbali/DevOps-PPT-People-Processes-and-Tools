@@ -1,0 +1,42 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam component {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Regression Test Selection
+
+rectangle "📝 Change: VNet Module" as CHANGE #7D3C98
+
+package "🔗 Direct Dependencies" as DIRECT #2874A6 {
+  [Subnet Module]
+  [NSG Module]
+  [Route Table Module]
+}
+
+package "🔗 Indirect Dependencies" as INDIRECT #B7950B {
+  [VM Module]
+  [AKS Module]
+  [API Management]
+}
+
+package "🧪 Regression Scope" as SCOPE #C0392B {
+  [TC-NET-001..010]
+  [TC-SEC-005..008]
+  [TC-INT-001..003]
+}
+
+CHANGE --> DIRECT
+DIRECT --> INDIRECT
+DIRECT --> SCOPE
+INDIRECT --> SCOPE
+
+@enduml

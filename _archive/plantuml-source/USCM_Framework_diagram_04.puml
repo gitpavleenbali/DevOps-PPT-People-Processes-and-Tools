@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title URM v2.0: 5 Phases + 5 Gates
+
+rectangle "📋 Phase 1: FOUNDATION" as P1 #2874A6 {
+  card "URM-01: Process Flow\nURM-02: Shared Responsibility\nURM-03: RTM (Traceability)\nURM-04: Requirements Template" as P1C
+}
+
+rectangle "🔍 Phase 2: DISCOVERY" as P2 #1E8449 {
+  card "URM-05: Discovery Log\nURM-06: Change Impact\nURM-07: Decision Log\nURM-08: RACI Matrix\nURM-09: Scope Coverage" as P2C
+}
+
+rectangle "✅ Phase 3: VALIDATION" as P3 #B7950B {
+  card "URM-10: Validation Checklist\nURM-11: Standard Workflow\nURM-12: Phase Gate Checklist" as P3C
+}
+
+rectangle "💻 Phase 4: DEVELOPMENT" as P4 #D35400 {
+  card "URM-13: Jira Templates\nURM-14: GitLab Issue Template\nURM-15: GitLab MR Template\nURM-16: Meeting Minutes" as P4C
+}
+
+rectangle "🚀 Phase 5: OPERATIONS" as P5 #C0392B {
+  card "URM-17: Stakeholder Comms\nURM-18: Lightweight Workflow\nURM-19: SSR (Retros)\nURM-20: Implementation Roadmap\nURM-21: Automation (CI/CD)\nURM-22: Best Practices (SRE)" as P5C
+}
+
+P1 --> P2 : "Gate 1"
+P2 --> P3 : "Gate 2\n≥95% scope"
+P3 --> P4 : "Gate 3\n≥95% SMART"
+P4 --> P5 : "Gate 4\n100% UAT"
+
+@enduml

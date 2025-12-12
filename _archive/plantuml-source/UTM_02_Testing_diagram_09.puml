@@ -1,0 +1,53 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Complete CI/CD Pipeline
+
+rectangle "📝 COMMIT" as COMMIT #7D3C98 {
+  card "Pre-commit Hook" as PRE
+  card "L0: Format" as L0A
+  card "L0: Validate" as L0B
+  card "L0: Lint" as L0C
+}
+
+rectangle "🔨 BUILD" as BUILD #2874A6 {
+  card "L1: Unit Tests" as L1
+  card "Coverage Report" as COV
+}
+
+rectangle "🔒 SECURITY" as SEC #1E8449 {
+  card "L2: Checkov" as L2A
+  card "L2: tfsec" as L2B
+}
+
+rectangle "📋 COMPLIANCE" as COMP #B7950B {
+  card "Generate Plan" as PLAN
+  card "L3: terraform-compliance" as L3
+}
+
+rectangle "🔗 INTEGRATION" as INT #D35400 {
+  card "L4: Terratest" as L4
+  card "Cleanup Resources" as CLEAN
+}
+
+rectangle "🚀 DEPLOY" as DEP #C0392B {
+  card "Deploy Staging" as STAG
+  card "Smoke Tests" as SMOKE
+  card "Deploy Production" as PROD
+}
+
+COMMIT --> BUILD
+BUILD --> SEC
+SEC --> COMP
+COMP --> INT
+INT --> DEP
+
+@enduml

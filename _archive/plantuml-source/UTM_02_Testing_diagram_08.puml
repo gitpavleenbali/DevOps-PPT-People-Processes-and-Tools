@@ -1,0 +1,48 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam component {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Testing Toolchain by Layer
+
+package "L0: Static" #7D3C98 {
+  [tofu fmt]
+  [tofu validate]
+  [tflint]
+}
+
+package "L1: Unit" #2874A6 {
+  [tofu test]
+  [mock_provider]
+}
+
+package "L2: Security" #1E8449 {
+  [checkov]
+  [tfsec]
+  [trivy]
+}
+
+package "L3: Compliance" #B7950B {
+  [terraform-compliance]
+  [OPA/Rego]
+}
+
+package "L4: Integration" #D35400 {
+  [Terratest]
+  [Azure CLI]
+  [API Testing]
+}
+
+package "L5: Acceptance" #C0392B {
+  [Manual Testing]
+  [Playwright]
+  [Selenium]
+}
+
+@enduml

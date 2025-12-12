@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 🧪 Functional vs Non-Functional Testing
+
+rectangle "🔧 FUNCTIONAL" as FUNC #2874A6 {
+  card "Does it work correctly?\nDoes it meet requirements?\nDoes it produce expected output?" as FUNCC
+}
+
+rectangle "⚙️ NON-FUNCTIONAL" as NFUNC #1E8449 {
+  card "How well does it perform?\nIs it secure? Reliable?\nDoes it scale?" as NFUNCC
+}
+
+rectangle "Functional Tests" as FT #D4E6F1;text:black {
+  card "Unit Tests (L1)" as F1
+  card "Compliance Tests (L3)" as F2
+  card "Integration Tests (L4)" as F3
+  card "Acceptance Tests (L5)" as F4
+}
+
+rectangle "Non-Functional Tests" as NFT #D5F5E3;text:black {
+  card "Security Scans (L2)" as N1
+  card "Performance Tests" as N2
+  card "Cost Analysis" as N3
+  card "Reliability Checks" as N4
+}
+
+FUNC --> FT
+NFUNC --> NFT
+
+@enduml

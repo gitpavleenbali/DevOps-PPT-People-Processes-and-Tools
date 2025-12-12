@@ -5,45 +5,11 @@
 
 ## 1. Quality Strategy Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_01
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_01.puml
+-->
+![Utm 03 Strategy Diagram 01](https://www.plantuml.com/plantuml/svg/TLBTRjCm5BxtKnoQwqhPshBrPbgIPbMaiQr9XZOfDrvoQAqwzh0Te9fsXz2qILm0zpp2teadu15m79M50VRD-Ou-Vz_vyQ4sL9ccvkI5MM6DKA9gE591z9g9Qwfe3LUqN2-LR4GLIIuLU4TnUtiCXQMXOiaHRWZ0aHHcotI7tFQu9LNLSzfkD8edlis5_x6w9SGmO_Lpr0OoewZ1vGQ6LgHHSCOufqeJybJ7uEVtpu-mE0-Ea_mIiZmDydX-EG2gOP5Pm_szSV3osOEl3s1vKHo4IVlAaLq2l9ruVpoUkh9T_OCKtpPCsO490py-VN5r5I9a5MibcHIKmp4JQrs8fBwcfO70fZQQwKvsfstfJ_TxU1NdQH9bZj75u8LxquaVzfmZ-GuLNI8aei8FXPZX6oi3CnIQcKqX5WtbDe2ib0exgR_Dlds4-2AEplFazCHnMWJUR3GP-txFB6YC5BAMZNOTwYVvkTs0XIsXfeQLa4hEsv_IoVsZlpj8uxFJD4zEvevZ4NYHFvhkzjkRKRswaZQquhb2KVqUN24oGzUuahn21QyPlkzccJelkzNXyA3RrnPqCzoYjiLjRBq9ERJgxS__1G)
 
-title Test Strategy - Four Pillars
-
-rectangle "🎯 QUALITY STRATEGY" as QS #2874A6
-
-rectangle "📋 TRACEABILITY" as TRACE #1E8449 {
-  card "Requirement → Test\nBidirectional Links\nImpact Analysis" as T1
-}
-
-rectangle "📊 METRICS" as METRIC #B7950B {
-  card "Coverage Index\nDefect Density\nQuality Score" as M1
-}
-
-rectangle "🔄 EXECUTION" as EXEC #D35400 {
-  card "Autonomous Tests\nQuality Gates\nAutomatic Rollback" as E1
-}
-
-rectangle "📈 REPORTING" as REP #C0392B {
-  card "Dashboards\nTrend Analysis\nStakeholder Views" as R1
-}
-
-QS --> TRACE
-QS --> METRIC
-QS --> EXEC
-QS --> REP
-
-@enduml
-```
 
 ---
 
@@ -53,60 +19,11 @@ QS --> REP
 
 > **Hierarchy Rule**: Requirements (URM) drive Architecture (ADM), which drives Testing (UTM)
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_02
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_02.puml
+-->
+![Utm 03 Strategy Diagram 02](https://www.plantuml.com/plantuml/svg/TPJDRjD0483l-nH38aGvf8hjG9CSK1tRAPRoH-nKGkfbwsmJAywwhDUg8jGh5mv5SE30WICIJy3py0Bm2CokdSHfItAmPkTRxtmxkpxD91KoNoVaYLooDOE8YJnXb9Di5VDhAkWQBccqMeWqvtCdJL81zRwd_XL2i4XIlaWOl2S0_PJBBQb_vBR2HbJCxsEcOtalcZZM-yzIjuJ8MEBx-tcIG2XenEXbdCHo0ywInhmBi-aGVd_u3BPRF6VXa91zNRM_txzyL50NfknT7WjqvJA3es0ycphUynhGJB-ZRhPFMlPBNQ4kjJRrtZGczjj6isbSy0dTg8aGi2WNkBoUXrdZ4Tn4tF71ITVNIKnvnBQm-GXiNV1EvxZp56RNCbxlK4kf7sZSVVtpwqvfTi4MqJAMcCm5WoFN2_opKM6YTg5-ubfEfrqnmT56u3c5YSSZiS6rKWuko-85rnCnRHpm8oyi-16JDwbOWP-b2LNJD8_fGtxg3Gh-jNrGdwOnQJmG-l5JDQiB8SjKGyxjWU_QeJykLJ07TSDhjrgTYahex4t2GG3dD8dd-xB2YiKEDG-adIMBLYLiLc5dF9oKpSRkgQeWo56ZPAqgE_6c_O8jsWR3bCSo5INRUY3xwHlkzXMEe6dV7xd-w2meF5sl3_MEQVPCe-BPcvtj9OtZ9juQl1nw0gQCUnmQ1WCRUeBHQBc5J5N4Cpo6GbK2LqbwKroNnYjzJl2XBeiwnD30G1y1TKeF8aj7ke4xKZUVA4A7QjChWLaDBAAcba6BaB3CQ0aSsGOc8QUCpzK7wHy)
 
-title Full Traceability Chain: URM → ADM → UTM
-
-rectangle "📋 URM: Requirements (SOURCE)" as URM #2874A6 {
-  card "REQ-PAY-001\nPayment Security" as PAY1
-  card "REQ-PAY-002\nPCI Compliance" as PAY2
-  card "REQ-PAY-003\n99.9% Uptime" as PAY3
-}
-
-rectangle "🏗️ ADM: Architecture (DESIGN)" as ADM #7D3C98 {
-  card "ADM-SEC-001\nEncryption Design" as SEC1
-  card "ADM-NET-001\nNetwork Isolation" as NET1
-  card "ADM-REL-001\nHA Architecture" as REL1
-}
-
-rectangle "🧪 UTM: Tests (VALIDATION)" as UTM #1E8449 {
-  card "TC-SEC-001\nTLS Validation" as TC1
-  card "TC-SEC-002\nEncryption Check" as TC2
-  card "TC-COMP-001\nPCI Test Suite" as TC3
-  card "TC-PERF-001\nUptime Monitor" as TC4
-}
-
-rectangle "🐛 Defects (FINDINGS)" as DEF #922B21 {
-  card "BUG-001\nTLS 1.0 Found" as BUG1
-  card "BUG-002\nSLA Breach" as BUG2
-}
-
-' Correct flow: URM -> ADM -> UTM
-PAY1 --> SEC1
-PAY2 --> SEC1
-PAY3 --> REL1
-PAY1 --> NET1
-
-SEC1 --> TC1
-SEC1 --> TC2
-SEC1 --> TC3
-REL1 --> TC4
-
-TC1 --> BUG1
-TC4 --> BUG2
-
-@enduml
-```
 
 ### 2.2 Traceability Table (URM → ADM → UTM)
 
@@ -526,58 +443,11 @@ Actions:
 
 #### Step 5: Complete Autonomous Traceability Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_03
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_03.puml
+-->
+![Utm 03 Strategy Diagram 03](https://www.plantuml.com/plantuml/svg/NPDDRben4CVtFiKqLIKI1PfkOT7G1qH4414W_P0YLUPvW15-DlK791Bh7g2BRhlfoNg27g5Z0osglB0rdldDtpFZQn-a2x7IuaLOOeLGeeiQfH5-HMOjdQnW9ilLmjbeL66rTV2orqrBY4118_p-yVCxj6EmnbOsUfWwMQASaQRm38L36SWQw6cx5MBNmGrgkqQt4pcpQ7vm510Agx0bceMjAWgmfR24ISNtC4JlvG8VpTcuUryVjJ_LhwxUmBIeJxf5EZQXqMYSjHXzGs4WPplH74dd4p6Z3l7CxZu5LXOWSIukeTqPfer95z3lU7OOHmD5_tNHWH6jKPF1X3sUTuc0PMInK_GX1ToWGIVPSFjWEDN7uU10YMl5vi_Xf1ADzNEYtPAJq1xrcPPBWz3tFY8CoApyewcnEFZrzLjIb_TfSSxCXyo38lfWA-WHQfMS2xlX_0k4LvTxJJ2ItgDA8Msb_ki4rmDDqYre3hNa3pr96jNRS-3U6wWzepyN04Tb7PmZroiBR2Lx4dcqPd69aGvZ_1B9OU9dHqviFEM-drn1iF1EstA5gYLGSuzgnkQ4X_UT-aw23975eb4q_riudh8gpnFNR-feiK1tOeGnZsvgp8IZuCu6cbEPR_o_8evHywRspqhLs1NMp7L4KwOU3sZ3BvT-ERFIAVQUE_JBJBsz7y1Gbivwc2pjbjlXt55g7XK-h71fjKhZtNnFkELugUk1-6ETDeDXTvPP9aeDUrqUxX1LgWn_3BiMufhVaFxb7m)
 
-title 🤖 Autonomous Traceability Creation Flow
-
-|Developer|
-start
-:Write Code;
-:Commit with Smart Message\n"REQ-PAY-001 TC-SEC-001: ...";
-
-|GitLab|
-:Parse Commit Message;
-:Extract REQ-*, ADM-*, TC-* IDs;
-:Run CI/CD Pipeline;
-
-|Pipeline|
-:Execute Tests;
-:Generate JUnit XML;
-:Run update_traceability.py;
-
-|Jira API|
-:Create Issue Links\n(REQ → ADM → TC);
-:Update Custom Fields\n(Coverage %, Tests Passed);
-:Add Traceability Comments;
-
-if (Test Failed?) then (yes)
-  :Create Defect Issue;
-  :Link Defect → Test → Requirement;
-  :Transition Requirement to Blocked;
-else (no)
-  :Update Requirement Status;
-endif
-
-|Jira Automation|
-:Trigger Automation Rules;
-:Send Notifications;
-:Update Related Issues;
-
-|Confluence|
-:Live Dashboard Refreshes;
-:JQL Macros Show Current State;
-
-|Stakeholder|
-:View Real-time Traceability;
-:No Manual Updates Needed;
-
-stop
-
-@enduml
-```
 
 #### Traceability Tool Summary
 
@@ -602,49 +472,11 @@ stop
 
 ### 3.1 Coverage Model
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #2C3E50
-}
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_04
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_04.puml
+-->
+![Utm 03 Strategy Diagram 04](https://www.plantuml.com/plantuml/svg/TPFDRXen483lVeefN8WgekKlm25Lm0K9HL75ZtBAnV5EYOMngUrj6qMyG0-zz91Z7Y77FW0lb4U8ronXbuHThUJrVZFVpCXxOHqpBbbAyidTuHA1eqaaCaNiGgWLCsm9jumlvaOdAgPQQWFbuI2zSyJA4soEy400XbgvZAlJng0LaNMEDCWTKtFvZXs6gy1oPk8ZAG7wHufQ4-A4y_cf_eacBOeooHF9dD0AhdIC4YeZHglJ5NBnNV0JGdRbbrwU_ltP1yxkLsXBm2pGRzSxGIXetqLfWZyIOVpab7kB334J2kNQeDDiTaC8RDl9ynP-2NS7CxJEtgZDVvXfnoJaYInJpITO--TGRNLYE1Qzr7lhdNQpTtRWtSAPj6SjcdGaHNF6P8a-rauvAcQ4Bcg7NjjlTrjHlw3TmJQqYN7EzlOfYp_IfB2BWy5UGfb6ZMwzQ4f12rV2YJahYiANB7GhyOSaftXv-liCuuH9uUvXf6By7U3n2ChjhmtQxGJFrk8tpw4oePl7wBG1dzEHXNNThwVxtSkmTmARHwX5KPOkFTqaFKhLwXV_IiW5gZZzzLu1)
 
-title Coverage Calculation Model (IaC-Specific)
-
-package "📊 Coverage Types" as COV #FEFEFE {
-  rectangle "Requirement Coverage" as RC #1E8449 {
-    card "Requirements with Tests\n÷ Total Requirements" as RC1
-  }
-  
-  rectangle "Resource Coverage" as CC #2874A6 {
-    card "Resources with Assertions\n÷ Total Resources" as CC1
-  }
-  
-  rectangle "Scenario Coverage" as FC #B7950B {
-    card "Scenarios Tested\n÷ Total Scenarios" as FC1
-  }
-  
-  rectangle "Risk Coverage" as RK #C0392B {
-    card "Risks Mitigated\n÷ Total Risks" as RK1
-  }
-}
-
-rectangle "🎯 Quality Index" as QI #7D3C98 {
-  card "QI = (RC×0.3 + ResC×0.2 + SC×0.3 + RK×0.2) × 100" as QIF
-}
-
-COV --> QI
-
-@enduml
-```
 
 ### 3.2 Coverage Targets
 
@@ -686,30 +518,11 @@ Formula: (Passed Tests ÷ Total Requirements) × 100
 {jira:jql=project=UTM AND fixVersion=current|columns=key,summary,status}
 ```
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam card {
-  FontColor #FFFFFF
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_05
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_05.puml
+-->
+![Utm 03 Strategy Diagram 05](https://www.plantuml.com/plantuml/svg/bPB1IiD048RlynHZYvT09QdH91waxIQ1e0Wj2ehDOPiiRKYogvkD5_7UimKVq2TnczRLYr1tvl0p_FCj_xAZHb6fshg28xLYDSECoRPYb4DJ5lo9IbhZWcRbKegMvqHKGc8_ZhRrov5HcUCh8CQ2gszJT-0DG1MgOaZ42vDqoJ2apMeXz0P0jzUph1bxRWkfh-VA-2nhpkVyyVDZ_NTlKWoyunxI1cS4-qxaksvWg4Jax73Sk-uK_U4EHpHkw7lk-DpWOaPLAmybRWpHtn5ZJPnumPaz-ObTDEM_ygvJT6nx7_ZA13R0wTtuEhbzmEGcZEulC71ENClgtDC4-rvuIW8VG3_LO72fHq2CYetItBs24UFvzcjy0G)
 
-title Coverage Dashboard
-
-card "**Requirement Coverage**\n\n[█████████▓] 97%" as RC #1E8449
-card "**Code Coverage**\n\n[████████▒▒] 82%" as CC #2874A6
-card "**Feature Coverage**\n\n[███████▓▒▒] 88%" as FC #B7950B
-card "**Risk Coverage**\n\n[██████████] 100%" as RK #1E8449
-
-card "**QUALITY INDEX: 91.4**" as QI #7D3C98
-
-RC --> QI
-CC --> QI
-FC --> QI
-RK --> QI
-
-@enduml
-```
 
 ---
 
@@ -717,56 +530,11 @@ RK --> QI
 
 ### 4.1 Finding Lifecycle
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam state {
-  FontColor #2C3E50
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_06
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_06.puml
+-->
+![Utm 03 Strategy Diagram 06](https://www.plantuml.com/plantuml/svg/NP91J-Cm48Nl_XMpoWq9BL3A2WuhYXjhaOfKjOWBuk2rXtHKnwvi1xPQxNzVEqb3MkMGoFFDUo-UkGzH-jZKXdsB6wmH5Fh6eBGiRCdkf9Sr_9PgMtdNMCsTSHuAKUPdH2IHYF2N0GXdOqzTyKavlM3_68iK3O8WgybMiA1tL7jbaB7NipSuF_y9Suoe8cguWsSC4OGa4nZhP8TY8RYOSD7wZ3eMLx16rNYAUrYhbFouEW7kwfqXQHK2tw3QdW3Ny6WZLbv6ShRrpva78kTxzYIhbfw5G9LDXX-O3GyP3q0XRiiVjrt4hoQUK5BIm7VuHTKclPvGKrEdZuNxF49NpaNWiWa8ColDFb38QGv03lDebzvL7aD8_3m5CMw7la-6-X1fX1Npw_96NBQfZhgvqtakVqxFbojOuGVXP_OULR9zmjkaJ-YhBxVkj9XFnRIST9lGSwjqaMcaQxL1dJPBPyckbjLUqZM-qp3v04iPXiaFnMBsK3xmcrPtrC6D2wU2H__HU_VhD7HcBgqUO_TeTTxz_m)
 
-title Finding Lifecycle
-
-[*] --> Detected : Test Fails
-
-state Detected #FCF3CF {
-  Detected : L2 Security Scan
-  Detected : L3 Compliance Check
-  Detected : L4 Integration Test
-}
-
-Detected --> Triaged : Assign Severity
-
-state Triaged #F9E79F {
-  Triaged : Critical / High / Medium / Low
-  Triaged : Root Cause Analysis
-}
-
-Triaged --> InProgress : Developer Assigned
-
-state InProgress #D4E6F1 {
-  InProgress : Code Fix
-  InProgress : PR Review
-}
-
-InProgress --> Fixed : Merged
-
-state Fixed #D5F5E3 {
-  Fixed : Retest Scheduled
-}
-
-Fixed --> Verified : Tests Pass
-
-state Verified #ABEBC6 {
-  Verified : Closed
-}
-
-Fixed --> InProgress : Retest Fails
-
-Verified --> [*]
-
-@enduml
-```
 
 ### 4.2 Finding Severity Matrix
 
@@ -807,44 +575,11 @@ checkov-scan:
     - python scripts/create_jira_finding.py --file results.xml
 ```
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam component {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_07
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_07.puml
+-->
+![Utm 03 Strategy Diagram 07](https://www.plantuml.com/plantuml/svg/TPAzJiCm58NtFCMbdP526txQgIKa4pyHBML07Lpd4gmwTkGVeGhr2TY0YGKn8V5OF06FWDDG9QN2sSuvkkUxiGVQ46LiphqTSuSv0aLbEHBXwJaJ1L4aXncXyqn9Az9GSgcW7KVbrqWKBa4oX0SF89R2h7EhuoqRIIhpGWeKvc-s4tQZVTzfn_-qBJtFCCCHOYPI9Z88YS5CAeRQyzO0hU-tboSO8RMAcSKwgbj0D8oY4DfxqL4Gz5RbDqxOzVszFfmnhSk9aQ1gKHWcnRJsEtr8x8mp2aDAKMkN8ZEEQIFIxSCraZcCJqSmGQLN0vORLC-F4BhLEIE2uYPNU76MkFsF3eFXGGLMAfjaOvBfQSDoKDTAEkCIipNkh-LW4kbm5p1XaXEp1VFr-Wu9gbkfycsO9BgCeNtItGzylu8fbGfcnEMzAzJk0ZLE6vwZSRAqoaqRinobDN_t__Y4s0fQqX2-MHbVdRkB2VrkhtDSLPPALLajUM5DKOwihKxzQoQ4ixHUSu0YBP_p3m)
 
-title Finding Categories
-
-package "🔒 Security Findings" as SEC #1E8449 {
-  [SEC-001: Missing Encryption]
-  [SEC-002: Public Access Enabled]
-  [SEC-003: Weak TLS Version]
-}
-
-package "📋 Compliance Findings" as COMP #2874A6 {
-  [COMP-001: Missing Tags]
-  [COMP-002: Wrong Region]
-  [COMP-003: Policy Violation]
-}
-
-package "⚡ Performance Findings" as PERF #D35400 {
-  [PERF-001: Slow Response]
-  [PERF-002: Resource Timeout]
-}
-
-package "🧪 Functional Findings" as FUNC #C0392B {
-  [FUNC-001: Wrong Output]
-  [FUNC-002: Missing Validation]
-}
-
-@enduml
-```
 
 ---
 
@@ -852,57 +587,11 @@ package "🧪 Functional Findings" as FUNC #C0392B {
 
 ### 5.1 Impact Analysis Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_08
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_08.puml
+-->
+![Utm 03 Strategy Diagram 08](https://www.plantuml.com/plantuml/svg/ZL91RXGn4Bpx5OrosNmXUqXMcmLoY8I6VC3OFRDcPzoctRDaeroH48WJ746HU0CluWLv0crdM3OII6WkdYvtLRkgpx9Obd7epHDPuu3WaCSURJHv4sAoR0TuPTscOngZNr9F34TFL-KpHeBq2CkrZHt2nP2i4rX4s-zooCRSdkCMUqh8jwQgc9Fxky_VO4b-t_I2AL56Fw_OHxZm62MqkmdtS4bUnybpfJiKk2caslBb4ronTGZdc31gimlbSY7x09SsmQ9jqOaIDPXfP5UfMkAD0JZPWrUOHG60I8B0eLkB_i137MHj1HnjaMlHJQCD3wDfJPLhPoK6szaG7z4t-6OChEx6lweSmj27k45Vwq9xBQUU_OVGAcu3K_oNq24COmwnU_GW_ctHeL8vLB-ggU_X6KPaA_ky6qp4Kl9fS1lmRGacj31xhghJdTDZjH0Zp7QOZykycjiFM5rBIQouK_hczI7U1mca2K_MJzReVc2V4MQH9eAxx_1IRFIM_n0eNMXrpfzVty4Y9TR4GDUrmTVgpbnta98nPtghhFil)
 
-title Change Impact Analysis
-
-|Developer|
-start
-:📝 Code Change Proposed;
-:📋 Identify Changed Modules;
-
-|Impact Analyzer|
-:🔍 Trace Dependencies;
-:📊 Map Affected Resources;
-
-fork
-  :Affected Tests;
-  note right
-    Tests that cover
-    changed modules
-  end note
-fork again
-  :Affected Requirements;
-  note right
-    Requirements linked
-    to changed code
-  end note
-fork again
-  :Affected Environments;
-  note right
-    Environments using
-    changed resources
-  end note
-end fork
-
-:📈 Generate Impact Report;
-
-|Reviewer|
-if (High Impact?) then (yes)
-  :🔴 Extended Review;
-  :Additional Tests Required;
-else (no)
-  :🟢 Standard Review;
-endif
-
-:✅ Approve or Reject;
-stop
-
-@enduml
-```
 
 ### 5.2 Impact Matrix
 
@@ -916,50 +605,11 @@ stop
 
 ### 5.3 Regression Scope
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam component {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_09
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_09.puml
+-->
+![Utm 03 Strategy Diagram 09](https://www.plantuml.com/plantuml/svg/ZPB1Re9054NtynMlkhOPjLRjeb57jAIH6Y5k6XSZl2WHPWWCgyQlQ9EkcYwRzElw2HqGb9gO55RlvFBkVJSC4iLZbOO1kL9R315SZDC0kI39pXSHZta8Q-xkDh5CXSTa86EeJupihIXYT1KNcm3XXG1Cf52bCd_8lgADz3Q--O_IbM4a1Gfrhcsnjj6Xceqk9DiJedobuonm4sEI-5A0Wua26mCTLO-4d3BNVZvVFu1jzOHtiBHGmKnwkeKQy0JOmz2Q6b3lZjkitoEapA-_Udk7iP_jWJ56A3mKhez9_jNON1ZCqL5xtPlXRNx0ivsknN7tAYEMFQsE2vag18UlTQWIxyyTJU5Ty3IjqdNKxNVewE2wd5KjXe_sdt5kmemBlJtKFP-xVNrN2xHT6HqgiTdJN3V2QBlVAbmSrh0Cfq5fy_gQDkcgOBR1DEjeHdibCwrIHzkvOz5met5Vr4QAEp9I7bLbkJyvddj2PA0RoNxcNm)
 
-title Regression Test Selection
-
-rectangle "📝 Change: VNet Module" as CHANGE #7D3C98
-
-package "🔗 Direct Dependencies" as DIRECT #2874A6 {
-  [Subnet Module]
-  [NSG Module]
-  [Route Table Module]
-}
-
-package "🔗 Indirect Dependencies" as INDIRECT #B7950B {
-  [VM Module]
-  [AKS Module]
-  [API Management]
-}
-
-package "🧪 Regression Scope" as SCOPE #C0392B {
-  [TC-NET-001..010]
-  [TC-SEC-005..008]
-  [TC-INT-001..003]
-}
-
-CHANGE --> DIRECT
-DIRECT --> INDIRECT
-DIRECT --> SCOPE
-INDIRECT --> SCOPE
-
-@enduml
-```
 
 ---
 
@@ -967,49 +617,11 @@ INDIRECT --> SCOPE
 
 ### 6.1 Autonomous Pipeline
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_10
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_10.puml
+-->
+![Utm 03 Strategy Diagram 10](https://www.plantuml.com/plantuml/svg/TPBFIYD14CRl_HHbH1YHuD-59OV5OPmTXImaRlQIMsLIJ9hqTC_sL0VTsnxsuiM381uKBmiBFe7Fumle8zWpYLdY87sh-dtzVLJLOSbesULAhF64SeAKh5E4MfHJgGkqcCC8qsbcZTFZo2XZOVrhN3qXMB8Y21qRRNBZIXXGoH2VKUfO6Ys4rxDCPO6QeVLoVtK7YUGkZbg09IJTz_s_rz2J1IcfgIPw3UBVmy93Ps_G85w5dcv-FpzUGlZBsJaG3XivBg3lK4a-XmHvJlKJ8P8kjBzurmvy8viHdD9FLxlDIBF0bENCurKiqQlHGTo1KwUXkmF1TqRliIa6CRGNl_ImB1leBWG_jEG625iGcHbPzCQVFsqqT7lUmW_M-jHDRR03aU_85DNsiSmccmtvFWIHoGibKQVqOSf-qe5eGkbqPK2Ydopffzi_TQsMqVXD60uxS4I5CkV01lmi_7uo4GwNkddpls0Px0224ysKMQnkviDaoSAxkhPslHuXnhIoaqFIu-gINm4)
 
-title Autonomous Test Execution
-
-participant "📝 GitLab" as GL
-participant "🤖 Pipeline" as PL
-participant "🧪 Test Engine" as TE
-participant "☁️ Azure" as AZ
-participant "📊 Quality Gate" as QG
-
-GL -> PL: Merge Request Event
-activate PL
-
-PL -> TE: Run L0 (Static)
-TE --> PL: Pass
-
-PL -> TE: Run L1 (Unit)
-TE --> PL: Pass + Coverage 85%
-
-PL -> TE: Run L2 (Security)
-TE --> PL: Pass (0 Critical/High)
-
-PL -> TE: Run L3 (Compliance)
-TE --> PL: Pass
-
-PL -> QG: Check Quality Gate
-QG --> PL: ✅ Gate Passed
-
-PL -> AZ: Deploy to Staging
-AZ --> PL: Deployed
-
-PL -> TE: Run L4 (Integration)
-TE --> PL: Pass
-
-PL -> GL: ✅ Auto-Merge
-
-deactivate PL
-
-@enduml
-```
 
 ### 6.2 Quality Gate Configuration
 
@@ -1065,40 +677,11 @@ gates:
 
 ### 6.3 Auto-Rollback Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_11
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_11.puml
+-->
+![Utm 03 Strategy Diagram 11](https://www.plantuml.com/plantuml/svg/PPA_IaCn5CRtFCKdBdPmT6a7BTMYWt-eedFCFMr3StDASY9qSn74FtJGIHJ1qKrmy7dw0le8vbvR7IH3mibtVj-NGpQYw22fT6f9XbGI38NaI7iLHzQFTT0bJhKP3G8dNtJOSS1oTwjQIeaLHsWduLABDUYnSvKOxD7LrgL0IjK6gldr_72EJHexda0O1u6BPCIoRwdcRFhs-J75YRQ2DPJM9w7OKghFOQI0t7jtXLtsLhBxDcadmrPz2JtGriybbx-INP9WJVolkRz5BtaSbZmY756Kh25Ve3PIje-LjdDpXybw0taa7YkpnmjCA3OgHdN-UKL9Nd2OZA6OAJyHNh37OlkJpDPbLOp2OqKkKgOytS1pOnxaVJ6WJ1CoGaNDc4rVSHJiO43XTveB-3LwEJ7dbeD0PvPJn365M8zmOTzs50JxVhMZdLkKdz09f8MmuuqjSko_PBwmVQKsybvzWMy)
 
-title Automatic Rollback on Failure
-
-start
-:🚀 Deploy to Production;
-:⏱️ Wait 5 minutes;
-
-fork
-  :📊 Monitor Health;
-fork again
-  :📈 Monitor Metrics;
-fork again
-  :🔍 Run Smoke Tests;
-end fork
-
-if (All Healthy?) then (✅ yes)
-  :✅ Deployment Success;
-  :📢 Notify Team;
-  stop
-else (❌ no)
-  :🔴 Failure Detected;
-  :⏪ Trigger Rollback;
-  :📋 Restore Previous Version;
-  :📢 Alert On-Call;
-  :📝 Create Incident;
-  stop
-endif
-
-@enduml
-```
 
 ---
 
@@ -1337,50 +920,11 @@ if __name__ == "__main__":
 
 ### Autonomous Traceability Flow Summary
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_12
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_12.puml
+-->
+![Utm 03 Strategy Diagram 12](https://www.plantuml.com/plantuml/svg/XPFDRjD058NtynINHa8GAQ5j0aspG8tij4eLe2G5iiXcRDyaeynFcBaJjKBTiK1iYzYXRdZ0FWBZSKf3LGbxOtdEcVdEkVQH8sx9AycUq08LGexMI-IQkQNGAswvWepdoxarNXU9aSP2xRXVtbiAYpbnFPS8NnZ0iT5qfumNksAC18NbsvlVFw7doMYZZ7TmRdcEF1DIq2MCBnsXOkn-jvtRc-jVaE8QfLcXXSGe9SZj07UGzZz2RRzpqEwz2gTUFR3z-0edWeOyWsJm8acZusG8jRJrihsx-uZX-ZkS2iiZdE8aZ8wUqy6e1xMzVgVTFdpCzIqmwPdqg7E4bBj5PhWjeZLvz_OOQWTfApdiLDOIkT5uNO9qOIu8LjujflgPqBdq1JeOzTyt9fC920qAdUDpVCw2-Azdv3MSeoCtrMVSEeGHEY_9tOaYRHS-OROmPZdL7rO59_odPHOrM-8oS6CeT937np5n2fEfhFVgcAOBGx56UCDpQmB32Bbia51RoHdJ9fnenNn1O6O1EtmGzVhMo7jvMQxhrkjXPQy9_GiAU1Ip3r87CsiKvDMWWsA_6LDJcHgUGivNv6quO1CSeDM4CUe2o5G3N8imnBC1Az-LB0-9oaJ_OqeibhrbeX3bkCCQbo13HnkYJQyMF_iWKAW9NAojueazvjKU1Sx23cuBvoWybZ_S7m)
 
-title 🤖 Autonomous Traceability System
-
-rectangle "📝 Developer Commits" as DEV #2874A6 {
-}
-
-rectangle "🔄 GitLab CI/CD" as GL #D35400 {
-}
-
-rectangle "📊 Jira Automation" as JIRA #1E8449 {
-}
-
-rectangle "📈 Confluence Dashboard" as CONF #7D3C98 {
-}
-
-DEV --> GL : git push\n(includes REQ-XXX in message)
-GL --> GL : Run Tests\nParse Results
-GL --> JIRA : Webhook\nUpdate Traceability
-JIRA --> JIRA : Auto-Link\nAuto-Status Update
-JIRA --> CONF : Live Macros\nReal-time Dashboard
-
-note right of GL
-  **Autonomous Actions:**
-  1. Extract REQ-IDs from commits
-  2. Run tests & capture results
-  3. Send to Jira via API
-end note
-
-note right of JIRA
-  **Autonomous Actions:**
-  1. Create bidirectional links
-  2. Update requirement status
-  3. Auto-create defects
-end note
-
-@enduml
-```
 
 ### 🎯 Key Principle: Zero Manual Traceability
 
@@ -1398,56 +942,11 @@ end note
 
 ### 7.1 Execution Matrix by Trigger
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_13
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_13.puml
+-->
+![Utm 03 Strategy Diagram 13](https://www.plantuml.com/plantuml/svg/dLF1RjD04BtxAuRa7Ac94zeO2JLrrbKa395jUjyu8sSLUrtMuz0A8VKFAW6dIWZn5N3YO_W1-0JMkmYxZT83ycLtP-QzD_F6fnLnHNMHEqzeWmL2YghEaKkdsWfvoHKlOCNJRQRAMgxzCYyLz0FMV9qCXIbncUK8xno0e9JqDtFaksnofD_E3c2yxw2aNAt_0y0XGPevmOg0NM5QaoWbhAuXKIBBK07ReIJ7QKNsVjvzXIHQd9-p2DW5Uvd4FU2LUOB-yTprfoVF2A_8UxiHXFTAVt_vy0C2eOyntw4fYsSN3FhpCNiQ36tPAjTgJIkcfzwB8qytfGfEu6ymtTgoOIF-7lJ7p-2NHI789FYlmd2HQEH9C67k8yXrdaDCd4HgwuPjUEZ1Qod8JAUoqT4UxQSR255b216-gNMYoGiZFMC_SFtW4FEWGLygt8cojjXXXtdaGQpDK8AkRMpKnbolwVCo5rocTeQXkwVgzjklxxTQajx6IjlBC-lHJ5iKJDdnz15TxWDTIKVNs8E59CmKR_R4XlT7SdVJ80oMgbpNwR_4PQID3cRpi_d9OVBn0_9bXtoYxPWbzjcGcfKR39wR9Mflrlhs7aRjMK-WlMX5ZdEASjtymdy0)
 
-title Test Execution by Trigger Event
-
-rectangle "⚡ TRIGGER EVENTS" as TRIG #7D3C98;text:white
-
-rectangle "💾 File Save" as SAVE #D4E6F1;text:black {
-  card "L0: Format Check" as S1
-}
-
-rectangle "📝 Commit" as COMMIT #D5F5E3;text:black {
-  card "L0: Full Static" as C1
-  card "L1: Unit Tests" as C2
-}
-
-rectangle "🔀 Merge Request" as MR #FCF3CF;text:black {
-  card "L0-L1: Previous" as M1
-  card "L2: Security" as M2
-  card "L3: Compliance" as M3
-}
-
-rectangle "🏷️ Release Tag" as TAG #F9E79F;text:black {
-  card "L0-L3: Previous" as T1
-  card "L4: Integration" as T2
-}
-
-rectangle "🚀 Pre-Production" as PRE #FADBD8;text:black {
-  card "L0-L4: Previous" as P1
-  card "L5: UAT" as P2
-}
-
-TRIG --> SAVE
-TRIG --> COMMIT
-TRIG --> MR
-TRIG --> TAG
-TRIG --> PRE
-
-@enduml
-```
 
 ### 7.2 Execution Summary Table
 
@@ -1466,85 +965,19 @@ TRIG --> PRE
 
 ### 8.1 Report Types
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam component {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_14
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_14.puml
+-->
+![Utm 03 Strategy Diagram 14](https://www.plantuml.com/plantuml/svg/ZPAnJiCm54LtVyMZcIiLMcYx821D1HEGPa1232Pv2bOT9xAVgoB4ZbWwmCx8pCRty0Fm2TX9Moea998blhfvvxwR71ZYccmXsHRTO86GehOIkM9cAbJ5DI_WcgVJN9TMPM4fImt1EFBtXaDZIbpb4k6E0OnBHIjdVR7x3M_bfl7yFywqBAfIeQBVtfsm6-rsd7RqHx9xnaYGYnDZLMeIAeS9QPkIrSZOJzhMrylJ8yJHsMcSJ5h0ZNzsymVztk4UOwketlO0qHnJIsA6jJ6wY488-gDkE1pK-IxFBPU2Rk54PJY7HAFAhhmUe-lJ-2my4mgDQLHXfZ2nHS7rxPKFl05xVeK4qnibKYvhM1A5nn1iHuDURzZ04ZJa9XehgPaNbZFK_lqH4XUo4ST2PNxvjRR9-LYyVRulV2pPJaJHh1Kd48owkxrEf-6SYGgbI-twusINAAkr_oehP2sULgXWoMj0lifsUxzkQdtmcwmFSSBOWQl9_txV)
 
-title Reporting Structure
-
-rectangle "📊 REPORTS" as REP #2874A6
-
-package "📈 Executive" as EXEC #7D3C98 {
-  [Quality Index Trend]
-  [Release Readiness]
-  [Risk Summary]
-}
-
-package "🔧 Technical" as TECH #1E8449 {
-  [Test Results]
-  [Coverage Details]
-  [Finding Details]
-}
-
-package "⏱️ Real-Time" as RT #D35400 {
-  [Pipeline Status]
-  [Current Coverage]
-  [Open Findings]
-}
-
-REP --> EXEC
-REP --> TECH
-REP --> RT
-
-@enduml
-```
 
 ### 8.2 Quality Trend
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_15
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_15.puml
+-->
+![Utm 03 Strategy Diagram 15](https://www.plantuml.com/plantuml/svg/TPB1IiCm7CRlUOg_tKMHmfAkTjr1vaO7EmWE1xlqahL_kx8k7Kag4zbHZnuy2pw2xxGdy15CMpf7qGHo-FAHtyVtpr1fBdMnoSYPNk468K9PPCW5KUjKRBda6rZoQ9t8l13nECzo2Pr9KEuJXyH8Sv5a2Cy4O98BtJYhHVOdteZBk6rZOoTmkqOR_OFQ4w9JRTwV5JnBzHDCHOmxc4iKCPnJ1Wl4jReWv3U9LKf0xPu5NC62GcVSTNmsgjXL26is7S2L2uVNT_1OAEvH5rkuMt65eHYPCqi5Gc0QMcQfMc5SlJIZPPesnxNxDOT1P-JvRhVDyLZ5wHlETBEL-QCfM-Y6DaUb5Tp4SGDXVq5ycxAQua271lrUpszH-ZN5fw6uvRgGPLKDWii4DGIx2F68SKgCwSQshyle0x0kFTZcgT3A8aQeTAVI_QDEHAuHP9giDEGFzVttvziNr0YJmWt5uUC5neKq0pA2JmaPcb6L_-m7)
 
-title Quality Index Trend (12 Weeks)
-
-rectangle "Week 1-4" as W1 #C0392B {
-  card "QI: 65 → 72\nSetup Phase\nBaseline Established" as Q1
-}
-
-rectangle "Week 5-8" as W2 #B7950B {
-  card "QI: 72 → 82\nImprovement Phase\nTests Added" as Q2
-}
-
-rectangle "Week 9-12" as W3 #1E8449 {
-  card "QI: 82 → 91\nMaturity Phase\nTarget Exceeded" as Q3
-}
-
-W1 --> W2 : "+7 points"
-W2 --> W3 : "+9 points"
-
-note right of W3 : 🎯 Target: 85\n✅ Current: 91
-
-@enduml
-```
 
 ### 8.3 Stakeholder Views
 
@@ -1562,52 +995,11 @@ note right of W3 : 🎯 Target: 85\n✅ Current: 91
 
 ### 9.1 Phased Implementation
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_03_Strategy_diagram_16
+Original source archived in _archive/plantuml-source/UTM_03_Strategy_diagram_16.puml
+-->
+![Utm 03 Strategy Diagram 16](https://www.plantuml.com/plantuml/svg/TPJDZjem4CVlVeefN5fLaHAIy7Me5W8h8MqbshBjPI_6CS72iIF7GKBL7li6FLRgE_IH-WHzX4wCwR8BJIwZyUG_l_bmRcfBZMrAILxPBIyvC6uQoQaYzKweYXfQmfgoNM5qe_9CIssWUpjltxC8mvcbgf0SlXA0MwtiAT8zvF4ibb6JlmphPV4y3T4t_K-gHqAiiAY_A2k9cCfIAxI2Zvhc9Qq8UIBeBBUqvX2DCG7g7EDUV-5y1r7GUzC1MiCoWkvW5cUZeIDnI9tVFxx1NJY6JwqsWucYyb2B-a6r1ql30wRBKbZOQhtptYcjCJ9RG2KgBeNYNZrhWI-GUcEuLoYmuhKLgl1GSP1ug1usOZX89lsNK5YBrPi6B7vuJFnUinrKHkz5pes7oVIU6rfmi0QxY0cywdMO60lbh3727Zn86lGzI0pTQ3vCaj4Po9-Vtt_17PQGRJdRwJsy1RkfENjGxkIVLa6HqZi_Dr8Xqbh8zkGvLdmTAy446cSig6BSWms2eGTBe3iTZD9mUW66vLXk3DreKxQ3yWeUP3gRGSsueaRe4znIIy4EhIpJkHzSSXqg7SD2MLwOysKQ1L7eiLBepk8q2SCBB2ndrM8T9-TyyzuSQ6DrwSIySuAEWBNthgcyvdMKFgvr8wNxe7ossr4GdRQx3zqiZ4UzopPX9VUJ5OYdQiu1Z9QolUpUzw6XRd0vhRThZIgrbtTeU8U2u1tk5y75TLPCS7ESbH0SbRDIWjrnLf-G6wxozbVp5m)
 
-title Implementation Roadmap
-
-rectangle "Phase 1: Foundation (Week 1-2)" as P1 #7D3C98 {
-  card "✅ L0: Static Analysis\n✅ Pre-commit hooks\n✅ Basic CI pipeline" as P1C
-}
-
-rectangle "Phase 2: Unit Testing (Week 3-4)" as P2 #2874A6 {
-  card "✅ L1: tofu test\n✅ Mock providers\n✅ Coverage tracking" as P2C
-}
-
-rectangle "Phase 3: Security (Week 5-6)" as P3 #1E8449 {
-  card "🔲 L2: Checkov + tfsec\n🔲 Security gates\n🔲 Vulnerability tracking" as P3C
-}
-
-rectangle "Phase 4: Compliance (Week 7-8)" as P4 #B7950B {
-  card "🔲 L3: terraform-compliance\n🔲 BDD scenarios\n🔲 Policy as code" as P4C
-}
-
-rectangle "Phase 5: Integration (Week 9-10)" as P5 #D35400 {
-  card "🔲 L4: Terratest\n🔲 E2E automation\n🔲 Auto-cleanup" as P5C
-}
-
-rectangle "Phase 6: Full Automation (Week 11-12)" as P6 #C0392B {
-  card "🔲 L5: UAT integration\n🔲 Auto-rollback\n🔲 Quality dashboards" as P6C
-}
-
-P1 --> P2
-P2 --> P3
-P3 --> P4
-P4 --> P5
-P5 --> P6
-
-@enduml
-```
 
 ### 9.2 Success Metrics
 

@@ -1,0 +1,49 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title Change Impact Analysis
+
+|Developer|
+start
+:📝 Code Change Proposed;
+:📋 Identify Changed Modules;
+
+|Impact Analyzer|
+:🔍 Trace Dependencies;
+:📊 Map Affected Resources;
+
+fork
+  :Affected Tests;
+  note right
+    Tests that cover
+    changed modules
+  end note
+fork again
+  :Affected Requirements;
+  note right
+    Requirements linked
+    to changed code
+  end note
+fork again
+  :Affected Environments;
+  note right
+    Environments using
+    changed resources
+  end note
+end fork
+
+:📈 Generate Impact Report;
+
+|Reviewer|
+if (High Impact?) then (yes)
+  :🔴 Extended Review;
+  :Additional Tests Required;
+else (no)
+  :🟢 Standard Review;
+endif
+
+:✅ Approve or Reject;
+stop
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title 🤖 USCM Autonomous Traceability Flow
+
+|Developer|
+start
+:Commit Code;
+note right: Include REQ-XXX, ADR-XXX in message
+
+|GitLab CI/CD|
+:Parse Commit;
+:Extract IDs (REQ, ADR, TC);
+:Run All Test Layers (L0-L4);
+
+|Jira API|
+:Create Issue Links;
+:Update Custom Fields;
+:Add Traceability Comments;
+
+|Jira Automation|
+:Trigger Rules;
+:Update Requirement Status;
+:Calculate Coverage;
+
+|Confluence|
+:Live Dashboard Updates;
+:JQL Macros Refresh;
+
+|Stakeholder|
+:View Real-time Status;
+:No Manual Updates;
+
+stop
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title ❌ Why Traditional Line Coverage Fails for IaC
+
+rectangle "📦 Imperative Language\n(Java, Python, C#)" as IMP #2874A6 {
+  card "Execute line by line\nTrack which lines ran\nMeasure: Lines Executed / Total Lines" as IMPC
+}
+
+rectangle "📋 Declarative Language\n(HCL, YAML, JSON)" as DEC #1E8449 {
+  card "Describe desired state\nNo execution flow\nNo lines to 'run'" as DECC
+}
+
+rectangle "❌ Result" as RES #C0392B {
+  card "Traditional coverage tools\nCANNOT work with IaC" as RESC
+}
+
+IMP -[hidden]right- DEC
+IMP --> RES
+DEC --> RES
+
+@enduml

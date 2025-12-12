@@ -1,0 +1,46 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title UTM Success Factors
+
+package "🎯 UTM SUCCESS" as UTM #D35400 {
+}
+
+package "🔗 Traceability" as TRACE #2874A6 {
+  card "URM → ADM → UTM → Delivery"
+  card "Every test linked to requirement"
+  card "Impact analysis enabled"
+}
+
+package "⚡ Automation" as AUTO #1E8449 {
+  card "5-Layer Testing Pyramid"
+  card "Quality Gates at every stage"
+  card "Shift-Left approach"
+}
+
+package "📊 Visibility" as VIS #7D3C98 {
+  card "Single source of truth"
+  card "Role-based dashboards"
+  card "Evidence-based decisions"
+}
+
+package "🔄 Continuous" as CONT #C0392B {
+  card "Build once, test always"
+  card "Fail fast, fix early"
+  card "Learn and improve"
+}
+
+UTM --> TRACE
+UTM --> AUTO
+UTM --> VIS
+UTM --> CONT
+
+@enduml

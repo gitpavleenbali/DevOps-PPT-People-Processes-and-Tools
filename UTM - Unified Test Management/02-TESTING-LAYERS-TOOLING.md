@@ -19,56 +19,11 @@
 
 ## Testing Pyramid Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam shadowing false
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_01
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_01.puml
+-->
+![Utm 02 Testing Diagram 01](https://www.plantuml.com/plantuml/svg/TPJ1RjD048Rl-nH38o4GZN3Yf6roQk8u4CbDgyQfX0X2MtkShBhUZTRhf1RgaHCI1q3YWiGHYGlln1Fm28oJ5a9IlBVPV-V_PdRMnvdbnkQfP0_i35E424qkaIkMNGarvuQdSCcZgwdHkOezBRM1IjylruOYc_5OBuMQGi9bXXix1YFBrLGYl640VQtiNOxLnsusj14tyRQixhb-qw5OzpyGDunPOIb_Y9aj2SuAoYLYgC811Bn0ap7sbsBlrzVtFo1ejg7ZUVvPs1bwFZmQTyB7Uy0pse2AvxYjUdS5iYBQw-QPK9XbSC6bYBaLMatK2LSvb_04EhdLARSOJzHpCPqH1NXQ9I965U5jKg_4_0VYqsS86ctmwpuyXS4mz9-TTyB1wN1ze06LdjjiECu6HJ-N4aP5PZ652pGY4T4jIeZ6400PFuLp9AWUpgKk9efa1PHGEqIDNQAFxo1msz0V3xqIf1DGDk_qv2mOb3rQ7tEXqZriDPrxknFegOWcofOqYJPfDTBfN0fEffIgs-kj6xJ3ujxJdGyGrDimyhtn-I1yiTRLeLBpZngDreRvHIuL6duffB05rMqfowedqGoZAxqWOvjaI5Wd68iyhTvBKDyb-FOTWbeRniD1kDRKQ1QF3XkTWmrtZmhK2fNzKxjEShYzYLH7Lw_dHY_8oTpvxrZNjgr_VdaBWKErXpGFtbhaGEMmvtgjemtlKQ4iluQ7CBA5n8bQh6UpR7MIsbNTKYWxKO5UxhWwArSQzkhBcOXfunKzNrMbkM0qUzj1bz75RmVhZ2vaErXZrAVjeCEOqWHcgFKMT58-CfepNEw3Vpr7bOa5xiD8wkMspY4TlRDY7_e6ITFdcMNi65LS_h1-0m)
 
-title Testing Pyramid - 6 Layers
-
-rectangle "🎯 L5: ACCEPTANCE (UAT)" as L5 #C0392B {
-  card "Business Validation\nManual + Automated\nHighest Confidence" as L5C
-}
-
-rectangle "🔗 L4: E2E / INTEGRATION" as L4 #D35400 {
-  card "Full System Verification\nTerratest / Real Deploy\nVery High Confidence" as L4C
-}
-
-rectangle "📋 L3: FUNCTIONAL / COMPLIANCE" as L3 #B7950B {
-  card "Business Logic\nterraform-compliance / BDD\nHigh Confidence" as L3C
-}
-
-rectangle "🔒 L2: SECURITY" as L2 #1E8449 {
-  card "Vulnerability Detection\ncheckov / tfsec\nMedium-High Confidence" as L2C
-}
-
-rectangle "🧪 L1: UNIT" as L1 #2874A6 {
-  card "Component Logic\ntofu test / mock_provider\nMedium Confidence" as L1C
-}
-
-rectangle "✅ L0: STATIC" as L0 #7D3C98 {
-  card "Syntax & Style\nvalidate / fmt / tflint\nLow Confidence" as L0C
-}
-
-L5 -[hidden]down- L4
-L4 -[hidden]down- L3
-L3 -[hidden]down- L2
-L2 -[hidden]down- L1
-L1 -[hidden]down- L0
-
-note right of L5 : Few, Expensive, Slow
-note right of L0 : Many, Free, Fast
-
-@enduml
-```
 
 ### Layer Comparison
 
@@ -97,45 +52,11 @@ note right of L0 : Many, Free, Fast
 
 ## 1. L0: Static Analysis
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_02
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_02.puml
+-->
+![Utm 02 Testing Diagram 02](https://www.plantuml.com/plantuml/svg/RPA_JiCm4CRtUuf3BErGYJaPw1-863fKL68toQMrujYHVIcjr9KD92GOgVfkF44V0Jk9r48h3_RvxlkT_Tb3ny9oNIguuYMLX2dPMf7Gu0gfAs55YSyYBHRMr3gR66KiNYVtOG2mP4KulObmpe9bYYCjrCP9XuaoBm3RErgHCXNPBJHz83hiFtSu5ol2H2gAVStCqY0rPIaP7umfjatD1xB9QynBZa4R9hHoiUG89qjA2yoDBGMpr0i0cMClQMFARlleRw6nz_FzYXjoVK2CmhgXhOIIcM3V5V4SwZQQnTgd0l4fb5wYUTvX__MEd2kfEMvsJbbZSeoL5QctWroJ3hofByQPSEuoiplbfBLXfBnxbCLToh6fcYKfHrwuU_CTZpeVZfNn5nXuIzSOZeLahR7k7A0pcSCbq1ccTQCbTFfM_L_xH_bOwvE7wvIj3eP-3l_i5m)
 
-title L0: Static Analysis Flow
-
-|Developer|
-start
-:📝 Save File;
-
-|Pre-commit Hook|
-:📐 tofu fmt;
-note right: Check formatting
-
-if (Formatted?) then (✅ yes)
-  :✅ tofu validate;
-  note right: Check syntax
-  if (Valid?) then (✅ yes)
-    :🔍 tflint;
-    note right: Best practices
-    if (Lint Pass?) then (✅ yes)
-      :✅ Commit Allowed;
-      stop
-    else (❌ no)
-      :❌ Block - Fix lint errors;
-      stop
-    endif
-  else (❌ no)
-    :❌ Block - Fix syntax;
-    stop
-  endif
-else (❌ no)
-  :❌ Block - Run tofu fmt;
-  stop
-endif
-
-@enduml
-```
 
 | Tool | Purpose | Example Finding |
 |:-----|:--------|:----------------|
@@ -181,43 +102,11 @@ pre-commit install
 
 ## 2. L1: Unit Tests
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #2C3E50
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_03
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_03.puml
+-->
+![Utm 02 Testing Diagram 03](https://www.plantuml.com/plantuml/svg/TPBDRXCn58NtVehBT0EB5ae8geg46XoFL96VKJEHM8o4t9cRn8h7ZlnJMggy0flks5ILODcNwXFq4R1d0fJIoAih7z_xdNDzP1qtpjUIF7CBh15AD5uYLyGkXLfnmsiuvULoRhHN5TLI6zX9MJmF50PBnzLS8bmIW5Ghjr6-fXtMVKNM3xGbDzKM6S27BQFMX3ZXGl_1_Y5CbN2GetL2pU6BS0iOwd89cT5dea93o5-SvFxwwYSSgvLt2N0BnwDiciDE_mrxc-w_StZk3azbcDa0DMJ9K5SX0A2wma8zttCpc0c9zaNpVZZk_n560aZZNQjpeTvRbB9LvcoIH-n_MBxTjgW3Ve5cqv1-32vfsg7fqpnrUF1vjV46HSA_UeEcBXAuN1Tgf85AxIkWNCe0al80nSwnz4verOx87d7SVRzv966V60sfTDCkwpnDuVJCGtHOg4no5Mp4U7hMeebTRDCc6_H6_tc--W5ZxtulO3pDcmsmWtwFRN6SSMlX9QHSo49HVOQ6pn5ESALDswGtcR2J9jrsdxkxxviWIPDchA8XqhYALJkKa2DKLVpglm0)
 
-title L1: Unit Testing with Mock Provider
-
-rectangle "📥 Input" as INPUT #D4E6F1;text:black {
-  card "Module Code\n(.tf files)" as MOD
-  card "Test Files\n(.tftest.hcl)" as TEST
-}
-
-rectangle "🎭 Mock Layer" as MOCK #FCF3CF;text:black {
-  card "mock_provider \"azurerm\" {}\nNo Cloud Calls\nFast Execution" as MP
-}
-
-rectangle "⚡ Execution" as EXEC #D5F5E3;text:black {
-  card "tofu test\nPlan Mode\nAssertions" as PLAN
-}
-
-rectangle "📤 Output" as OUTPUT #E8DAEF;text:black {
-  card "Pass / Fail\nCoverage Report" as ASSERT
-}
-
-INPUT --> MOCK
-MOCK --> EXEC
-EXEC --> OUTPUT
-
-@enduml
-```
 
 **Example: Payment Gateway Module Test**
 
@@ -251,48 +140,11 @@ run "verify_gateway_configuration" {
 
 ## 3. L2: Security Scanning
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_04
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_04.puml
+-->
+![Utm 02 Testing Diagram 04](https://www.plantuml.com/plantuml/svg/VLFDRjD06BplKtmaHrJ9pOyWHKArtPXOJPEgjjIBBzlrbtWLUnsjruGMzSW9f4g5KmLgopDmu7do0l08U3SASIibtejdDVFjpAnzM2WgLPcbv8LAC4DWACiKgI35Z8ivbJI32yfcKvcN8dRpD9VGzFfwrHWIcQ9YcY9y901UBjIQQHvoNUCoAkFdj9RRxdUjQi_PSjGr8OghQlwmTG01ib9oTGa1eq9mCGKlpHU4R5mq_jv_ktt6GraqW1OGkFO8cllzrvrEp_WmXXeiGJRBtqV2zGDmKB0aet9MH6BVigoNCCzJpZYkHhY3u_ywDIcGHI94AUaabna4TX16mhug9K8nHyOdd1bLw0KwnnENNp-3nqLSPLXDzlpHqJhq6uKVrC55MbLIyrab-mLk5OipcgxSdFaXD5shtMivAyqYuGfhYli76F1fOjW3_zq0caVjRiUojh0VuGHZNcQ6VzAl33clUbrhs_2VCCmNXZiSdw-RhNEVXbxUFS8fdsFA1OBD5C-54Tjkw8z7kyClVtm1PpXsZoEn7c6qPczN1ykxXp-_R-3SFXj5OYpIIoFJS5UuvVTFS6e7WI7hbotfgky1zlRUcjiZrJLl036New6nI4px6wZBrKWR8Rez3VH1X1oYYFLl-Gy)
 
-title L2: Security Scanning Flow
-
-rectangle "🔒 Security Scanners" as SCAN #1E8449 {
-  card "checkov\nCIS Benchmarks\n1000+ policies" as CHK
-  card "tfsec\nTerraform SAST\nAzure specific" as TFS
-}
-
-rectangle "📋 Findings" as FIND #FEFEFE;text:black {
-  card "🔴 Critical" as CRIT #C0392B;text:white
-  card "🟠 High" as HIGH #D35400;text:white
-  card "🟡 Medium" as MED #B7950B;text:white
-  card "🟢 Low" as LOW #1E8449;text:white
-}
-
-rectangle "⚡ Pipeline Action" as ACTION #FEFEFE;text:black {
-  card "❌ BLOCK\nPipeline" as BLOCK #C0392B;text:white
-  card "⚠️ WARN\nOnly" as WARN #B7950B;text:white
-  card "✅ PASS" as PASS #1E8449;text:white
-}
-
-CHK --> FIND
-TFS --> FIND
-
-CRIT --> BLOCK
-HIGH --> BLOCK
-MED --> WARN
-LOW --> PASS
-
-@enduml
-```
 
 **Common Findings**
 
@@ -356,47 +208,11 @@ def create_jira_finding(finding):
 
 ## 4. L3: Compliance Testing
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_05
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_05.puml
+-->
+![Utm 02 Testing Diagram 05](https://www.plantuml.com/plantuml/svg/TLEnRjim5Dpv5Q_sqWuEdDXfwmv599aA3AYkOCcR5vPc5DOKQP0KMYF8s2xTahL0f_nOlg2VK9AARJL59K0WnNllxjr95yOIRPjQe1VscjKCADEDO4GYi-5oIpIfuHEXcqghHguJ9PI6VehztK5eHYsHbM1mWm1I9UqU6Ivqsy5IejVFOMV929yFtRluFrIt25bkNVziz0uILMy59v8oA9cnN5RmCfvENo5qrD7x_Ul-0MPoszWU40EpURuieJyTuzVfQQ0FEdebqvfSALr3BeXSoQrxddmsIeQgF8lc1sZAY6qqWvGBPbRovAhT1s2AezAB_4l0mnquMO1bnMKByzj-_6PoFemx6knUmu0U9bl9oskcdMbGxAGbNqDvyl53_W_B_G_8bU1q1miNd0d0nJB3XJClIKT9sfsML9Mtgoq8q3AwF1mlMCMLX8KpLNDgtVgf7JvYvin-KNhJ8PlZyd1QCDfeRdSkICF4Vkm29yzaF_xyvcaQOPy8YcLMxjFk2Cw9CV3u_SvbBbtGJTilZmettIb-EnvFZl4GBW8q5efksbIYMGRzP3YQdCLUGFiH30RlVH38X-7NmIpKMXRsGGn25qok_O_n1m)
 
-title L3: Compliance Testing (BDD)
-
-rectangle "📥 Input" as INPUT #D4E6F1 {
-  card "Terraform Plan\nplan.json" as PLAN
-  card "Feature Files\n.feature" as FEAT
-}
-
-rectangle "🥒 BDD Engine" as BDD #B7950B {
-  card "terraform-compliance\nGherkin Syntax" as COMP
-}
-
-rectangle "📋 Policy Rules" as RULES #FCF3CF {
-  card "Tagging Policy" as TAG
-  card "Region Restrictions" as REG
-  card "Network Rules" as NET
-  card "Security Baseline" as SEC
-}
-
-rectangle "✅ Result" as RESULT #FEFEFE {
-  card "Pass → Continue" as PASS #1E8449
-  card "Fail → Block" as FAIL #C0392B
-}
-
-INPUT --> BDD
-BDD --> RULES
-RULES --> RESULT
-
-@enduml
-```
 
 **Example: Payment System Compliance**
 
@@ -462,51 +278,11 @@ Page: /spaces/UTM/pages/Compliance-Policies
 
 ## 5. L4: Integration Testing
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_06
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_06.puml
+-->
+![Utm 02 Testing Diagram 06](https://www.plantuml.com/plantuml/svg/XPEzJiCm58LtFyMbBAq0iJ1bG4Gf4P6GgC1Yw6QIIx7gsfP_GB3n12mCR8oLU0AUXnU0H-2wFz2M0h8KoLTVpZa-JWvy42x4aM8RuGf723Mwg51eveTIM-7422v4FHmu4tLJ66KSR9Q7QJ4MP508ntiPL3hWm8aWZGQEFaWzW5AP6sXpT3IdKOSnaWkobbRe0AsFvySn51Nqf4KbDRP0UDglGkCN-9AO89ml8szFz--l3t1YKNDp6QTCkPR9xwAR-kHzniXxPv_aCZXB7Vmu0nDraDTad2mPvnEwp22G2qWj0so1i5RTBe0busNYydu6XSCqEqMXwE5DT3NwRvOYv7tOcOdE0QYwddHFOh0nUDRW8f-qPv7pP0o56Lc50HSvoZ0BcqAS2oMRD6uVSTxRXhnNGIsKyfsrIVWaYJNQuuhtl83axJrINmH6HHbNgsceEsT-QwMBAV3_XHJf8unsxH6Ng-XE_VuiWz2YoYRNEiyDxPxmVhSKKdMMNg7BFa3Tf7_Y4m)
 
-title L4: Integration Testing Flow (Terratest)
-
-participant "🔧 CI Pipeline" as CI
-participant "🧪 Terratest" as TT
-participant "☁️ OpenTofu" as TF
-participant "☁️ Azure" as AZ
-
-CI -> TT: Start Integration Test
-activate TT
-
-TT -> TF: tofu init + apply
-activate TF
-TF -> AZ: Create Real Resources
-activate AZ
-AZ --> TF: Resource IDs + Outputs
-deactivate AZ
-TF --> TT: Apply Complete
-deactivate TF
-
-TT -> AZ: Validate (HTTP, API calls)
-activate AZ
-AZ --> TT: Response
-deactivate AZ
-
-TT -> TT: Assert Results
-
-TT -> TF: tofu destroy
-activate TF
-TF -> AZ: Delete Resources
-activate AZ
-AZ --> TF: Cleanup Complete
-deactivate AZ
-TF --> TT: Destroy Complete
-deactivate TF
-
-TT --> CI: Test Results (Pass/Fail)
-deactivate TT
-
-@enduml
-```
 
 **Example: Payment Gateway Integration Test**
 
@@ -544,99 +320,21 @@ func TestPaymentGatewayDeployment(t *testing.T) {
 
 ## 6. L5: Acceptance Testing (UAT)
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_07
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_07.puml
+-->
+![Utm 02 Testing Diagram 07](https://www.plantuml.com/plantuml/svg/TP91Qzim5CVl-XHlxJdGDIsi7OpQmYw3BGcsCnZaeYWlheWY6KdkMaQFEvLjb5uBk-o-wpvFly3s4Ih9RM8AjGz6yk-zz___fHFhc77jMf9NxWpN21nDAv4fObT2DSomDSmPNzL6jsf1jTG6TlCil3t287TCrHBXAm78jN9FP7p8LO_bp2oUO_jqc1tk-RtqXL5NX3ZXVFyFXySmjMWWuHmRFvGZL6YTK3KXMnax_t_z-0FJfDe1PiCNTkdUy6W_ZPEZ18_SNaFQMg7GMYWvAcQ4jh4YfJtivdStyd5ErxBQ0FTtt__z_GcbgDLWl5p6t-KuIExf2RLGNJROzQy-JxBIkwFvaEPl7LwuuxdqtdloybPn9xHYSgO-CIaMBAnYTJuTRVLDq2orMOSaPegU8Lz5Pf8L-OQPMZONKhZBcIhmNE2NpaEPf1kamDhu7Fo8cIfRuJ0YHNRwpCZztJV8BeG3QZna18iSBTxxY5zdRmuEZdeUUeVqXCD7TB4asLeOQKYbvlwArFv0wYwYqLRRP0n9qnXzpcJdBQORJdKmUDTbIRf4mpfe8UG4rI9SwmS)
 
-title L5: User Acceptance Testing
-
-rectangle "🎯 UAT" as UAT #C0392B {
-  card "📋 Business Scenarios" as BC
-  card "👤 User Testing" as UT
-  card "✍️ Sign-Off" as SO
-}
-
-rectangle "Test Types" as TYPES #FCF3CF;text:black {
-  card "Functional\nValidation" as FUNC
-  card "Performance\nCheck" as PERF
-  card "Usability\nReview" as USAB
-  card "Regression\nSuite" as REG
-}
-
-rectangle "✅ Exit Criteria" as CRIT #1E8449 {
-  card "Acceptance Criteria Met" as AC
-  card "No Blocking Bugs" as NB
-  card "PO Approval" as PO
-}
-
-UAT --> TYPES
-TYPES --> CRIT
-
-@enduml
-```
 
 ---
 
 ## 7. Tool Matrix
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam component {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_08
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_08.puml
+-->
+![Utm 02 Testing Diagram 08](https://www.plantuml.com/plantuml/svg/TPB1Ri8m38RlVGeFpjDAMmRq11Gc8J4D3NQQfYa4qqPDaofrcRg9TrzeWQ5AIowny_lp7olZWfYXCfFE7IMO8N0qfKIcd28LAcU6PR1bF8sDBjKkqb8Rw3xDJ_j6aLi5Yn5-780dhUYYgvTpl55odULQeQAsrelyUT-rkUa_tOwEGu8amWOB4Yg6ZTQI9qmes5QmP1KQnxaOwIpT4DR4IF0ET0SpFneDwuxlfFSbx3Fwk0O79iME4JQPlHJANXvlMRqGtfGWI_A6Ws3oU4CYQwOkp3HFFtEZ3sA7fbNlMI_8IoEeiepUV1W4euR14-IfFfnR5yYRan67giNmGuZixAHWYgEbJ0UZlZizEq5Zs5wRx9vV9JNePJLvUCLOjrX120j561ix7wqiRERt0zTjO9iJxFgioNTf4ABbeebMYyluMyX-21FECQUplSZrHzxPtZDJ9PD_XJQragpwCY9EcYvhbAX4cTNGCQhTwKF-0W)
 
-title Testing Toolchain by Layer
-
-package "L0: Static" #7D3C98 {
-  [tofu fmt]
-  [tofu validate]
-  [tflint]
-}
-
-package "L1: Unit" #2874A6 {
-  [tofu test]
-  [mock_provider]
-}
-
-package "L2: Security" #1E8449 {
-  [checkov]
-  [tfsec]
-  [trivy]
-}
-
-package "L3: Compliance" #B7950B {
-  [terraform-compliance]
-  [OPA/Rego]
-}
-
-package "L4: Integration" #D35400 {
-  [Terratest]
-  [Azure CLI]
-  [API Testing]
-}
-
-package "L5: Acceptance" #C0392B {
-  [Manual Testing]
-  [Playwright]
-  [Selenium]
-}
-
-@enduml
-```
 
 ### Tool Comparison
 
@@ -655,61 +353,11 @@ package "L5: Acceptance" #C0392B {
 
 ### 8.1 Complete CI/CD Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_09
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_09.puml
+-->
+![Utm 02 Testing Diagram 09](https://www.plantuml.com/plantuml/svg/TLF1Zfim4BtxAznmZae2wIOvL0k6JL59WXAoKeykcSsYW8sCMQcgLkgzjswbIfMgNljv_OJQG1AIg72PuOtzthmPRaj9XQpo3BsIZv03Ja1K6L26odtA2YfeZZ_IPByJl69RmZCki77dwxTJ8I2HbEqom9yHndUSoKDb_Q3dJcr2nVQoR4WiVsIgR-v_g9uHagbKznEU5nb85GIlYOUZj80iPO3GIKBlx--NNvWiv_CWxc5QjY4sRZoBJCOrTosY5mde9ppFKudVSRwlYwELVyH3SwfKYfpA6WfDvmowfrcwfH9Qq3q3mvGTJX4j_qpVzp_OtGIXLnVKaV9WV6CxRphgmi4KRvZI5aCfo-QkmH4b_0a4tG5UGS65R1kzlwRwXjS-sQo2-4DTen9i3FonRK-wNCCf9e-GxFbJGpHqpZ3vK4BI8kuLnyjNxN4K1iw2-0VB8souDvEHwNPePi2KQ3MzAAEiiJjq5YScIp614FH1cQudKsGfPKbhi7NTsmySB69_jdBYOBcegrIE3SyQsQRPRS-UAXU5fYxRgTWd9_MwLuKoikILIA2nceI-KdR9-FCBzlmeN3PUgX0RnBGcmswJ7XGP_uJNakvIjcjCZvtP4L_dV0-TeQxdo_V-vUb8y6sLo9ItDgsMdXRJhdA__xPP6zGiZyxLO94Uhewr_QYUWSwK9qZxecCb6Q5RO5lzo_y3)
 
-title Complete CI/CD Pipeline
-
-rectangle "📝 COMMIT" as COMMIT #7D3C98 {
-  card "Pre-commit Hook" as PRE
-  card "L0: Format" as L0A
-  card "L0: Validate" as L0B
-  card "L0: Lint" as L0C
-}
-
-rectangle "🔨 BUILD" as BUILD #2874A6 {
-  card "L1: Unit Tests" as L1
-  card "Coverage Report" as COV
-}
-
-rectangle "🔒 SECURITY" as SEC #1E8449 {
-  card "L2: Checkov" as L2A
-  card "L2: tfsec" as L2B
-}
-
-rectangle "📋 COMPLIANCE" as COMP #B7950B {
-  card "Generate Plan" as PLAN
-  card "L3: terraform-compliance" as L3
-}
-
-rectangle "🔗 INTEGRATION" as INT #D35400 {
-  card "L4: Terratest" as L4
-  card "Cleanup Resources" as CLEAN
-}
-
-rectangle "🚀 DEPLOY" as DEP #C0392B {
-  card "Deploy Staging" as STAG
-  card "Smoke Tests" as SMOKE
-  card "Deploy Production" as PROD
-}
-
-COMMIT --> BUILD
-BUILD --> SEC
-SEC --> COMP
-COMP --> INT
-INT --> DEP
-
-@enduml
-```
 
 ### 8.2 GitLab CI/CD Configuration
 
@@ -798,42 +446,11 @@ deploy-production:
 
 ### 9.1 System Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #2C3E50
-}
-skinparam component {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_10
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_10.puml
+-->
+![Utm 02 Testing Diagram 10](https://www.plantuml.com/plantuml/svg/TP9VJi904CRVznGZF9Eeg0zg3FqV8v4653J6Xw6TG4ExIxPJXHXku8Fn0Xx2Yta4kuiOeY7DDZlpVJFpsyrsIaRDLP6BFPvIGP2Ghd92ASfP9kUeiO0n9hE9LfLCFPKh3SqmCD-MOruxS4Bm8W129Vd7T-YrW-DziTfo9ggOAqcITtW1t1tJLa9mnZb1ZCl2D1WiIwO279rCCwQ4Aqr2R4WQNn_ldt-i3S0IOkSUclvHS18Ud34j-7ISroMMvi69Bo52fcTSFXflD3BP8UPPYfmf2GFIJrb2LXmwNQDkHiHQ9LIMIbinxlSye_h8ECPoNU6xTaYLPWnTDR6vRYyo9zl2Vds3OC6a9UOMEBYxgU_02zjU-0_OHJc3cjgsSfthAvCCDLOf-6Jkf8QsMjXtRdqpA1f1gtLXuUjbzvRL_6nKG_xk3PmDpara-viY6wqxYWx9rBoURm)
 
-title Payment System Architecture
-
-package "💳 Payment System" as PAY #D4E6F1;text:black {
-  [API Gateway] as GW
-  [Validation Service] as VAL
-  [Payment Processor] as PROC
-  [Database] as DB
-  [Audit Log] as LOG
-}
-
-package "🌐 External" as EXT #FCF3CF;text:black {
-  [Bank API] as BANK
-  [Fraud Detection] as FRAUD
-}
-
-GW --> VAL
-VAL --> PROC
-PROC --> DB
-PROC --> LOG
-PROC <--> BANK
-VAL <--> FRAUD
-
-@enduml
-```
 
 ### 9.2 Testing at Each Layer
 
@@ -852,47 +469,11 @@ VAL <--> FRAUD
 
 ### 10.1 When to Run Each Layer
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_11
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_11.puml
+-->
+![Utm 02 Testing Diagram 11](https://www.plantuml.com/plantuml/svg/RPBBJiCm44Nt_ef1RD85uhsX2uhILaAqeagBM1jdcbXDni6P8ENliUEw5AYyiEovvyx3dhGiBNTr9Swun1f1eUqgb2JQdQP6Mbd3XrIxmfgEyjHKniBvVEQN4AovGdWlaO0DP1t1JAeIDjWoB6IFLeZ1NZoa9aT8Iqa5ZeLuyDB55IHhbgpLQ2pq5fBKrBNcnn6mDqnwR4S286Yl8NaZpKu9uBMhx7A9ja38yBDpwVvIaRjnEL1rLdC_i84Eg2jvAJNzHoDyEzJKL5gImZqU339q8seHDh8uXKU3EqYUYR6mhaj31uSOldTDFMsEhwVOLARtbQsioJlbiPzmowRP7x1osHCoHncdXX0km8sq1qD3QwTHolLMd3A95glCZLNcVSGFS4H_Wn4BxmUlBu7RKu4v9g9-hjtdMSilp3qmo8DOJDpkl-Gt)
 
-title When to Run Each Test Layer
-
-start
-:Code Change;
-
-:Run L0 (Static);
-if (Commit?) then (yes)
-  :Run L1 (Unit);
-  if (PR/Merge Request?) then (yes)
-    :Run L2 (Security);
-    if (Merge to Main?) then (yes)
-      :Run L3 (Compliance);
-      if (Release Tag?) then (yes)
-        :Run L4 (Integration);
-        :Run L5 (UAT);
-        :Deploy to Production;
-        stop
-      else (no)
-        :Done - Stay on Main;
-        stop
-      endif
-    else (no)
-      :Done - PR Ready;
-      stop
-    endif
-  else (no)
-    :Done - Commit OK;
-    stop
-  endif
-else (no)
-  :Done - File Saved;
-  stop
-endif
-
-@enduml
-```
 
 ---
 
@@ -902,42 +483,11 @@ endif
 
 ### 10.1 Process → Tool Embedding
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_12
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_12.puml
+-->
+![Utm 02 Testing Diagram 12](https://www.plantuml.com/plantuml/svg/TPFVRjCm5CRlynI7LKWWqQX_sJe9j3JDfg6scPOM2QathdFQcZfsPJk32EqM9BX0OXAtk-6I1-1vzWBi4N2SJYj395V-ykMSdxzZ7sb3bCapxZqoAymGAAgS8n6UNZEn8OfaC2TqlLGo5saekLHGEuxATyUXa1eYbXpXWmTmB8MvSxh7kzpnKgBIXxPMs8ww3Qlr_zFgqlCCCxR-xVMFxt2c94MjuURZDvX8oI7AvfYcJ2pX1GIvaK9cCjUG5DfWvddtU7ktrrTVO1ICfy4GpixZC4gIFI3wJgg5ZNQlrNTy3dIlwLjGbH43LAOu4oqVNXFEKc8GT24CUJyJRH_ESm4QQQwOAO2kaAxrJ7Hy21MMpbTC4J2Chj5OlUl3TECgX58iU8w2OaNHB7UwWtlpyzFlNryX6lMZ0PoE9p5CudXO8LTYhR_VwpPsYJSAwrHc6JEmahBay9SsEpAlK-ON6Py9HrFcPBV5fB3m7Atj7WP6X2gfgpOFcTm8Wkaa7iUZU9f0yYQPH2FdBLMeDQE3JgUtGtJ2p93CuOnja3DXGrIvq42s09HmNcoXSXUB1cOqyiLVI7ebtsdWx0B1UaZLxr-sgy_GQpo6Vf14mzDn14aKJi-ZWRENeZri1_kTuFaENYnu0Ktxaq1CRGwhF2C2tkRfCaDXPkB9D9Wy0qoNzdOGZVffLSprtfwRUltbTXw7TgOfMnHUjIm_k5GEOO0RBWlFhKhPqHn2G5SCBr1xtX6AjBo9Vm0)
 
-title 🤖 Process → Tool Embedding = Autonomous System
-
-rectangle "📋 MANUAL PROCESS" as MANUAL #C0392B {
-  card "1. Format code\n2. Validate syntax\n3. Run security checks\n4. Create Jira tickets\n5. Update Confluence" as M1
-}
-
-rectangle "⬇️ EMBED INTO TOOLS" as EMBED #B7950B {
-  card "pre-commit hooks\n.gitlab-ci.yml\nJira Automation Rules\nConfluence Macros" as E1
-}
-
-rectangle "🤖 AUTONOMOUS SYSTEM" as AUTO #1E8449 {
-  card "GitLab Pipeline\nruns automatically\nJira updates itself\nConfluence shows live data" as A1
-}
-
-rectangle "📊 90% BASELINE SECURED" as BASE #2874A6 {
-  card "Only 10% needs\nhuman judgment\n(UAT, edge cases)" as B1
-}
-
-MANUAL --> EMBED : Codify
-EMBED --> AUTO : Deploy
-AUTO --> BASE : Achieves
-
-@enduml
-```
 
 ### 10.2 Autonomous Tooling Matrix
 
@@ -1044,43 +594,11 @@ Actions:
 
 ### 10.6 Autonomous System Benefits
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam object {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_13
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_13.puml
+-->
+![Utm 02 Testing Diagram 13](https://www.plantuml.com/plantuml/svg/TPBFJXin48Vl-nG3Q2-fK3TT5efK98Ap2pa0LJOlu7YdYPlrEF8Vf0XnHnnGLUYPH-YhyGXubwLDH2jBFlXdpVTvniVMSUEyggCjDqU58D3u6Zb5TY5foGrNCELYCJFQKyLqhGti57cprcxewNSK3guZW4AJwwvzOccU9U7iv3y5RgB8ILSZF3yztCB0EqrQQM-XN5c72iQNeoZgQcy_F_tw0HCP54j-9Mbcju5Rc8pESzWPPaMMfot_d9FdDNmrMg2rS0HxCDVUs8yLNuLu3N84_GoK9E_mBUtrkjeXF4pZNgzH_2jm_nkO9Yk378bLosUN5sNWx-NxHR_bdtd52N9ZmZl7t66ebEtsaxXZgt1KRSPV-d6B7gcbqLTX1kGQVF8E_t074yC5ygcifNlbJyO35XfGi29bnNe3M2Xb-Am1x2Ux1ty4kiUlnOTP_E4V0cdsJk3n9vGel0dmC5EBjIHiBSgS1OV1y6JuUSDXZcBHz794ugrlRgCHfs5l9v4aCI1zqqPWrSemhPQrv2GQnLCVlXavnEfLwHYfQlxi2m)
 
-title 📈 Autonomous System ROI
-
-object "🕐 Time Savings" as TIME #D5F5E3 {
-  Manual Process = 4 hours/day
-  Autonomous = 15 minutes/day
-  **Savings = 93%**
-}
-
-object "🎯 Consistency" as CONS #D4E6F1 {
-  Human Error Rate = 5-10%
-  Automated Error Rate = <1%
-  **Improvement = 90%**
-}
-
-object "📊 Traceability" as TRACE #FCF3CF {
-  Manual Coverage = 60-70%
-  Autonomous Coverage = 95%+
-  **Improvement = 35%**
-}
-
-object "🔒 Security Baseline" as SEC #FADBD8 {
-  Manual Checks = Inconsistent
-  Automated Gates = 100% enforced
-  **Compliance = Guaranteed**
-}
-
-@enduml
-```
 
 ---
 
@@ -1090,38 +608,11 @@ object "🔒 Security Baseline" as SEC #FADBD8 {
 
 ### 11.1 The IaC Coverage Problem
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_14
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_14.puml
+-->
+![Utm 02 Testing Diagram 14](https://www.plantuml.com/plantuml/svg/TPB1RXCn48RlVeeXEPHAYIXj2Yq7rDJPY5H9MhMHAjHmc7YdMIkENTdUX0Zr2U366N7ZmNW27g6sqnNR8dQbtTMlV-R_FBCdpgFrvLAn5xwW9O4WMof2pTn2wZkqk8GPYiNScbBdt2XZeTdFubrpM18UzLmHV640VQDzvKmNkwzv1ThykMsV7sI7Uq4x_K_KFMDU-j3_zuzlS5riO68nbruQZGg6KXDmioABSu8-IkNWDXGFa3Fs5wtnv-VtNp1OtWMVbok2OT3BK3BLByzmXIsusFZ2w1Rmvcu3qC5WT17OZjvskcyISK9lP9z9b9v0nTZP9hsdEW291QmBAOgaEB2eftf4w4fBxnAaWyVQ75x1nFX7TbU5yNZEfy1VeKT2uR_47_Ym1H-xe_0ykpeVRu5x6OVcw-oeqpck0VV82Ijd13avQKDusBaFFSO6AF64CSAjCkiaRU6zWHrRwfsgxNEqk8TBSgNooN6PNK6JxnqSxv_MWkjB4jL-l37AJJNlZiVd4rWR6wOcVH6tLRLAON7uxPj2vZdfJrRE2z-E85kz_JxwM3nlzSrEIEVnHtu0)
 
-title ❌ Why Traditional Line Coverage Fails for IaC
-
-rectangle "📦 Imperative Language\n(Java, Python, C#)" as IMP #2874A6 {
-  card "Execute line by line\nTrack which lines ran\nMeasure: Lines Executed / Total Lines" as IMPC
-}
-
-rectangle "📋 Declarative Language\n(HCL, YAML, JSON)" as DEC #1E8449 {
-  card "Describe desired state\nNo execution flow\nNo lines to 'run'" as DECC
-}
-
-rectangle "❌ Result" as RES #C0392B {
-  card "Traditional coverage tools\nCANNOT work with IaC" as RESC
-}
-
-IMP -[hidden]right- DEC
-IMP --> RES
-DEC --> RES
-
-@enduml
-```
 
 ### 11.2 Custom IaC Coverage Methodology (Dual Metrics)
 
@@ -1136,37 +627,11 @@ Since native line coverage doesn't exist, we developed a **custom dual-metric co
 
 Measures **how well your tests execute** across all testing layers.
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_15
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_15.puml
+-->
+![Utm 02 Testing Diagram 15](https://www.plantuml.com/plantuml/svg/PL5HIWCn4FsVKuo8KFV7Lbk5b4BBqeBG3sdr0EDss8PcaoMP5GizWRyUm2jw12T5i5JozTxBlFSocIQXA5tZu4Ast31M73l7v27jh6yfKeElLEtg63g_AOCB4IyNytm0n8fZ_Fxw_C1rnPwY3LY6DuvKCvRagiwHsE013i-S1EVlN7MPEC0n5iogypXp3e_oalOSqnZCiczmBJfQOMymGb4nNMT-OF35MpbZR_Ms6aSh-pFbpcYVfdMMVCMgzK-qeS57Brp7OqNi_St1OUR9xPDD1p2blbjmnQbpejry4CPewwq0udCGSWRlVssLUQAKU6DmE5Am8Eio66ImtjcspQWFx3UOVJJeP4cQzN-94tMwKVy95iN3wAeenhgvq09CrIJ_sWy)
 
-title 📊 Scenario Coverage Calculation
-
-|Test Execution|
-start
-:Run All Test Layers;
-:L0: Static (15 tests);
-:L1: Unit (15 tests);
-:L2: Security (15 tests);
-:L3: Compliance (10 tests);
-:L4: Integration (5 tests);
-
-|Analysis|
-:Count Results;
-note right
-  Total: 60 tests
-  Passed: 45
-  Failed: 15
-  Skipped: 0
-end note
-
-|Calculation|
-:Scenario Coverage = 45/60 = **75%**;
-stop
-
-@enduml
-```
 
 **Tools to Measure Scenario Coverage:**
 
@@ -1182,42 +647,11 @@ stop
 
 Since OpenTofu is declarative, we measure **code structure coverage** using static analysis:
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_16
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_16.puml
+-->
+![Utm 02 Testing Diagram 16](https://www.plantuml.com/plantuml/svg/ZPFDIiD058NtynJN5a71d_vfMq5nEgOg516jYk9ccaxRO39J9ZUYY2iVm8KBbovy2VU-YI-WZ-1C9jLO54msTmw7UxwS8PinSer9598P78b8W2zq4WekINmHo37NF88Uzo-6MYMoprIeD1JRddrp3Yryv78O2hWX06qbSU9C7tARy_fSzwTj5LRrLaf6Q_qHTKi81cZsVpmzt0DBObGHT08fWAbBeVbGmC3OTpaZv1kcK7v_kN-xUuPzUd3e5O37Re9YVQlAceqK8-Kf7FfSmX8EO1248ZwNtXLgxkCQ77CTy9xH5k10n2hHlXqfeWvw2OhORIrRmbnm9GkcUxHpUkQYizbyRQDUewk_X9jrk3Jomma4CqKOXAwHHVz_97IQf9gHd7YxsplTrED6ABRgpPLIAyT1n-Fm6hPKn0C99o8OZj1GV8N1woDK5xuvxBcI9x12sKLCOzGo34OxxAX3kwuIUu9YsMlKQiqSny-BNJ-NSra5Ph_3ceTbcEigv65Ui_6bqgnRdHAuwrvSt9YqJoQtO3LN1Cdwi8e58cHJoBxz9Ju1)
 
-title 📏 Custom Line Coverage for IaC
-
-rectangle "1️⃣ PARSE" as PARSE #7D3C98 {
-  card "Scan .tf files\nExtract: Variables, Resources, Attributes" as P1
-}
-
-rectangle "2️⃣ ANALYZE" as ANALYZE #2874A6 {
-  card "Scan .tftest.hcl files\nCount: Tested Variables, Resources, Attributes" as A1
-}
-
-rectangle "3️⃣ WEIGHT" as WEIGHT #B7950B {
-  card "Apply Domain Weights\nResources × 3, Variables × 2, Attributes × 1" as W1
-}
-
-rectangle "4️⃣ CALCULATE" as CALC #1E8449 {
-  card "Line Coverage =\n(Tested × Weight) / (Total × Weight) × 100%" as C1
-}
-
-PARSE --> ANALYZE
-ANALYZE --> WEIGHT
-WEIGHT --> CALC
-
-@enduml
-```
 
 **Weighted Formula:**
 
@@ -1293,37 +727,11 @@ Write-Output "Line Coverage: $coverage%"
 
 ### 12.1 Why Fuzz Testing Matters for IaC Modules
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_17
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_17.puml
+-->
+![Utm 02 Testing Diagram 17](https://www.plantuml.com/plantuml/svg/TPA_SjGm48TxFyNcA3DXZkG2IGecTyQNeGZ7X10QDtlMdYDEbZpI-fY4IKd7qAI5IKVBE_44UGJMkZyuPB0hIp_h-tQrnu7HSrEPP8ilgI8eo3U6q2PXhcsD7YkOOZ4llMkiIfrn7fwCi_Rj93mLZBOq19yJWB6pl4x69xdfP0lqwj_ORhgNxVTbRVGVr4sIi6Ov__xksoyODzVNS4w1jItXhNTJGnNC9FuQKpXrIWe8IV9NgdT_T_iJJiYIryKgq0CCS3fv9V235uFXywWKtNhls7ai2OP58IQy-Y6txmCfc5x1VdyRiAwDBf2riy24LSYjnAdc0B5COl815XhXASyMwCEQbxQrTDH-__WA7pHVkeOVr1Npew7ufVszmzrHn-zSU489WG9yyavwuAaKaTmkJK5HRTnL07QhVUEMghbDNINYQ0iIEMVYwjQQzSZj-vVezbZiPD9sxbbsC1WSTimkq6YrRCfKcFCWPX_bF93BRpYteqOR1JFKHdZPU7AMhLmhiln0hcoaYvQ9r8ONxTeRszbv6Jjp16ySB3R8pLwKEu8Bz1fbD3eHs9PneS9PfTjF6P9ZiggT_Zy)
 
-title 🎯 Fuzz Testing Problem for IaC Modules
-
-rectangle "📦 Generic Module" as MOD #2874A6 {
-  card "Storage Account Module\nUsed by 50+ application teams\nAccepts parameters via .tfvars" as MODC
-}
-
-rectangle "❌ Without Fuzz Testing" as BAD #C0392B {
-  card "Team passes wrong region\nModule deploys to wrong location\nCompliance violation!" as BADC
-}
-
-rectangle "✅ With Fuzz Testing" as GOOD #1E8449 {
-  card "Validation blocks reject input\nBuild fails BEFORE deployment\nCompliance guaranteed" as GOODC
-}
-
-MOD --> BAD : No validation
-MOD --> GOOD : Variable validation + Preconditions
-
-@enduml
-```
 
 ### 12.2 IaC Fuzz Testing Strategy
 
@@ -1545,47 +953,11 @@ fuzz-tests:
 
 ### 13.1 Testing Categories Overview
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_18
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_18.puml
+-->
+![Utm 02 Testing Diagram 18](https://www.plantuml.com/plantuml/svg/TPFFRjD04CRl-nH3Ue53998ufO146bnRHAhSYgOtBflra5fPxvhTCMbKzHcuSA6N7Yln13mFBq0VWVMVsCOgzcbslvtlzytQnvQueJoLx1bTOOeWqEGIkM9sawYC6vx2YelDskXSnRwMsi1161HlHs5G45ThYN3304AjQAyi7tRRqGfkuhvix4-2wKktzlu_LhUCKKAk_-Fzmqy8SoKeqOfB-6eXqchOMLcYfKIj6MkX1e_ttnyWl8pyvU8icfyEWDkoTCv7hxpvOSbJWWrED5f82BRQR41eKtIHkzadjTz84Sa5_f8dnirBaUtiPKR7kK30wymTmnXqJbbEiyRGBv9qm7xV_VZpwnj4Pz6mXnTLVAFWoFDUT_W-w2riKKg8zvveFckJEef5MLiKkS4PV4IPy9N43fuLtDLj-pvDRugsmbx2mOaN78QZjuJNz6ObtHrrW2wLwrpAuVdfw4LrPjHi-phD78XoKzcB9hLet8WMYd1jUE7TgBnQDMbKSo4metzQJMkHrqlon3TXwzn5d6au3IPFnxaenfVG3Yu4LuN5kBA8saZdrSHRa4emxcIs17DdlBD9lTccgEubaOM7VuLYKolA2EMb3uVltDHPr1GEch5ZL77nd_u5)
 
-title 🧪 Functional vs Non-Functional Testing
-
-rectangle "🔧 FUNCTIONAL" as FUNC #2874A6 {
-  card "Does it work correctly?\nDoes it meet requirements?\nDoes it produce expected output?" as FUNCC
-}
-
-rectangle "⚙️ NON-FUNCTIONAL" as NFUNC #1E8449 {
-  card "How well does it perform?\nIs it secure? Reliable?\nDoes it scale?" as NFUNCC
-}
-
-rectangle "Functional Tests" as FT #D4E6F1;text:black {
-  card "Unit Tests (L1)" as F1
-  card "Compliance Tests (L3)" as F2
-  card "Integration Tests (L4)" as F3
-  card "Acceptance Tests (L5)" as F4
-}
-
-rectangle "Non-Functional Tests" as NFT #D5F5E3;text:black {
-  card "Security Scans (L2)" as N1
-  card "Performance Tests" as N2
-  card "Cost Analysis" as N3
-  card "Reliability Checks" as N4
-}
-
-FUNC --> FT
-NFUNC --> NFT
-
-@enduml
-```
 
 ### 13.2 Functional Testing for IaC
 
@@ -1655,47 +1027,11 @@ checkov-nonfunctional:
 
 ### 14.1 Traceability Flow: Requirements → Tests → Acceptance
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_02_Testing_diagram_19
+Original source archived in _archive/plantuml-source/UTM_02_Testing_diagram_19.puml
+-->
+![Utm 02 Testing Diagram 19](https://www.plantuml.com/plantuml/svg/TPF1RjD048RlVegXFQTAavGqEQ2wMnT53RIADv6GSjckns5LUntjheKYr6Cvm0N15SGHYSVg4_08p6wSOWh4f_bdDFFjp9yJwuHnTLb4JznhB14achf0eIDxe_HQ6572jP0tArFLEcDLKHdOFq_yrwemA9tGgmBXRGHmNcctgmo_wBPLAuN97fVrM3yvwf9s-fzHjr7abAF-Fxzz_W1pYmPILvaDtB_x11oj0oOiXYYM4jT48n6OKGwD4a6VnpoAVeFkKQUlC4-J6QJySlPg3uIb4FQ7PtqsEWw40NKljY1WBJObQWSEHRdK4tWZAB2485O8gANPh1rcIvrMa0adG5bOcyhHECoQrio_ua-0Zn0pbbpn-2LBWCqcF9bDub0UCzhAyN0GFssH71w4L_kHjKKBQPfqs8kBfUuTm0Lk0Wzce7I85g8kt5Bt3o2kC-MWg5QMKCLrqI3HxB-Glly0dgGSM9mcQQZYH78w71rrJriad7MwtSCnB6Yz-SQ3x3elTSZr7d84IFx8qT2MiCds7xBY0QqPzXZf_ijTUqaURiiLSzW_J8u7Wr6BQqfCSwtydSWJpLrKfK5MEbUhfPuIM8go9cVGlgJGT5bBkwJCqTXx1AnQwKwLvysGVrpjVQYR9UbyohUtzIoisn_rsZiAv4K1SkV24kaSNhswXBIPiXLcAB8Dv6JuArDbjVJ8kyu1W8pPwJpphXZ36UPAeuqey1htsdFKQ0GzEk9RbOZ6C2dN1NhRKZ4FyZpe2r6eB5H79wWp_-__1G)
 
-title 📋 User Story → Test Case → Acceptance Criteria → UAT
-
-rectangle "📝 USER STORY" as US #7D3C98 {
-  card "As a payment team\nI want storage encrypted\nSo data is protected" as USC
-}
-
-rectangle "📐 ACCEPTANCE CRITERIA" as AC #2874A6 {
-  card "1. Storage uses SSE-CMK\n2. Key stored in Key Vault\n3. Audit logs enabled" as ACC
-}
-
-rectangle "🧪 TEST CASES" as TC #B7950B {
-  card "TC-001: Verify SSE enabled\nTC-002: Verify CMK reference\nTC-003: Verify audit logs" as TCC
-}
-
-rectangle "✅ ACCEPTANCE TESTS" as AT #1E8449 {
-  card "L1: Unit test encryption config\nL2: Security scan passes\nL5: UAT sign-off" as ATC
-}
-
-rectangle "📊 UAT RESULT" as UAT #C0392B {
-  card "✅ All criteria met\n✅ PO Sign-off\n✅ Ready for Production" as UATC
-}
-
-US --> AC : Defines
-AC --> TC : Generates
-TC --> AT : Implements
-AT --> UAT : Validates
-
-@enduml
-```
 
 ### 14.2 Example: User Story to UAT Mapping
 

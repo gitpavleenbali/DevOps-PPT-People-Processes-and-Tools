@@ -1,0 +1,40 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam object {
+  FontColor #FFFFFF
+  AttributeFontColor #FFFFFF
+}
+
+title Quality Index Components
+
+object "Quality Index = 89.5" as QI #1E8449 {
+  Formula = (0.3×Coverage) + (0.3×PassRate) + (0.2×AutoRate) + (0.2×(100-Escape))
+}
+
+object "Coverage = 80%" as COV #2874A6 {
+  Weight = 0.30
+  Contribution = 24.0
+}
+
+object "Pass Rate = 95%" as PASS #7D3C98 {
+  Weight = 0.30
+  Contribution = 28.5
+}
+
+object "Automation = 90%" as AUTO #D35400 {
+  Weight = 0.20
+  Contribution = 18.0
+}
+
+object "Escape Rate = 5%" as ESC #C0392B {
+  Weight = 0.20
+  Contribution = 19.0
+}
+
+QI <-- COV
+QI <-- PASS
+QI <-- AUTO
+QI <-- ESC
+
+@enduml

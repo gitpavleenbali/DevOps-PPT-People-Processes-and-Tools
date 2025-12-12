@@ -1,0 +1,41 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam component {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Reporting Structure
+
+rectangle "📊 REPORTS" as REP #2874A6
+
+package "📈 Executive" as EXEC #7D3C98 {
+  [Quality Index Trend]
+  [Release Readiness]
+  [Risk Summary]
+}
+
+package "🔧 Technical" as TECH #1E8449 {
+  [Test Results]
+  [Coverage Details]
+  [Finding Details]
+}
+
+package "⏱️ Real-Time" as RT #D35400 {
+  [Pipeline Status]
+  [Current Coverage]
+  [Open Findings]
+}
+
+REP --> EXEC
+REP --> TECH
+REP --> RT
+
+@enduml

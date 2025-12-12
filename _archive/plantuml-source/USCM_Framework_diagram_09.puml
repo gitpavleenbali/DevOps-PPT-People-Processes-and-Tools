@@ -1,0 +1,34 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 🤖 USCM: Manual → Autonomous Transformation
+
+rectangle "📋 MANUAL PROCESSES" as MANUAL #C0392B {
+  card "1. Track requirements manually\n2. Create designs in Word\n3. Run tests locally\n4. Email for approvals\n5. Update spreadsheets" as M1
+}
+
+rectangle "⚙️ EMBED IN TOOLS" as EMBED #B7950B {
+  card "Jira Templates (URM-13)\nConfluence ADRs (ADM-05)\nGitLab CI/CD (UTM)\nJira Automation\nConfluence Macros" as E1
+}
+
+rectangle "🤖 AUTONOMOUS SYSTEM" as AUTO #1E8449 {
+  card "Self-updating traceability\nAuto-create links\nAuto-block on failure\nLive dashboards\nZero manual tracking" as A1
+}
+
+rectangle "📊 90% BASELINE SECURED" as BASE #2874A6 {
+  card "Only 10% needs\nhuman judgment\n(UAT, complex decisions)" as B1
+}
+
+MANUAL --> EMBED : "Codify"
+EMBED --> AUTO : "Deploy"
+AUTO --> BASE : "Achieves"
+
+@enduml

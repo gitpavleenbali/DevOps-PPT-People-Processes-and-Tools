@@ -1,0 +1,52 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+
+title Quality Gate Progression
+
+|Developer|
+start
+:💻 Code Commit;
+
+|Gate 1 - L0|
+:🔍 Static Analysis;
+note right: Format, Validate, Lint
+if (Pass?) then (✅ yes)
+else (❌ no)
+  :Block & Fix;
+  stop
+endif
+
+|Gate 2 - L1|
+:🧪 Unit Tests;
+note right: Coverage ≥ 80%
+if (Pass?) then (✅ yes)
+else (❌ no)
+  :Block & Fix;
+  stop
+endif
+
+|Gate 3 - L2|
+:🔒 Security Scan;
+note right: No Critical/High
+if (Pass?) then (✅ yes)
+else (❌ no)
+  :Block & Fix;
+  stop
+endif
+
+|Gate 4 - L3/L4|
+:📋 Compliance + E2E;
+note right: All scenarios pass
+if (Pass?) then (✅ yes)
+else (❌ no)
+  :Block & Fix;
+  stop
+endif
+
+|Production|
+:🚀 Deploy to Production;
+stop
+
+@enduml

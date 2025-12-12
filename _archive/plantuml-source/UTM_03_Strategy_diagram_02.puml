@@ -1,0 +1,52 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Full Traceability Chain: URM → ADM → UTM
+
+rectangle "📋 URM: Requirements (SOURCE)" as URM #2874A6 {
+  card "REQ-PAY-001\nPayment Security" as PAY1
+  card "REQ-PAY-002\nPCI Compliance" as PAY2
+  card "REQ-PAY-003\n99.9% Uptime" as PAY3
+}
+
+rectangle "🏗️ ADM: Architecture (DESIGN)" as ADM #7D3C98 {
+  card "ADM-SEC-001\nEncryption Design" as SEC1
+  card "ADM-NET-001\nNetwork Isolation" as NET1
+  card "ADM-REL-001\nHA Architecture" as REL1
+}
+
+rectangle "🧪 UTM: Tests (VALIDATION)" as UTM #1E8449 {
+  card "TC-SEC-001\nTLS Validation" as TC1
+  card "TC-SEC-002\nEncryption Check" as TC2
+  card "TC-COMP-001\nPCI Test Suite" as TC3
+  card "TC-PERF-001\nUptime Monitor" as TC4
+}
+
+rectangle "🐛 Defects (FINDINGS)" as DEF #922B21 {
+  card "BUG-001\nTLS 1.0 Found" as BUG1
+  card "BUG-002\nSLA Breach" as BUG2
+}
+
+' Correct flow: URM -> ADM -> UTM
+PAY1 --> SEC1
+PAY2 --> SEC1
+PAY3 --> REL1
+PAY1 --> NET1
+
+SEC1 --> TC1
+SEC1 --> TC2
+SEC1 --> TC3
+REL1 --> TC4
+
+TC1 --> BUG1
+TC4 --> BUG2
+
+@enduml

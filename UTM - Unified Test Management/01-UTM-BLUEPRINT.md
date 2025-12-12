@@ -13,70 +13,11 @@ This blueprint transforms **scattered testing efforts** into a **unified, autono
 
 ### 1.1 End-to-End Flow
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam roundcorner 10
-skinparam shadowing false
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_01
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_01.puml
+-->
+![Utm 01 Blueprint Diagram 01](https://www.plantuml.com/plantuml/svg/TPJBQjj058RtUefJUzCk79pOQIwG45aNKB4QiEM4BYVIiJn4cd5dHWaX1Bhl8j0k2jsKhWfzWhvL-mYTIweeCRN17ft_c-6V_ypeH2eYL5DNtWkrmXeXHz5KI9WdBobR4q5gk23vPIbumug0Lrn0FuxCjqDOCUU2eO3jOKUGArBmQyfAM99AOdSAvegmiaAuzG1YpjI_nUt7k-kmEH75Ssmd64MxGrsR_CVTdUSfglJw4Ii6YW_q7uHOqIiKDp2bIynlyWezxz58xy-tpnzXCKjX00j6bnGBcE7xXWeT35EG4aPAE-m1aHRix-plZVtNrfnrsPiqaZAKiZjJMduoQw6v8igjoPTmpiMb1UQdvosHORvYD2SLd96A5aHHpYoKdPazps0mE7wOe7_jarRkdctdqtT8miZFajEty78fU6rClxBhc3hqzy9HSB3ViV-62WBHckOMYjfwZ4Gr0cqrRgiBgHi-LrpSk0re8R9U318xZnkcxh_y_dKFVcXYzaM-eaghUctTdPnAlKz8ozf5RA3-ThG_7XzqF8OeQSbQtAKRXgqUy7hDMPjxaBPAmXIA9SdHAOcn6ORMfwM2r8wJUCFqZv-moBe78qEvUI8qqGz7k-FXi6FNadCbTCjBbrCsVoe6H3uuoe9MyHl5wqxVVQraSzTfGsM16_iRNhz-W32Q9cVHx9sB9ff2FnYE3dOcJmughGeNKDA9TbrnPp9u33JbZEecst9wQd9AN6O62Ln-kgvzc3jnf6yyEpfs9-mGUWKAVUaaNEjp3hhPjUnvLZiIj5mfJPes6z1nXMrlppFL5Z7HQkJANGQTbcSghMosg6LavA8oeddUsZgsT_GGOiJ2lCHWoldQyqwG5UQDznS)
 
-title End-to-End Delivery Lifecycle
-
-rectangle "📋 URM - Unified Requirement Management" as URM #2874A6 {
-  card "Business Requirements" as BR
-  card "Statement of Work" as SOW
-  card "Technical Validation" as TV
-  BR --> SOW
-  SOW --> TV
-}
-
-rectangle "💡 IDEATION (from URM)" as IDEA #7D3C98 {
-  card "Jira Epic" as E
-  card "Feature" as F
-  card "User Story" as S
-  E --> F
-  F --> S
-}
-
-rectangle "🏗️ ADM - Architecture Decision Mgmt" as ADM #1E8449 {
-  card "Design Decisions" as DD
-  card "Components" as CM
-  card "Interfaces" as IF
-  DD --> CM
-  CM --> IF
-}
-
-rectangle "🧪 UTM - Unified Test Management" as UTM #D35400 {
-  card "Test Strategy" as TS
-  card "Test Cases" as TC
-  card "Automation" as TA
-  TS --> TC
-  TC --> TA
-}
-
-rectangle "🚀 DELIVERY" as DEL #C0392B {
-  card "Build" as CI
-  card "Deploy" as CD
-  card "Monitor" as MO
-  CI --> CD
-  CD --> MO
-}
-
-URM =down=> IDEA : "derives work items"
-IDEA =right=> ADM : "drives design"
-ADM =right=> UTM : "validates"
-UTM =right=> DEL : "enables"
-DEL ..> URM : Feedback Loop
-
-@enduml
-```
 
 ### 1.2 What Happens at Each Stage
 
@@ -94,39 +35,11 @@ DEL ..> URM : Feedback Loop
 
 ### 2.1 The Golden Thread
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam shadowing false
-skinparam defaultFontColor #FFFFFF
-skinparam card {
-  BackgroundColor #FEFEFE
-  FontColor #2C3E50
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_02
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_02.puml
+-->
+![Utm 01 Blueprint Diagram 02](https://www.plantuml.com/plantuml/svg/TLDDRjD05DxFAHxDkbLfVfe4gQhjJ4iasa9i2o5bC_6ynADEnj7CE6c4MB82gKWiM01YYSG9E0yNW2CmOwWn8jWBw_dxUJ_pvjHOfcsvbEIUpN69aA4k9J95pBLGAwRP4cOikrxeebGyAcIXeNL6_TjWc9pnOYFK0kPC6cmW7EUibFQiKFPEN3qDIiOqX-S48FnF7e26_2Xgq-uXUK685LOYHCLo9T4Y99fbo6P22hk5A6T24L9Px_tuzFOrqCVZQAfYgvd5XSZWl61o3vYfW3lR1nPlx72J2uj_j1yXZUa4ukHgycogdkRCGcbGWqBafh98OsYrEuF-ADnfy0ecz4awdj0BUfbCrGWj4n8vc1LcbTx1q1g4tK7OssLm--xxrri8HXSmej4u7bzTJjN3OWCRX5af90TXAnlFQ1qT1xItiv7FNo2XSG9H4DFQO8rQpBULF75ZwDDE9nZzg_xsuQMhCauVkVhfMd1K6VuktVL-lnSSzhjDLPtqpNi8q_EAwhxGeiUTg1tzHQqEO5-BHMxtJ_miXtvhX493N503VaWUySCpn4Srv1jta1Phf_51ZRYUXh1cKd1tx8OaKTFFPrhfWfUPWpnsS71ILJbq2-Us4C8jyQ7__IjxC9zZPXtv51Ntb-Od)
 
-title Complete Traceability Chain
-
-card "📌 EPIC\nStrategic Goal" as EPIC #2C3E50;text:white
-card "📝 USER STORY\nWhat user needs" as US #3498DB;text:white
-card "📋 REQUIREMENT\nDetailed spec" as REQ #9B59B6;text:white
-card "🏗️ ADM DECISION\nHow we build it" as ADM #27AE60;text:white
-card "🧪 TEST CASE\nHow we verify" as TC #8E44AD;text:white
-card "✅ RESULT\nEvidence" as RES #16A085;text:white
-
-card "🐛 BUG" as BUG #E74C3C;text:white
-
-EPIC -right-> US : defines
-US -right-> REQ : details
-REQ -right-> ADM : drives
-ADM -right-> TC : validates
-TC -right-> RES : produces
-
-TC ..> BUG : Found By
-BUG ..> REQ : Affects
-
-@enduml
-```
 
 ### 2.2 Traceability Benefits
 
@@ -176,60 +89,11 @@ Create Link Type:
 
 ### 3.1 Progressive Gates
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam shadowing false
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_03
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_03.puml
+-->
+![Utm 01 Blueprint Diagram 03](https://www.plantuml.com/plantuml/svg/hTB1RXCn40RWkv_YHmZKYAAsQGzLSg0bJU0GeQBGtWVlP6F5wrdPiuL8EN3XW81BuOH0d11INu6twHFm27WN8IZdo98bUsRap_OS9QMeJUNDBLrmnR0S6yyKJ5gwK5Ea2i_9BiieJIX6uYNYzcJSZdyoqe8AUU52YJdvnCQeKyzusf1tki8ZKiPfb39oIaw2CUiJlc0lDSUrwGHcyFFhvG-CfE0yLPNJOSxg2lTm7zFTTPlnyJrcIkeiZWFvLN9fQ8BadEZAXGumaLYHRkCydrlascrCNL3ZvjWwfPGUz90l6R1r_VarLfnwXhCsBx-yGv2U0GOFlTWbxcBYNWxpEgdKXaFXvdyq_LQprsc-N-4iECKpJleVP2GN7AbaNB_vXiFTEnibxBU4_ky7kSICRHFRLvvP2ZSLJmIZ77AM_CxZlBLHnK6hsD-P7dIG3s_RRwkzes0Pzp3kZszQZhr7iXmeEaceCs9JcjnOHMCrzrKd-VGA9rnxMK45VsD3qnMPerpMjlil)
 
-title Quality Gate Progression
-
-|Developer|
-start
-:💻 Code Commit;
-
-|Gate 1 - L0|
-:🔍 Static Analysis;
-note right: Format, Validate, Lint
-if (Pass?) then (✅ yes)
-else (❌ no)
-  :Block & Fix;
-  stop
-endif
-
-|Gate 2 - L1|
-:🧪 Unit Tests;
-note right: Coverage ≥ 80%
-if (Pass?) then (✅ yes)
-else (❌ no)
-  :Block & Fix;
-  stop
-endif
-
-|Gate 3 - L2|
-:🔒 Security Scan;
-note right: No Critical/High
-if (Pass?) then (✅ yes)
-else (❌ no)
-  :Block & Fix;
-  stop
-endif
-
-|Gate 4 - L3/L4|
-:📋 Compliance + E2E;
-note right: All scenarios pass
-if (Pass?) then (✅ yes)
-else (❌ no)
-  :Block & Fix;
-  stop
-endif
-
-|Production|
-:🚀 Deploy to Production;
-stop
-
-@enduml
-```
 
 ### 3.2 Gate Criteria Summary
 
@@ -246,60 +110,11 @@ stop
 
 ### 4.1 Who Sees What
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam shadowing false
-skinparam package {
-  FontColor #FFFFFF
-  BackgroundColor #F5B041
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_04
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_04.puml
+-->
+![Utm 01 Blueprint Diagram 04](https://www.plantuml.com/plantuml/svg/TPJDRjD04CVlVeeXELTgawQG8g4wjYCg16e-6hXkx4cyoiORxOxJLYWIBm0LN3ZsoCU5An9lmmlGHs1i9x6RW7tPzSpyzpVpN_dCaZ2KpfNpY6AS8uHeKeKYSUnC9WjXn1p68fnDZKwJoDDA6wXtW-ojPDXOHFfA9bEO26Mn4bbmhPWYl7K0kZgXZKB-yBVEddQhStXyvAmg6g4mqQv0msi6hSD_2XHmAySXIGhXSlWI3c10OeQnLX4Qy8MDnpeJ7KcyiewpWQpTtttuiIdWRhXwe5CJ8kW934rASGs4pHFMd4y9h-bqh5Y02LSFfRv1S8rXIdA9-KbvSV0cy3RuULDvTxLUAfIa6tXnSMwBlADjh2_jh8GkeeqoYcoNnQn3IjUrJOuccX36caZFJ-4ruapTG1-NpB73UVlvpyzRS4qOIyAGIbItxprdrCTkS595zJ6KLke4FBr4mo95Sidxgjk74RSJ2UAq8bhodYU4KvE7gipk7lC5MpLO69dG3l37hx_VlR-_-_GBV5oYqWjEt4BxmGZgpUFs4xzJOVPqX0zv_PBtCf44GxJ4yx6feWB8Bv47xAB9tEdA9E9xiKxO8_Q5L3Sxi5--GyyjyNXTRtTQxSv9XIu_ssCJ2-5UYUQcB5pCgY-e8EyrAbPCCiU61fDeNVj_gFnU7ppBR-1satcytV3ijkkUwpXdB9lz6lu2)
 
-title UTM - Stakeholder Dashboard Views
-
-package "🎯 UTM - Single Source of Truth" as UTM #F5B041;text:black {
-}
-
-package "🎩 Executive View" as EXEC #2C3E50 {
-  card "Quality KPIs" as E1
-  card "Risk Dashboard" as E2
-  card "Release Status" as E3
-  note bottom: Weekly Review
-}
-
-package "🏗️ Architect View" as ARCH #27AE60 {
-  card "Decision Coverage" as A1
-  card "NFR Validation" as A2
-  card "Integration Status" as A3
-  note bottom: Per Sprint
-}
-
-package "👨‍💻 Developer View" as DEV #3498DB {
-  card "Code Coverage" as D1
-  card "Unit Test Results" as D2
-  card "Security Findings" as D3
-  note bottom: Daily
-}
-
-package "🧪 QA View" as QA #9B59B6 {
-  card "Test Cases" as Q1
-  card "Automation Rate" as Q2
-  card "Defect Trends" as Q3
-  note bottom: Daily
-}
-
-UTM --> EXEC
-UTM --> ARCH
-UTM --> DEV
-UTM --> QA
-
-@enduml
-```
 
 ---
 
@@ -307,50 +122,11 @@ UTM --> QA
 
 ### 5.1 Gap Analysis
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam shadowing false
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_05
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_05.puml
+-->
+![Utm 01 Blueprint Diagram 05](https://www.plantuml.com/plantuml/svg/TPFFZfim4CRlVWetEICbGAJkfLh2alvH4rN4kUNYDHDYhR5NOwCgglROddhgkNsvF4aDjC1kAKW8llbcFDzFujOwZgwk57dbpb015O2r0gw9VP3waIElw3qN3oMQMXUfKGRfV9CrzyXXpxmmdwKkwOah2wCAWd1Sbmhe5qBfncZtTqPxaQUHLt0iNjh2DCfM2w-j_xF44o5EEZ-V8TVsPB3YJXfDFvWQDLm86JQONNzzf-aXpxCTetkMi6n6kUsLURg8Ri9rkq6xoknTNN4T2D0E48gZBk3aXz6Jr8NFsZKlU_VE-BGbWhN-_AD-H2FyU-SAUzTM-hekZzeX5y3lfPBkqfcYtfGKmTa8xm7h-fFY9kiepO5jZthzyP1zoj_lMElfl-ZyBbh5YuKFyxpf-lChPKd-DXiJ-2FCbzdhEBuP0TXVh8Eg9O1ID02S7-NZTMr3zgHsneDl80qCEjCGVLChHG_vzlhjHtBNFDi4_t1W0uUzmrgukeM_2XI_0D8n4zOoIPSqG5cUNV1c843IS5AD9jLuIYK3phxgCq-fuQGQJQen8RUWY-QV-mq)
 
-title Transformation Journey
-
-rectangle "❌ CURRENT STATE" as CURRENT #C0392B {
-  card "Human-centered\ndefect finding" as C1
-  card "No regression\nprocess" as C2
-  card "Missing\ntraceability" as C3
-  card "Ad-hoc\ntesting" as C4
-}
-
-rectangle "UTM\nBLUEPRINT" as BLUEPRINT #D35400 {
-}
-
-rectangle "✅ TARGET STATE" as TARGET #1E8449 {
-  card "System-centric\ndetection" as T1
-  card "Automated\nregression" as T2
-  card "Full URM→ADM→UTM\ntraceability" as T3
-  card "Structured\n5-layer testing" as T4
-}
-
-C1 -right-> BLUEPRINT
-C2 -right-> BLUEPRINT
-C3 -right-> BLUEPRINT
-C4 -right-> BLUEPRINT
-
-BLUEPRINT -right-> T1
-BLUEPRINT -right-> T2
-BLUEPRINT -right-> T3
-BLUEPRINT -right-> T4
-
-@enduml
-```
 
 ### 5.2 Value Realization
 
@@ -367,43 +143,11 @@ BLUEPRINT -right-> T4
 
 ### 6.1 Three-Phase Approach
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam rectangle {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_06
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_06.puml
+-->
+![Utm 01 Blueprint Diagram 06](https://www.plantuml.com/plantuml/svg/TPDTRvim58Rl_IlE4cdQBf32HrkIYwaDeMqa8aKDqwvFd2DY1MnapBHfwd-lCIcWTOCRw-ZXFO-FpNrZK9ksAjadSwQAW9DkIqB9cekGDMgiu8ZyKcZLobEYIgLX_fXsxuJGn0tAeYJumm0UbJJlf7lOwuJbg4z_Oq4IfZSBMrl_fzKhOqOOc_yzty6sgakhAWqQeIIyA3nLM3CsMipspm-75FoLRMApUkxB3w8B-5xqTGROmDw7-TqcJ9Qnit5QioVraxH4oGa-Guw_b5JLRuS_3Kosy38VScgCa0KSoBIr8xA5Fp1hR0I7N2CdF8fIc3vadNSx-U0Ph6mCRxN5RDj4sVq9vz0httZnLJcmeuhleeVRYN8MZ1yVE4ffhNgVO6J2QUfLlOV20TgBcaeX2RRIKA7TqFgsstzQXwifQSLtPBJWpTLwwVd1LJk4kP_6KRISQaUG1kc7Nbaq41jipaTbbysOxPZDRc0IUuU4R5NRTBT2szFhxeMZ4cTjJzdJeZWRxritlXKujuZPzLWFt-inO_SaJztly0O)
 
-title UTM Implementation Roadmap
-
-rectangle "PHASE 1: Foundation (Week 1-4)" as P1 #7D3C98 {
-  card "Governance & Taxonomy" as G
-  card "L0-L1 Testing Setup" as L01
-  card "Basic Traceability" as BT
-}
-
-rectangle "PHASE 2: Security & Compliance (Week 5-8)" as P2 #2874A6 {
-  card "L2 Security Scanning" as L2
-  card "L3 Compliance Testing" as L3
-  card "Pipeline Integration" as PI
-}
-
-rectangle "PHASE 3: Integration & Metrics (Week 9-12)" as P3 #1E8449 {
-  card "L4 E2E Integration" as L4
-  card "Dashboards & Metrics" as DM
-  card "Continuous Improvement" as CI
-}
-
-P1 -right-> P2 : Week 4
-P2 -right-> P3 : Week 8
-
-@enduml
-```
 
 ### 6.2 Milestones
 
@@ -455,48 +199,11 @@ Message: "Cannot move to Review without Accountable person assigned"
 
 ### 8.1 Quality Index
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam object {
-  FontColor #FFFFFF
-  AttributeFontColor #FFFFFF
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_07
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_07.puml
+-->
+![Utm 01 Blueprint Diagram 07](https://www.plantuml.com/plantuml/svg/ZP9DRi8m48NtFiMKg1Ae8Z99A8dKIgGcIAo0qf-r2HQa93PodAfLrNDm82vMEyGIj5qGRyOpJs--6MTOAYfLLUJeIcrOmI1biiePvQZSPdn79IrWITFjMegAhuZ8XGHdd9XpeX3BDvOg-480Oy6LbTMVpiLAoMnPAVQt-8sGobJEO5xHF5EVCE4hzW5453l16LSbGervwrnn3s7azbj0IvXFmEabOH143O4igfngHHkx_c5Fn3kJTCqwSDDaPhGi7wco6U-mZoibpZFj7iRTf4pfZdKw1jDYM3j3WAzh039z0SSB1q5yMnEyicozKLgWks5z9thiUW6Pu3hh1Iu-TJGuOBhhMjG_MixYnGASmSWdKNYHP-ZsJptDG0LjYb736Jy_JS4P-Vq0uz-ctZ-clV0SzBWEYzgG9Wi23i5-v3rSv1aTFVMZtNMxPdKsD2FRs93QM3T0QCZuolobFm)
 
-title Quality Index Components
-
-object "Quality Index = 89.5" as QI #1E8449 {
-  Formula = (0.3×Coverage) + (0.3×PassRate) + (0.2×AutoRate) + (0.2×(100-Escape))
-}
-
-object "Coverage = 80%" as COV #2874A6 {
-  Weight = 0.30
-  Contribution = 24.0
-}
-
-object "Pass Rate = 95%" as PASS #7D3C98 {
-  Weight = 0.30
-  Contribution = 28.5
-}
-
-object "Automation = 90%" as AUTO #D35400 {
-  Weight = 0.20
-  Contribution = 18.0
-}
-
-object "Escape Rate = 5%" as ESC #C0392B {
-  Weight = 0.20
-  Contribution = 19.0
-}
-
-QI <-- COV
-QI <-- PASS
-QI <-- AUTO
-QI <-- ESC
-
-@enduml
-```
 
 ### 8.2 Target KPIs
 
@@ -512,54 +219,11 @@ QI <-- ESC
 
 ## Key Takeaways
 
-```plantuml
-@startuml
-!theme cerulean
-skinparam backgroundColor #FEFEFE
-skinparam package {
-  FontColor #FFFFFF
-}
-skinparam card {
-  FontColor #2C3E50
-  BackgroundColor #FEFEFE
-}
+<!-- PlantUML Diagram: UTM_01_Blueprint_diagram_08
+Original source archived in _archive/plantuml-source/UTM_01_Blueprint_diagram_08.puml
+-->
+![Utm 01 Blueprint Diagram 08](https://www.plantuml.com/plantuml/svg/TPFFRjD04CRlVeh1kJPIQ1AQN50Jnq6LKWgnq_juFKbMMU-6_LEmK6w80mSEK0c92-89UAS-0O_0sb4JDnBsONTMd_Rx-PlnfR6ehIj4yCokgI1Wf9qWb87PSBb5ZGLao3OhhPpC8oMKXjOqhjw6OkiLk2Bu601CbRIFkle9TWqbGvsVoiwZRjpl-BFnVunsGM2v5GIBz1eInnWP0rDaLcaJ18_cuTzVN__i9OieYfCa13HrtPfq-xrEn_lkdiZlVq2gaH5cN71RrlfqFefYppIuw8rUrAGrShYONyF3vsymckpNwjvgdP3WTwJByA2Cgn8i6Gk2omtbO1LeUkUuzW5BUrHU5Hx60aeKfU46I68cA0-VO3xy_0qZPrM1bYjPCuuMwGsqdiU3Nc_OGEotPrYIXjHRSxc2DwLFdET7lxSEg--4L-Zf02rGZUf7O4L7LRBcIzkUqTAJRRTQ8Lk79y5z_mAttF16RBTN2RGk9jreE6WG9Hx3jyqefnc1MeBLpgwFLdCbg9sXyHdbQDQPygUccIJFIRA3X9WtLTASujn_WiYF4vTEELFZH3UlKsX5dUxmVDpW6JikSb3-ohDzWr2ynxBXE4KkO8d6di6IVm12BHgTdVbQ-dRbm0iVp1tL8DKajDilzvDpgAeU7GgVpc5VeGN19Scy-kl-0G)
 
-title UTM Success Factors
-
-package "🎯 UTM SUCCESS" as UTM #D35400 {
-}
-
-package "🔗 Traceability" as TRACE #2874A6 {
-  card "URM → ADM → UTM → Delivery"
-  card "Every test linked to requirement"
-  card "Impact analysis enabled"
-}
-
-package "⚡ Automation" as AUTO #1E8449 {
-  card "5-Layer Testing Pyramid"
-  card "Quality Gates at every stage"
-  card "Shift-Left approach"
-}
-
-package "📊 Visibility" as VIS #7D3C98 {
-  card "Single source of truth"
-  card "Role-based dashboards"
-  card "Evidence-based decisions"
-}
-
-package "🔄 Continuous" as CONT #C0392B {
-  card "Build once, test always"
-  card "Fail fast, fix early"
-  card "Learn and improve"
-}
-
-UTM --> TRACE
-UTM --> AUTO
-UTM --> VIS
-UTM --> CONT
-
-@enduml
-```
 
 ---
 

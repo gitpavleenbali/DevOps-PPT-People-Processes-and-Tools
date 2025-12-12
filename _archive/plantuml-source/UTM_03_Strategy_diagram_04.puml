@@ -1,0 +1,41 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #2C3E50
+}
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Coverage Calculation Model (IaC-Specific)
+
+package "📊 Coverage Types" as COV #FEFEFE {
+  rectangle "Requirement Coverage" as RC #1E8449 {
+    card "Requirements with Tests\n÷ Total Requirements" as RC1
+  }
+  
+  rectangle "Resource Coverage" as CC #2874A6 {
+    card "Resources with Assertions\n÷ Total Resources" as CC1
+  }
+  
+  rectangle "Scenario Coverage" as FC #B7950B {
+    card "Scenarios Tested\n÷ Total Scenarios" as FC1
+  }
+  
+  rectangle "Risk Coverage" as RK #C0392B {
+    card "Risks Mitigated\n÷ Total Risks" as RK1
+  }
+}
+
+rectangle "🎯 Quality Index" as QI #7D3C98 {
+  card "QI = (RC×0.3 + ResC×0.2 + SC×0.3 + RK×0.2) × 100" as QIF
+}
+
+COV --> QI
+
+@enduml

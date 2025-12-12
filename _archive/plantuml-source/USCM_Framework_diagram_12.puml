@@ -1,0 +1,35 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam object {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 📈 USCM ROI Summary
+
+object "🕐 Time Savings" as TIME #D5F5E3 {
+  Manual Tracking = 4 hrs/day
+  With USCM = 15 mins/day
+  **Savings = 93%**
+}
+
+object "🎯 Quality Improvement" as QUAL #D4E6F1 {
+  Defect Escape Rate = 15%
+  With USCM = 2%
+  **Improvement = 87%**
+}
+
+object "📊 Traceability" as TRACE #FCF3CF {
+  Manual Coverage = 60%
+  With USCM = 99%
+  **Improvement = 65%**
+}
+
+object "🔒 Compliance" as COMP #FADBD8 {
+  Audit Prep Time = 2 weeks
+  With USCM = 2 hours
+  **Savings = 99%**
+}
+
+@enduml

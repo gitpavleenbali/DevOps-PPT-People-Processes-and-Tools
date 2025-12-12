@@ -1,0 +1,50 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title 🤖 Autonomous Traceability Creation Flow
+
+|Developer|
+start
+:Write Code;
+:Commit with Smart Message\n"REQ-PAY-001 TC-SEC-001: ...";
+
+|GitLab|
+:Parse Commit Message;
+:Extract REQ-*, ADM-*, TC-* IDs;
+:Run CI/CD Pipeline;
+
+|Pipeline|
+:Execute Tests;
+:Generate JUnit XML;
+:Run update_traceability.py;
+
+|Jira API|
+:Create Issue Links\n(REQ → ADM → TC);
+:Update Custom Fields\n(Coverage %, Tests Passed);
+:Add Traceability Comments;
+
+if (Test Failed?) then (yes)
+  :Create Defect Issue;
+  :Link Defect → Test → Requirement;
+  :Transition Requirement to Blocked;
+else (no)
+  :Update Requirement Status;
+endif
+
+|Jira Automation|
+:Trigger Automation Rules;
+:Send Notifications;
+:Update Related Issues;
+
+|Confluence|
+:Live Dashboard Refreshes;
+:JQL Macros Show Current State;
+
+|Stakeholder|
+:View Real-time Traceability;
+:No Manual Updates Needed;
+
+stop
+
+@enduml

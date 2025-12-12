@@ -1,0 +1,42 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 🎯 USCM: Unified Service Capability Management
+
+rectangle "🌟 USCM VISION" as VISION #2874A6 {
+  card "Culture + Process + Tools\n= Autonomous Delivery" as V1
+}
+
+rectangle "📋 URM\nUnified Requirements\nManagement" as URM #1E8449 {
+  card "WHAT to build\n23 modules\n5 phases + 5 gates" as URM1
+}
+
+rectangle "🏗️ ADM\nArchitecture Decision\nManagement" as ADM #7D3C98 {
+  card "HOW to build\n13 modules\nARB governance" as ADM1
+}
+
+rectangle "🧪 UTM\nUnified Test\nManagement" as UTM #D35400 {
+  card "HOW to verify\n6 layers (L0-L5)\nAutonomous pipelines" as UTM1
+}
+
+rectangle "🚀 DELIVERY\nContinuous Value" as DEL #C0392B {
+  card "Build → Deploy → Monitor\nCI/CD + SRE\n99.9% reliability" as DEL1
+}
+
+VISION --> URM
+VISION --> ADM
+VISION --> UTM
+
+URM --> DEL
+ADM --> DEL
+UTM --> DEL
+
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Testing Pyramid - 6 Layers
+
+rectangle "🎯 L5: ACCEPTANCE (UAT)" as L5 #C0392B {
+  card "Business Validation\nManual + Automated\nHighest Confidence" as L5C
+}
+
+rectangle "🔗 L4: E2E / INTEGRATION" as L4 #D35400 {
+  card "Full System Verification\nTerratest / Real Deploy\nVery High Confidence" as L4C
+}
+
+rectangle "📋 L3: FUNCTIONAL / COMPLIANCE" as L3 #B7950B {
+  card "Business Logic\nterraform-compliance / BDD\nHigh Confidence" as L3C
+}
+
+rectangle "🔒 L2: SECURITY" as L2 #1E8449 {
+  card "Vulnerability Detection\ncheckov / tfsec\nMedium-High Confidence" as L2C
+}
+
+rectangle "🧪 L1: UNIT" as L1 #2874A6 {
+  card "Component Logic\ntofu test / mock_provider\nMedium Confidence" as L1C
+}
+
+rectangle "✅ L0: STATIC" as L0 #7D3C98 {
+  card "Syntax & Style\nvalidate / fmt / tflint\nLow Confidence" as L0C
+}
+
+L5 -[hidden]down- L4
+L4 -[hidden]down- L3
+L3 -[hidden]down- L2
+L2 -[hidden]down- L1
+L1 -[hidden]down- L0
+
+note right of L5 : Few, Expensive, Slow
+note right of L0 : Many, Free, Fast
+
+@enduml

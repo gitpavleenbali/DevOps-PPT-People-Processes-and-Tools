@@ -1,0 +1,52 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam package {
+  FontColor #FFFFFF
+  BackgroundColor #F5B041
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title UTM - Stakeholder Dashboard Views
+
+package "🎯 UTM - Single Source of Truth" as UTM #F5B041;text:black {
+}
+
+package "🎩 Executive View" as EXEC #2C3E50 {
+  card "Quality KPIs" as E1
+  card "Risk Dashboard" as E2
+  card "Release Status" as E3
+  note bottom: Weekly Review
+}
+
+package "🏗️ Architect View" as ARCH #27AE60 {
+  card "Decision Coverage" as A1
+  card "NFR Validation" as A2
+  card "Integration Status" as A3
+  note bottom: Per Sprint
+}
+
+package "👨‍💻 Developer View" as DEV #3498DB {
+  card "Code Coverage" as D1
+  card "Unit Test Results" as D2
+  card "Security Findings" as D3
+  note bottom: Daily
+}
+
+package "🧪 QA View" as QA #9B59B6 {
+  card "Test Cases" as Q1
+  card "Automation Rate" as Q2
+  card "Defect Trends" as Q3
+  note bottom: Daily
+}
+
+UTM --> EXEC
+UTM --> ARCH
+UTM --> DEV
+UTM --> QA
+
+@enduml

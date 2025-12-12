@@ -1,0 +1,32 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title Automatic Rollback on Failure
+
+start
+:🚀 Deploy to Production;
+:⏱️ Wait 5 minutes;
+
+fork
+  :📊 Monitor Health;
+fork again
+  :📈 Monitor Metrics;
+fork again
+  :🔍 Run Smoke Tests;
+end fork
+
+if (All Healthy?) then (✅ yes)
+  :✅ Deployment Success;
+  :📢 Notify Team;
+  stop
+else (❌ no)
+  :🔴 Failure Detected;
+  :⏪ Trigger Rollback;
+  :📋 Restore Previous Version;
+  :📢 Alert On-Call;
+  :📝 Create Incident;
+  stop
+endif
+
+@enduml

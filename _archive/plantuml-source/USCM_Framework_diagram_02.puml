@@ -1,0 +1,36 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam rectangle {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title USCM in the DevOps/Agile Ecosystem
+
+package "🌐 AGILE CULTURE" as AGILE #2874A6;text:white {
+  package "🔄 DevOps" as DEVOPS #1E8449;text:white {
+    package "📦 USCM" as USCM #7D3C98;text:white {
+      rectangle "URM" as URM
+      rectangle "ADM" as ADM
+      rectangle "UTM" as UTM
+    }
+    rectangle "CI/CD" as CICD
+    rectangle "SRE" as SRE
+    rectangle "IaC" as IAC
+  }
+  rectangle "Scrum" as SCRUM
+  rectangle "Kanban" as KANBAN
+  rectangle "SAFe" as SAFE
+}
+
+note right of USCM
+  USCM provides the
+  **structured backbone**
+  for DevOps delivery
+end note
+
+@enduml

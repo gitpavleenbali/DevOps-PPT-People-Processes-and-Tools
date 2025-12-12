@@ -1,0 +1,22 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam card {
+  FontColor #FFFFFF
+}
+
+title Coverage Dashboard
+
+card "**Requirement Coverage**\n\n[█████████▓] 97%" as RC #1E8449
+card "**Code Coverage**\n\n[████████▒▒] 82%" as CC #2874A6
+card "**Feature Coverage**\n\n[███████▓▒▒] 88%" as FC #B7950B
+card "**Risk Coverage**\n\n[██████████] 100%" as RK #1E8449
+
+card "**QUALITY INDEX: 91.4**" as QI #7D3C98
+
+RC --> QI
+CC --> QI
+FC --> QI
+RK --> QI
+
+@enduml

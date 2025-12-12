@@ -1,0 +1,62 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam roundcorner 10
+skinparam shadowing false
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title End-to-End Delivery Lifecycle
+
+rectangle "📋 URM - Unified Requirement Management" as URM #2874A6 {
+  card "Business Requirements" as BR
+  card "Statement of Work" as SOW
+  card "Technical Validation" as TV
+  BR --> SOW
+  SOW --> TV
+}
+
+rectangle "💡 IDEATION (from URM)" as IDEA #7D3C98 {
+  card "Jira Epic" as E
+  card "Feature" as F
+  card "User Story" as S
+  E --> F
+  F --> S
+}
+
+rectangle "🏗️ ADM - Architecture Decision Mgmt" as ADM #1E8449 {
+  card "Design Decisions" as DD
+  card "Components" as CM
+  card "Interfaces" as IF
+  DD --> CM
+  CM --> IF
+}
+
+rectangle "🧪 UTM - Unified Test Management" as UTM #D35400 {
+  card "Test Strategy" as TS
+  card "Test Cases" as TC
+  card "Automation" as TA
+  TS --> TC
+  TC --> TA
+}
+
+rectangle "🚀 DELIVERY" as DEL #C0392B {
+  card "Build" as CI
+  card "Deploy" as CD
+  card "Monitor" as MO
+  CI --> CD
+  CD --> MO
+}
+
+URM =down=> IDEA : "derives work items"
+IDEA =right=> ADM : "drives design"
+ADM =right=> UTM : "validates"
+UTM =right=> DEL : "enables"
+DEL ..> URM : Feedback Loop
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 📏 Custom Line Coverage for IaC
+
+rectangle "1️⃣ PARSE" as PARSE #7D3C98 {
+  card "Scan .tf files\nExtract: Variables, Resources, Attributes" as P1
+}
+
+rectangle "2️⃣ ANALYZE" as ANALYZE #2874A6 {
+  card "Scan .tftest.hcl files\nCount: Tested Variables, Resources, Attributes" as A1
+}
+
+rectangle "3️⃣ WEIGHT" as WEIGHT #B7950B {
+  card "Apply Domain Weights\nResources × 3, Variables × 2, Attributes × 1" as W1
+}
+
+rectangle "4️⃣ CALCULATE" as CALC #1E8449 {
+  card "Line Coverage =\n(Tested × Weight) / (Total × Weight) × 100%" as C1
+}
+
+PARSE --> ANALYZE
+ANALYZE --> WEIGHT
+WEIGHT --> CALC
+
+@enduml

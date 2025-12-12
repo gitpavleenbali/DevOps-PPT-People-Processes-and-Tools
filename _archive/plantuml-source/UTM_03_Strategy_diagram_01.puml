@@ -1,0 +1,37 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Test Strategy - Four Pillars
+
+rectangle "🎯 QUALITY STRATEGY" as QS #2874A6
+
+rectangle "📋 TRACEABILITY" as TRACE #1E8449 {
+  card "Requirement → Test\nBidirectional Links\nImpact Analysis" as T1
+}
+
+rectangle "📊 METRICS" as METRIC #B7950B {
+  card "Coverage Index\nDefect Density\nQuality Score" as M1
+}
+
+rectangle "🔄 EXECUTION" as EXEC #D35400 {
+  card "Autonomous Tests\nQuality Gates\nAutomatic Rollback" as E1
+}
+
+rectangle "📈 REPORTING" as REP #C0392B {
+  card "Dashboards\nTrend Analysis\nStakeholder Views" as R1
+}
+
+QS --> TRACE
+QS --> METRIC
+QS --> EXEC
+QS --> REP
+
+@enduml

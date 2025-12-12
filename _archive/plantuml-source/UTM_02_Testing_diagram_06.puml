@@ -1,0 +1,43 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title L4: Integration Testing Flow (Terratest)
+
+participant "🔧 CI Pipeline" as CI
+participant "🧪 Terratest" as TT
+participant "☁️ OpenTofu" as TF
+participant "☁️ Azure" as AZ
+
+CI -> TT: Start Integration Test
+activate TT
+
+TT -> TF: tofu init + apply
+activate TF
+TF -> AZ: Create Real Resources
+activate AZ
+AZ --> TF: Resource IDs + Outputs
+deactivate AZ
+TF --> TT: Apply Complete
+deactivate TF
+
+TT -> AZ: Validate (HTTP, API calls)
+activate AZ
+AZ --> TT: Response
+deactivate AZ
+
+TT -> TT: Assert Results
+
+TT -> TF: tofu destroy
+activate TF
+TF -> AZ: Delete Resources
+activate AZ
+AZ --> TF: Cleanup Complete
+deactivate AZ
+TF --> TT: Destroy Complete
+deactivate TF
+
+TT --> CI: Test Results (Pass/Fail)
+deactivate TT
+
+@enduml

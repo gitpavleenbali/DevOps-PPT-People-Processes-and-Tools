@@ -1,0 +1,36 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #FFFFFF
+}
+skinparam component {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Finding Categories
+
+package "🔒 Security Findings" as SEC #1E8449 {
+  [SEC-001: Missing Encryption]
+  [SEC-002: Public Access Enabled]
+  [SEC-003: Weak TLS Version]
+}
+
+package "📋 Compliance Findings" as COMP #2874A6 {
+  [COMP-001: Missing Tags]
+  [COMP-002: Wrong Region]
+  [COMP-003: Policy Violation]
+}
+
+package "⚡ Performance Findings" as PERF #D35400 {
+  [PERF-001: Slow Response]
+  [PERF-002: Resource Timeout]
+}
+
+package "🧪 Functional Findings" as FUNC #C0392B {
+  [FUNC-001: Wrong Output]
+  [FUNC-002: Missing Validation]
+}
+
+@enduml

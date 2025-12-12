@@ -1,0 +1,48 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam state {
+  FontColor #2C3E50
+}
+
+title Finding Lifecycle
+
+[*] --> Detected : Test Fails
+
+state Detected #FCF3CF {
+  Detected : L2 Security Scan
+  Detected : L3 Compliance Check
+  Detected : L4 Integration Test
+}
+
+Detected --> Triaged : Assign Severity
+
+state Triaged #F9E79F {
+  Triaged : Critical / High / Medium / Low
+  Triaged : Root Cause Analysis
+}
+
+Triaged --> InProgress : Developer Assigned
+
+state InProgress #D4E6F1 {
+  InProgress : Code Fix
+  InProgress : PR Review
+}
+
+InProgress --> Fixed : Merged
+
+state Fixed #D5F5E3 {
+  Fixed : Retest Scheduled
+}
+
+Fixed --> Verified : Tests Pass
+
+state Verified #ABEBC6 {
+  Verified : Closed
+}
+
+Fixed --> InProgress : Retest Fails
+
+Verified --> [*]
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam package {
+  FontColor #2C3E50
+}
+skinparam component {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Payment System Architecture
+
+package "💳 Payment System" as PAY #D4E6F1;text:black {
+  [API Gateway] as GW
+  [Validation Service] as VAL
+  [Payment Processor] as PROC
+  [Database] as DB
+  [Audit Log] as LOG
+}
+
+package "🌐 External" as EXT #FCF3CF;text:black {
+  [Bank API] as BANK
+  [Fraud Detection] as FRAUD
+}
+
+GW --> VAL
+VAL --> PROC
+PROC --> DB
+PROC --> LOG
+PROC <--> BANK
+VAL <--> FRAUD
+
+@enduml

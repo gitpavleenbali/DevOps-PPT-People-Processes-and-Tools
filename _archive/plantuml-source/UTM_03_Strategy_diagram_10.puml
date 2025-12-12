@@ -1,0 +1,41 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title Autonomous Test Execution
+
+participant "📝 GitLab" as GL
+participant "🤖 Pipeline" as PL
+participant "🧪 Test Engine" as TE
+participant "☁️ Azure" as AZ
+participant "📊 Quality Gate" as QG
+
+GL -> PL: Merge Request Event
+activate PL
+
+PL -> TE: Run L0 (Static)
+TE --> PL: Pass
+
+PL -> TE: Run L1 (Unit)
+TE --> PL: Pass + Coverage 85%
+
+PL -> TE: Run L2 (Security)
+TE --> PL: Pass (0 Critical/High)
+
+PL -> TE: Run L3 (Compliance)
+TE --> PL: Pass
+
+PL -> QG: Check Quality Gate
+QG --> PL: ✅ Gate Passed
+
+PL -> AZ: Deploy to Staging
+AZ --> PL: Deployed
+
+PL -> TE: Run L4 (Integration)
+TE --> PL: Pass
+
+PL -> GL: ✅ Auto-Merge
+
+deactivate PL
+
+@enduml

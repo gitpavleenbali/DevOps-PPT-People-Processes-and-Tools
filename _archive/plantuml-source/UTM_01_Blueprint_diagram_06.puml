@@ -1,0 +1,35 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title UTM Implementation Roadmap
+
+rectangle "PHASE 1: Foundation (Week 1-4)" as P1 #7D3C98 {
+  card "Governance & Taxonomy" as G
+  card "L0-L1 Testing Setup" as L01
+  card "Basic Traceability" as BT
+}
+
+rectangle "PHASE 2: Security & Compliance (Week 5-8)" as P2 #2874A6 {
+  card "L2 Security Scanning" as L2
+  card "L3 Compliance Testing" as L3
+  card "Pipeline Integration" as PI
+}
+
+rectangle "PHASE 3: Integration & Metrics (Week 9-12)" as P3 #1E8449 {
+  card "L4 E2E Integration" as L4
+  card "Dashboards & Metrics" as DM
+  card "Continuous Improvement" as CI
+}
+
+P1 -right-> P2 : Week 4
+P2 -right-> P3 : Week 8
+
+@enduml

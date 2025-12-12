@@ -1,0 +1,34 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title 🤖 Process → Tool Embedding = Autonomous System
+
+rectangle "📋 MANUAL PROCESS" as MANUAL #C0392B {
+  card "1. Format code\n2. Validate syntax\n3. Run security checks\n4. Create Jira tickets\n5. Update Confluence" as M1
+}
+
+rectangle "⬇️ EMBED INTO TOOLS" as EMBED #B7950B {
+  card "pre-commit hooks\n.gitlab-ci.yml\nJira Automation Rules\nConfluence Macros" as E1
+}
+
+rectangle "🤖 AUTONOMOUS SYSTEM" as AUTO #1E8449 {
+  card "GitLab Pipeline\nruns automatically\nJira updates itself\nConfluence shows live data" as A1
+}
+
+rectangle "📊 90% BASELINE SECURED" as BASE #2874A6 {
+  card "Only 10% needs\nhuman judgment\n(UAT, edge cases)" as B1
+}
+
+MANUAL --> EMBED : Codify
+EMBED --> AUTO : Deploy
+AUTO --> BASE : Achieves
+
+@enduml

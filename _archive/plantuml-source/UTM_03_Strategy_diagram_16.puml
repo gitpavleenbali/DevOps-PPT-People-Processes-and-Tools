@@ -1,0 +1,44 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Implementation Roadmap
+
+rectangle "Phase 1: Foundation (Week 1-2)" as P1 #7D3C98 {
+  card "✅ L0: Static Analysis\n✅ Pre-commit hooks\n✅ Basic CI pipeline" as P1C
+}
+
+rectangle "Phase 2: Unit Testing (Week 3-4)" as P2 #2874A6 {
+  card "✅ L1: tofu test\n✅ Mock providers\n✅ Coverage tracking" as P2C
+}
+
+rectangle "Phase 3: Security (Week 5-6)" as P3 #1E8449 {
+  card "🔲 L2: Checkov + tfsec\n🔲 Security gates\n🔲 Vulnerability tracking" as P3C
+}
+
+rectangle "Phase 4: Compliance (Week 7-8)" as P4 #B7950B {
+  card "🔲 L3: terraform-compliance\n🔲 BDD scenarios\n🔲 Policy as code" as P4C
+}
+
+rectangle "Phase 5: Integration (Week 9-10)" as P5 #D35400 {
+  card "🔲 L4: Terratest\n🔲 E2E automation\n🔲 Auto-cleanup" as P5C
+}
+
+rectangle "Phase 6: Full Automation (Week 11-12)" as P6 #C0392B {
+  card "🔲 L5: UAT integration\n🔲 Auto-rollback\n🔲 Quality dashboards" as P6C
+}
+
+P1 --> P2
+P2 --> P3
+P3 --> P4
+P4 --> P5
+P5 --> P6
+
+@enduml

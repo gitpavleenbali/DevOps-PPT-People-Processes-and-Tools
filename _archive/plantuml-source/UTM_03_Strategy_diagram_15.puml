@@ -1,0 +1,31 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+skinparam card {
+  FontColor #2C3E50
+  BackgroundColor #FEFEFE
+}
+
+title Quality Index Trend (12 Weeks)
+
+rectangle "Week 1-4" as W1 #C0392B {
+  card "QI: 65 → 72\nSetup Phase\nBaseline Established" as Q1
+}
+
+rectangle "Week 5-8" as W2 #B7950B {
+  card "QI: 72 → 82\nImprovement Phase\nTests Added" as Q2
+}
+
+rectangle "Week 9-12" as W3 #1E8449 {
+  card "QI: 82 → 91\nMaturity Phase\nTarget Exceeded" as Q3
+}
+
+W1 --> W2 : "+7 points"
+W2 --> W3 : "+9 points"
+
+note right of W3 : 🎯 Target: 85\n✅ Current: 91
+
+@enduml

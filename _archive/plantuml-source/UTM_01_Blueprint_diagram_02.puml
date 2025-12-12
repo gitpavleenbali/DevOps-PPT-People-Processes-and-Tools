@@ -1,0 +1,31 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam shadowing false
+skinparam defaultFontColor #FFFFFF
+skinparam card {
+  BackgroundColor #FEFEFE
+  FontColor #2C3E50
+}
+
+title Complete Traceability Chain
+
+card "📌 EPIC\nStrategic Goal" as EPIC #2C3E50;text:white
+card "📝 USER STORY\nWhat user needs" as US #3498DB;text:white
+card "📋 REQUIREMENT\nDetailed spec" as REQ #9B59B6;text:white
+card "🏗️ ADM DECISION\nHow we build it" as ADM #27AE60;text:white
+card "🧪 TEST CASE\nHow we verify" as TC #8E44AD;text:white
+card "✅ RESULT\nEvidence" as RES #16A085;text:white
+
+card "🐛 BUG" as BUG #E74C3C;text:white
+
+EPIC -right-> US : defines
+US -right-> REQ : details
+REQ -right-> ADM : drives
+ADM -right-> TC : validates
+TC -right-> RES : produces
+
+TC ..> BUG : Found By
+BUG ..> REQ : Affects
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+
+title When to Run Each Test Layer
+
+start
+:Code Change;
+
+:Run L0 (Static);
+if (Commit?) then (yes)
+  :Run L1 (Unit);
+  if (PR/Merge Request?) then (yes)
+    :Run L2 (Security);
+    if (Merge to Main?) then (yes)
+      :Run L3 (Compliance);
+      if (Release Tag?) then (yes)
+        :Run L4 (Integration);
+        :Run L5 (UAT);
+        :Deploy to Production;
+        stop
+      else (no)
+        :Done - Stay on Main;
+        stop
+      endif
+    else (no)
+      :Done - PR Ready;
+      stop
+    endif
+  else (no)
+    :Done - Commit OK;
+    stop
+  endif
+else (no)
+  :Done - File Saved;
+  stop
+endif
+
+@enduml

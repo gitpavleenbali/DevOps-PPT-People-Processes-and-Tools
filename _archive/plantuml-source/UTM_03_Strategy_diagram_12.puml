@@ -1,0 +1,42 @@
+@startuml
+!theme cerulean
+skinparam backgroundColor #FEFEFE
+skinparam rectangle {
+  FontColor #FFFFFF
+}
+
+title 🤖 Autonomous Traceability System
+
+rectangle "📝 Developer Commits" as DEV #2874A6 {
+}
+
+rectangle "🔄 GitLab CI/CD" as GL #D35400 {
+}
+
+rectangle "📊 Jira Automation" as JIRA #1E8449 {
+}
+
+rectangle "📈 Confluence Dashboard" as CONF #7D3C98 {
+}
+
+DEV --> GL : git push\n(includes REQ-XXX in message)
+GL --> GL : Run Tests\nParse Results
+GL --> JIRA : Webhook\nUpdate Traceability
+JIRA --> JIRA : Auto-Link\nAuto-Status Update
+JIRA --> CONF : Live Macros\nReal-time Dashboard
+
+note right of GL
+  **Autonomous Actions:**
+  1. Extract REQ-IDs from commits
+  2. Run tests & capture results
+  3. Send to Jira via API
+end note
+
+note right of JIRA
+  **Autonomous Actions:**
+  1. Create bidirectional links
+  2. Update requirement status
+  3. Auto-create defects
+end note
+
+@enduml
